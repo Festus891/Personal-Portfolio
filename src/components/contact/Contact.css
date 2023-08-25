@@ -1,0 +1,108 @@
+.container.contact_container{
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+}
+
+h2{
+    font-size: 1.5;
+    font-weight: bold;
+}
+
+.contact_text{
+    margin-left: 10rem;
+    margin-bottom: 0;
+    display: flex;
+    padding-bottom: 0;
+}
+
+.contact_text::after{
+    content: "";
+    width: 58rem;
+    height: 1px;
+    margin-top: 20px;
+    background-color: var(--color-b-primary);
+}
+
+.contact_options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact_option{
+    background: transparent;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid var(--color-b-primary);
+    transition: var(--transition);
+}
+
+.contact_option:hover{
+    background: var(--color-white);
+    border:2px solid var(--color-black);
+}
+
+.contact_option-icon{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+contact_option a{
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* =====Form Styling===== */
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-b-primary);
+    resize: none;
+    font-size: 1.2rem;
+    color: var(--color-white);
+}
+
+
+/* RESPONSIVENESS FOR DEVICE */
+@media screen and (max-width: 1024px) {
+    .container.contact_container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+
+    .contact_text::after{
+        display: none;
+    }
+
+    .contact_text{
+        align-items: center;
+        color: var(--color-b-primary);
+        width: fit-content;
+        font-weight: bolder;
+        margin: auto;
+        padding-bottom: 0;
+        border-bottom: 2px solid var(--color-black);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container.contact_container{
+            width: var(--container-width-ms);
+        }
+}

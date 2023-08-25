@@ -1,0 +1,155 @@
+.about_container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+h2{
+    font: bold;
+    font-size: 1.5rem ;
+}
+
+
+.text{
+    margin-left: 10rem;
+    margin-bottom: 0;
+    display: flex;
+    padding-bottom: 0;
+}
+
+
+
+.text::after{
+    content: "";
+    width: 58rem;
+    height: 1px;
+    margin-top: 18px;
+    background-color: var(--color-b-primary);
+}
+
+
+
+.about_me{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, var(--color-b-primary), transparent);
+    display: grid;
+    place-items: center;
+}
+
+.about_me_image{
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.about_me_image:hover{
+    transform: rotate(0);
+    transition: var(--transition);
+}
+
+.about_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:  1.5rem;
+}
+
+.about_card{
+    border: 1px solid var(--color-black);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    background: transparent;
+}
+
+
+
+.about_card h5{
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.about_card small{
+    font-size: 0.7rem;
+    color: var(--color-b-primary);
+    font-weight: bold;
+}
+
+.about_content p{
+    margin: 2rem;
+    color: var(--color-b-primary);
+    font-weight: 500;
+}
+
+
+/* ----------Medium Device design----- */
+
+@media screen and (max-width: 1024px) {
+        .about_container{
+            grid-template-columns: 1fr;
+            gap: 0
+        }
+
+        .about_me{
+            width: 50%;
+            margin: 2rem auto 4rem;
+        }
+
+        .about_content p{
+            margin: 1rem 0 1.5rem;
+        }
+
+        .text::after{
+            display: none;
+        }
+
+        section > .text{
+            align-items: center;
+            color: var(--color-b-primary);
+            width: fit-content;
+            font-weight: bolder;
+            margin: auto;
+            padding-bottom: 0;
+            border-bottom: 2px solid var(--color-b-primary);
+        }
+
+        #about > h5{
+            text-align: center;
+            margin: auto;
+            color: var(--color-b-primary);
+            font-weight: bolder;
+            padding-top: 10px;
+            
+        }
+}
+
+@media screen and (max-width: 600px) {
+        .about_me{
+            width: 65%;
+            margin: 0 auto 3rem;
+        }
+
+        .about_cards{
+            grid-template-columns:  1fr 1fr;
+            gap: 1rem;
+        }
+
+        .about_content{
+            text-align: center;
+        }
+
+        .about_content p{
+            margin: 1.5rem 0;
+        }
+
+        .text{
+            text-align: center;
+        }
+
+        .text::after{
+            display: none;
+        }
+
+}

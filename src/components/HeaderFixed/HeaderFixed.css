@@ -1,0 +1,128 @@
+div > a > img{
+    width: 60px;
+}
+
+
+.header_fixed_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.8rem;
+    height: 70px;
+    font-size: 1rem;
+    position: fixed;
+    width: 90%;
+    top: 10px;
+    left: 50px;
+    z-index: 99;
+    border-radius: 3rem;
+    background-color: var(--color-white);
+
+}
+
+
+
+.header_link{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 8px;
+    align-items: center;
+    text-align: center;
+    padding: 0.9rem 2rem;
+
+}
+
+ul > li > a {
+    color: var(--color-b-primary);
+    padding: 0.9rem 1.5rem;
+    white-space: nowrap;
+    font-weight: bolder;
+}
+
+
+ul > li > a:hover{
+    border-bottom: 3.5px solid var(--color-black);
+    padding-bottom: 1px;
+    width: 20px;
+    width: max-content;
+}
+
+.list_icon{
+    padding: 14px 0px 0 0;
+    font-size: 1.8rem;
+}
+
+/* ul > li > a.active{
+    border-bottom: 3.5px solid var(--color-black);
+    color: var(--color-black);
+    padding-bottom: 1.3px;
+} */
+
+
+.menu{
+    display: none;
+}
+
+
+/* ----Media Queries (Medium Device) -----*/
+@media screen and (max-width: 1024px) {
+    .header_fixed_container{
+        z-index: 99;
+    }
+
+    .header_link{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: var(--color-light) ;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+        border-radius: 13px;
+        backdrop-filter: blur(4px);
+        width: 50%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: -110%;
+        align-items: center;
+        padding: 50px 0 10px 0;
+        margin: 0 50px 0 250px;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .header_link.active{
+        left: 0%;
+    }
+
+    ul > li > a {
+        display: block;
+        padding: 0.5rem 10px;
+        color: #222;
+
+    }
+
+    ul > li > a:hover{
+        backdrop-filter: blur(20px);
+        border-radius: none;
+        border: none;
+    }
+
+ 
+    
+
+    .menu{
+        display: block;
+        color: var(--color-black);
+        font-size: 1.5rem;
+        
+    }
+    
+    
+}
+
+/* ----Media Queries (Small Device) -----*/
+@media screen and (max-width: 600px) {
+
+}
+    
