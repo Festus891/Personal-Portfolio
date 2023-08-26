@@ -4,13 +4,35 @@ import img1 from '../../asset/ImageGetter.jpg'
 import img2 from '../../asset/CountDownApp.jpg'
 import img3 from '../../asset/Cloned-Whatsapp.jpg'
 import data from './data'
+import {animations, motion, useAnimation} from 'framer-motion';
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react';
 
 
 
 const Porfolio = () => {
 
+  const {ref, inView} = useInView()
+  const animations =useAnimation();
+
+  useEffect(()=>{
+    if(inView){
+      animations.start({
+        x: 0,
+        transition: {
+          type: 'spring', duration: 4, bounce:0.4
+        }
+      })
+    }
+
+    if(!inView){
+      animations.start({x: '100vw'})
+    }
+      console.log("use effect hook, inView=" ,inView)
+  }, [inView])
+
   return (
-    <section id='portfolio ' >
+    <motion.section id='portfolio ' ref={ref} >
       <div className="portfolio_text">
          <h2>Portfolio</h2>
       </div>
@@ -18,7 +40,7 @@ const Porfolio = () => {
       <h5>My Recent Projects</h5>
       
 
-      <div className="container portfolio_container">
+      <motion.div className="container portfolio_container" animate={animations}>
         {
           data.map(({id, image, title, github, demo}) => {
             return(
@@ -35,8 +57,8 @@ const Porfolio = () => {
             )
           })
         } 
-      </div>
-    </section>
+      </ motion.div>
+    </motion.section>
   )
 }
 

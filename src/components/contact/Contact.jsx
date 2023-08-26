@@ -5,10 +5,33 @@ import {MdOutlineEmail} from 'react-icons/md'
 import {BsLinkedin} from 'react-icons/bs'
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import {animations, motion, useAnimation} from 'framer-motion';
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react';
 
 
 
 const Contact = () => {
+  const {ref, inView} = useInView()
+  const animations =useAnimation();
+
+  useEffect(()=>{
+    if(inView){
+      animations.start({
+        x: 0,
+        transition: {
+          type: 'spring', duration: 4, bounce:0.5
+        }
+      })
+    }
+
+    if(!inView){
+      animations.start({x: '-100vw'})
+    }
+      console.log("use effect hook, inView=" ,inView)
+  }, [inView])
+
+
   const form = useRef();
 
       const sendEmail = (e) => {
@@ -25,14 +48,14 @@ const Contact = () => {
     
 
   return (
-    <section id='contact'>
+    <motion.section id='contact' ref={ref}>
       <div className="contact_text">
            <h2>Contact</h2>
       </div>
       <h5>Get In Touch</h5>
 
-      <div className="container contact_container">
-        <div className="contact_options">
+      <motion.div className="container contact_container" animate={animations}>
+        <motion.div className="contact_options">
           <article className="contact_option">
             <MdOutlineEmail className="contact_option-icon"/>
             <h4>Email</h4>
@@ -51,18 +74,18 @@ const Contact = () => {
             <h5>+2348143430827</h5>
             <a href="https://api.whatsapp.com/send?phone+23408143430827" target='_blank'>Send Message</a>
           </article>
-        </div>
+        </motion.div>
       {/* end of contact optiom */}
-          <form ref={form} onSubmit={sendEmail}>
+          <motion.form ref={form} onSubmit={sendEmail}>
             <input type="text" name="name" placeholder='Your full name' id="" />
             <input type="email" name="email"  
             placeholder='Your Email' />
             <input type="text" name="subject"  placeholder='Your subject' />
             <textarea name="message" rows="7" placeholder='Type your Message'></textarea>
             <button type="submit" className='btn btn-primary'>Send Message</button>
-          </form>
-      </div>
-    </section>
+          </motion.form>
+      </motion.div>
+    </motion.section>
   )
 }
 

@@ -1,18 +1,41 @@
 import React from 'react'
 import './Experience.css'
 import {BsPatchCheckFill} from 'react-icons/bs'
+import {animations, motion, useAnimation} from 'framer-motion';
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react';
 
 const Experience = () => {
+
+  const {ref, inView} = useInView()
+  const animations =useAnimation();
+
+  useEffect(()=>{
+    if(inView){
+      animations.start({
+        x: 0,
+        transition: {
+          type: 'spring', duration: 4, bounce:0.4
+        }
+      })
+    }
+
+    if(!inView){
+      animations.start({x: '100vw'})
+    }
+      console.log("use effect hook, inView=" ,inView)
+  }, [inView])
+
   return (
-    <section id='experience'>
+    <motion.section id='experience' ref={ref}>
       <div className="skills_text">
         <h2>My Skills </h2>
       </div>
       <h5>My Stacks</h5>
       
 
-      <div className="container experience_container">
-        <div className="experience_frontend">
+      <motion.div className="container experience_container" animate={animations}>
+        <motion.div className="experience_frontend">
             <h3>Frontend Development </h3>
             <div className="experience_content">
                 <article className="experience_details">
@@ -51,9 +74,9 @@ const Experience = () => {
                     </div>
                 </article>
             </div>
-        </div>
+        </motion.div>
     {/* END OF FRONTEND  */}
-        <div className="experience_backend">
+        <motion.div className="experience_backend">
         <h3>Frontend Development </h3>
             <div className="experience_content">
                 <article className="experience_details">
@@ -92,9 +115,9 @@ const Experience = () => {
                     </div>
                 </article>
             </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   )
 }
 
