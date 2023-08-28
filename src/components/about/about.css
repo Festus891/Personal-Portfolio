@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
+
 }
 
 h2{
@@ -52,7 +53,9 @@ h2{
 
 .about_cards{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    /* for more than one cards in the container(three cards) */
+    /* grid-template-columns: repeat(3, 1fr); */
     gap:  1.5rem;
 }
 
@@ -94,7 +97,7 @@ h2{
 
         .about_me{
             width: 50%;
-            margin: 2rem auto 4rem;
+            margin: 1rem auto 4rem;
         }
 
         .about_content p{
@@ -110,9 +113,13 @@ h2{
             color: var(--color-b-primary);
             width: fit-content;
             font-weight: bolder;
-            margin: auto;
+            /* margin: auto; */
             padding-bottom: 0;
             border-bottom: 2px solid var(--color-b-primary);
+        }
+
+        h2{
+            color: var(--color-b-primary);
         }
 
         #about > h5{
@@ -132,7 +139,9 @@ h2{
         }
 
         .about_cards{
-            grid-template-columns:  1fr 1fr;
+            grid-template-columns:  1fr;
+            /* for more than one card in the container */
+            /* grid-template-columns:  1fr 1fr; */
             gap: 1rem;
         }
 

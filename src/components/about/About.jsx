@@ -51,7 +51,7 @@ const About = () => {
                   <h5>Experience</h5>
                   <small>2+ years working</small>
                 </article>
-                <article className='about_card'>
+                {/* <article className='about_card'>
                   <FiUsers className='about_icon' />
                   <h5>Clients</h5>
                   <small>200+ worldwide</small>
@@ -60,9 +60,13 @@ const About = () => {
                   <VscFolderLibrary className='about_icon'/>
                   <h5>Project</h5>
                   <small>80+ project</small>
-                </article>
+                </article> */}
           </div> 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur assumenda eum tempore inventore ab, pariatur sapiente. Eaque facere voluptas tenetur, doloribus assumenda provident voluptatibus ipsam magnam, sed beatae a?</p>
+          <p>Hello!, I am passionate self learned frontend web developer, I can create user friendly and interactive website with the skills and knowledge I have acquired so far, I bring a unique blend of technical skills and creativity to the table. As a Frontend Web Developer, I specialize in creating beautiful and functional websites and web applications that are optimized for user experience. My expertise lies in HTML, CSS, JavaScript, React and other libraries and frameworks.
+            <br />
+            <br/>
+            I am open to great job opportunities to collaborate, learn and grow as a developer and creator. If you're interested in my skills and expertise and got a great opportunity for me then please don't hesitate to connect with me. Let's work together to bring your ideas to life and make a real impact!
+          </p>
 
           <a href="#contact" className='btn btn-primary'>Hire Me</a>
         </motion.div>

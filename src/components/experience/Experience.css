@@ -98,7 +98,7 @@ h4, small{
         margin: auto;
         width: fit-content;
         padding-bottom: 0;
-        border-bottom: 2px solid var(--color-light);
+        border-bottom: 2px solid var(--color-black);
 
     }
     

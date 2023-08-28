@@ -11,7 +11,7 @@ div > a > img{
     height: 70px;
     font-size: 1rem;
     position: fixed;
-    width: 90%;
+    width: 95%;
     top: 10px;
     left: 50px;
     z-index: 99;
@@ -24,7 +24,7 @@ div > a > img{
 
 .header_link{
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 8px;
     align-items: center;
     text-align: center;
@@ -68,6 +68,13 @@ ul > li > a:hover{
 @media screen and (max-width: 1024px) {
     .header_fixed_container{
         z-index: 99;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 0rem;
+        padding: 0 2rem;
+
     }
 
     .header_link{
@@ -85,7 +92,7 @@ ul > li > a:hover{
         left: -110%;
         align-items: center;
         padding: 50px 0 10px 0;
-        margin: 0 50px 0 250px;
+        margin: 0 50px 0 290px;
         z-index: -1;
         transition: all 0.3s ease-in-out;
 
@@ -114,7 +121,8 @@ ul > li > a:hover{
     .menu{
         display: block;
         color: var(--color-black);
-        font-size: 1.5rem;
+        font-size: 1.7rem;
+        
         
     }
     
@@ -123,6 +131,12 @@ ul > li > a:hover{
 
 /* ----Media Queries (Small Device) -----*/
 @media screen and (max-width: 600px) {
+    .header_link{
+        width: 60%;
+        margin: 0 50px 0 200px;
+       
+
+    }
 
 }
     

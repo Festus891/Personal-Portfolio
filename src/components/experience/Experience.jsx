@@ -27,7 +27,7 @@ const Experience = () => {
   }, [inView])
 
   return (
-    <motion.section id='experience' ref={ref}>
+    <motion.section id='skills' ref={ref}>
       <div className="skills_text">
         <h2>My Skills </h2>
       </div>
@@ -73,44 +73,59 @@ const Experience = () => {
                         <small className="text-light">Experienced</small>
                     </div>
                 </article>
+                <article className="experience_details">
+                    <BsPatchCheckFill className='experience_details_icon' />
+                    <div>
+                        <h4>Bootstrap</h4>
+                        <small className="text-light">Experienced</small>
+                    </div>
+                </article>
+                
             </div>
         </motion.div>
     {/* END OF FRONTEND  */}
         <motion.div className="experience_backend">
-        <h3>Frontend Development </h3>
+        <h3>Additional Skills</h3>
             <div className="experience_content">
-                <article className="experience_details">
+            <article className="experience_details">
                     <BsPatchCheckFill className='experience_details_icon' />
                     <div>
-                      <h4>HTML</h4>
-                      <small className="text-light">Experienced</small>
-                    </div>
-                </article>
-                <article className="experience_details">
-                    <BsPatchCheckFill className='experience_details_icon'/>
-                    <div>
-                        <h4>CSS</h4>
+                        <h4>Git</h4>
                         <small className="text-light">Experienced</small>
                     </div>
                 </article>
                 <article className="experience_details">
-                    <BsPatchCheckFill className='experience_details_icon'/>
+                    <BsPatchCheckFill className='experience_details_icon' />
                     <div>
-                      <h4>JAVACRIPT</h4>
-                      <small className="text-light">Experienced</small>
-                    </div>
-                </article>
-                <article className="experience_details">
-                    <BsPatchCheckFill className='experience_details_icon'/>
-                    <div>
-                      <h4>REACT</h4>
-                      <small className="text-light">Experienced</small>
+                        <h4>Figma</h4>
+                        <small className="text-light">Experienced</small>
                     </div>
                 </article>
                 <article className="experience_details">
                     <BsPatchCheckFill className='experience_details_icon' />
                     <div>
-                        <h4>Tailwind</h4>
+                        <h4>Version Control/Git</h4>
+                        <small className="text-light">Experienced</small>
+                    </div>
+                </article>
+                <article className="experience_details">
+                    <BsPatchCheckFill className='experience_details_icon' />
+                    <div>
+                        <h4>Responsive Design</h4>
+                        <small className="text-light">Experienced</small>
+                    </div>
+                </article>
+                <article className="experience_details">
+                    <BsPatchCheckFill className='experience_details_icon' />
+                    <div>
+                        <h4>Graphics designing</h4>
+                        <small className="text-light">Experienced</small>
+                    </div>
+                </article>
+                <article className="experience_details">
+                    <BsPatchCheckFill className='experience_details_icon' />
+                    <div>
+                        <h4>Corel Draw</h4>
                         <small className="text-light">Experienced</small>
                     </div>
                 </article>

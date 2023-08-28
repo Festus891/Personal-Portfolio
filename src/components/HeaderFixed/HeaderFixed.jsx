@@ -5,7 +5,6 @@ import {AiOutlineUser} from 'react-icons/ai'
 import {BiBook} from 'react-icons/bi'
 import {MdHomeRepairService} from 'react-icons/md'
 import {MdPermContactCalendar} from 'react-icons/md'
-import {MdOutlineMiscellaneousServices} from 'react-icons/md'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {GiCancel} from 'react-icons/gi'
 import NewLogo from '../../asset/logo.png'
@@ -36,8 +35,9 @@ const HeaderFixed = () => {
         </div>
 
             <ul className={clicked ? "header_link active" : "header_link" }>
+                   <li><a href="#" onClick={()=>setActive('#')} className={active === '#' ? 'active' : ''}><AiOutlineHome className='list_icon'/>Home</a></li>
                     <li><a href="#about" onClick={()=>setActive('#about')} className={active === '#about' ? 'active' : ''}><AiOutlineUser className='list_icon'/>About</a></li>
-                    <li><a href="#experience" onClick={()=>setActive('#experience')} className={active === '#experience' ? 'active' : ''}><BiBook className='list_icon'/>Skills</a></li>
+                    <li><a href="#skills" onClick={()=>setActive('#experience')} className={active === '#eskills' ? 'active' : ''}><BiBook className='list_icon'/>Skills</a></li>
                     <li><a href="#portfolio" onClick={()=>setActive('#portfolio')} className={active === '#portfolio' ? 'active' : ''}><MdHomeRepairService className='list_icon' />Portfolio</a></li>
                     <li><a href="#contact" onClick={()=>setActive('#contact')} className={active === '#contact' ? 'active' : ''}><MdPermContactCalendar className='list_icon'/>Contact</a></li>
             </ul>

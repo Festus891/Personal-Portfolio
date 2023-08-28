@@ -32,7 +32,7 @@ const Porfolio = () => {
   }, [inView])
 
   return (
-    <motion.section id='portfolio ' ref={ref} >
+    <motion.section id='portfolio' ref={ref} >
       <div className="portfolio_text">
          <h2>Portfolio</h2>
       </div>
