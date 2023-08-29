@@ -42,7 +42,11 @@ const Service = () => {
           <ul className="service_list">
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <p>I develope websites from scratch and also ensure a responsive, well-designed, and functional user interface is implemented</p>
+            </li>
+            <li>
+              <BiCheck className="service_list-icon" />
+              <p>I Ensuring that the website I develope function consistently and correctly across different web browsers, including Chrome, Firefox, Safari, and Edge.</p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
@@ -50,15 +54,16 @@ const Service = () => {
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <p>Implementing animations, transitions, and interactive elements to enhance user engagement and provide a smooth browsing experience.</p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <p>Identifying and fixing frontend issues, bugs, and inconsistencies using browser developer tools and testing on different devices.</p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <p>I Collaborating with backend developers to integrate frontend components with server-side functionality and APIs.
+</p>
             </li>
           </ul>
         </motion.article>

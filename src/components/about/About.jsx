@@ -68,7 +68,7 @@ const About = () => {
             I am open to great job opportunities to collaborate, learn and grow as a developer and creator. If you're interested in my skills and expertise and got a great opportunity for me then please don't hesitate to connect with me. Let's work together to bring your ideas to life and make a real impact!
           </p>
 
-          <a href="#contact" className='btn btn-primary'>Hire Me</a>
+          <a href="#contact" className='btn btn-primary'>Contact Me</a>
         </motion.div>
       </motion.div>
 
