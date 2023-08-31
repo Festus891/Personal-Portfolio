@@ -40,8 +40,9 @@ h2{
 }
 
 .portfolio_item_image{
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     overflow: hidden;
+    border: 2px solid var(--color-black);
 }
 
 .portfolio_item h3{

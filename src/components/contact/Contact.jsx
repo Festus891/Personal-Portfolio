@@ -5,7 +5,7 @@ import {MdOutlineEmail} from 'react-icons/md'
 import {BsLinkedin} from 'react-icons/bs'
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
-import {animations, motion, useAnimation} from 'framer-motion';
+import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react';
 
@@ -60,19 +60,19 @@ const Contact = () => {
             <MdOutlineEmail className="contact_option-icon"/>
             <h4>Email</h4>
             <h5>festus891@yahoo.com</h5>
-            <a href="mailto:festus891@yahoo.com" target='_blank'>Send Message</a>
+            <a className='btn' href="mailto:festus891@yahoo.com" target='_blank'>Send Message</a>
           </article>
           <article className="contact_option">
             <BsLinkedin className="contact_option-icon" />
             <h4>LinkedIn</h4>
             <h5>Aderibigbe festus</h5>
-            <a href="https://linked.com" target='_blank'>Send Message</a>
+            <a className='btn' href="https://www.linkedin.com/in/aderibigbe-festus/detail/recent-activity/shares/" target='_blank'>Send Message</a>
           </article>
           <article className="contact_option">
             <BsWhatsapp className="contact_option-icon"/>
             <h4>Whatsapp</h4>
             <h5>+2348143430827</h5>
-            <a href="https://api.whatsapp.com/send?phone+23408143430827" target='_blank'>Send Message</a>
+            <a className='btn' href="https://wa.me/+2348143430827" target='_blank'>Send Message</a>
           </article>
         </motion.div>
       {/* end of contact optiom */}

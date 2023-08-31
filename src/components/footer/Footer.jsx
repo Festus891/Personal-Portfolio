@@ -10,9 +10,9 @@ const Footer = () => {
   return (
     <footer>
       <ul className="permalinks">
-        <li><a href="#"Home>Home</a></li>
+        <li><a href="#">Home</a></li>
         <li> <a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Experience</a></li>
         <li><a href="#service">Service</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -23,11 +23,11 @@ const Footer = () => {
           <a href="https://Twitter.com"><BsTwitter/></a>
           <a href="Mailto:festus891@yahoo.com"><MdEmail/></a>
           <a href="https://Github.com"><FaGithub/></a>
-          <a href="https://api.whatsapp.com/send?phone+23408143430827" target='_blank'><IoLogoWhatsapp /></a>
+          <a href="https://wa.me/+2348143430827" target='_blank'><IoLogoWhatsapp /></a>
       </div>
 
       <div className="footer_copyright">
-        <small>&copy; Aderibigbe festus 2023. All right Reserved</small>
+        <small>&copy; Copyright 2023. Made by Aderibigbe festus</small>
       </div>
     </footer>
   )

@@ -4,7 +4,7 @@ import img1 from '../../asset/ImageGetter.jpg'
 import img2 from '../../asset/CountDownApp.jpg'
 import img3 from '../../asset/Cloned-Whatsapp.jpg'
 import data from './data'
-import {animations, motion, useAnimation} from 'framer-motion';
+import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react';
 

@@ -51,7 +51,7 @@ h2{
     font-weight: 600;
 }
 
-contact_option a{
+.contact_option a{
     margin-top: 0.7rem;
     display: inline-block;
     font-size: 0.8rem;
@@ -74,7 +74,7 @@ input, textarea{
     border: 2px solid var(--color-b-primary);
     resize: none;
     font-size: 1.2rem;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 

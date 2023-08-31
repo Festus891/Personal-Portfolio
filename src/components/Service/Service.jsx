@@ -1,7 +1,7 @@
 import React from 'react'
 import './Service.css'
 import {BiCheck} from 'react-icons/bi'
-import {animations, motion, useAnimation} from 'framer-motion';
+import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react';
 const Service = () => {
@@ -29,7 +29,7 @@ const Service = () => {
   return (
     <motion.section id='service' ref={ref}>
       <div className="service_text">
-         <h2>Service<span>.</span></h2>
+         <h2>Service</h2>
       </div>
       <h5>What I offer</h5>
 

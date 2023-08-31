@@ -4,7 +4,7 @@ import profile from '../../asset/profile.png'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
 import {VscFolderLibrary} from 'react-icons/vsc'
-import {animations, motion, useAnimation} from 'framer-motion';
+import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
 
 
