@@ -19,10 +19,10 @@ const Footer = () => {
       </ul>
 
       <div className="footer_social">
-          <a href="https://linkedin.com"><BsLinkedin/></a>
-          <a href="https://Twitter.com"><BsTwitter/></a>
-          <a href="Mailto:festus891@yahoo.com"><MdEmail/></a>
-          <a href="https://Github.com"><FaGithub/></a>
+          <a href="https://www.linkedin.com/in/aderibigbe-festus/" target='_blank'><BsLinkedin/></a>
+          <a href="https://twitter.com/AdeHimself12" target='_blank'><BsTwitter/></a>
+          <a href="Mailto:festus891@yahoo.com" target='_blank'><MdEmail/></a>
+          <a href="https://github.com/Festus891" target='_blank'><FaGithub/></a>
           <a href="https://wa.me/+2348143430827" target='_blank'><IoLogoWhatsapp /></a>
       </div>
 

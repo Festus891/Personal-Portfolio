@@ -74,6 +74,13 @@ h5{
     background-color: var(--color-b-primary);
 
 }
+.header_socials_left::before{
+    content: "";
+    width: 2px;
+    height: 2rem;
+    background-color: var(--color-b-primary);
+
+}
 
 .header_socials_right::after{
     content: "";
@@ -118,8 +125,11 @@ h5{
     }
 
     .header_socials_left{
-        font-size: 1.3rem;
         bottom: 0;
+        font-size: 1.3rem;
+        /* bottom: 15rem;
+        left: -0.8rem; */
+        
     }
 
     .header_socials_right{
@@ -146,6 +156,21 @@ h5{
         font-size: 0.8rem;
         color: var(--color-b-primary);
         font-weight: bold ;
+    }
+
+    
+    
+}
+
+@media screen and (max-width: 450px) {
+    header{
+        height: 100vh;
+    }
+    .header_socials_left{
+        
+        bottom: 15rem;
+        left: -0.8rem;
+        
     }
 
     

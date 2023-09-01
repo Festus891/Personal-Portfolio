@@ -68,6 +68,7 @@ h2{
 .service_list-icon{
     color: var(--color-b-primary);
     margin-top: 2px;
+    font-size: 1rem;
 }
 
 .service_list p{
@@ -78,7 +79,7 @@ h2{
 /* RESPONSIVENESS FOR DEVICE */
 @media screen and (max-width: 1024px) {
     .services_container{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 2rem;
     }
 

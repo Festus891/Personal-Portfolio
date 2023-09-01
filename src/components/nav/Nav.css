@@ -3,16 +3,13 @@ nav{
     width: max-content;
     display: block;
     padding: 0.7rem 1.7rem;
-    /* z-index: 2; */
-    /* position: fixed; */
-    /* left: 50%; */
-    transform: translate(-50%);
-    /* bottom: 2rem; */
+    /* transform: translate(-50%); */
     display: flex;
     align-items: center;
     gap: 0.8rem;
     border-radius: 3rem;
     backdrop-filter: blur(15px);
+    margin: 0 auto;
 }
 
 nav a {
