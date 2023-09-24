@@ -1,172 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    outline: 0;
-    border: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
 }
 
-:root{
-    --color-bg: #1f1f38;
-    --color-green: #06EB21;
-    
-    --color--bg-variant: #2c2c6c;
-    --color-primary: #4db5ff;
-    --color-primary-variant: rgba(77, 188, 255, 0.4);
-    --container-width-lg: 75%;
-    --container-width-md: 86%;
-    --container-width-ms: 90%;
-    --transition: all 400ms ease;
-    --color-light: rgba(255, 255, 255, 0.6);
-    --color-white: #fff;
-    --color-black: black;
-    --color-b-primary: #191818;
+:root {
+  --container-width-lg: 100%;
+  --container-width-md: 86%;
+  --container-width-ms: 90%;
+  --transition: all 400ms ease;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --color-white: #fff;
+  --color-purple: #694ac4;
+  --color-black: black;
+  --color-b-primary: #191818;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 /* ::-webkit-scrollbar{
     display: none;
 } */
 
-body{
-    background-color: var(--color-white);
-    font-family: 'Poppins', sans-serif;
-    color: var(--color-black);
-    line-height: 1.5;
-    background-image: url(../src/asset/white4.jpg);
-    background-size: cover;
-    background-repeat: repeat;
-
+body {
+  background-color: var(--color-light);
+  font-family: "Poppins", sans-serif;
+  color: var(--color-black);
+  line-height: 1.5;
+  /* background-image: url(../src/asset/white4.jpg); */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* -------General styling----- */
 
-.container{
-    width: var(--container-width-lg);
-    margin: 0 auto;
-    
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
 }
 
-
-
-
-
-section{
-    margin-top: 5rem;
-    overflow: hidden;
+section {
+  margin-top: 5rem;
+  overflow: hidden;
 }
 
-section > h2, section > h5{
-    text-align: center;
-    color: var(--color-b-primary);
-    font-weight: bolder;
-    margin-bottom: 1rem;
+section > h2,
+section > h5 {
+  text-align: center;
+  color: var(--color-b-primary);
+  font-weight: bolder;
+  margin-bottom: 1rem;
 }
 
-section >h2{
-    color: var(--color-white);
-    margin-bottom: 0.2rem;
+section > h2 {
+  color: var(--color-white);
+  margin-bottom: 0.2rem;
 }
 
-section >h2::after{
-    content: "";
-    width: 10px;
-    height: 2rem;
-    background-color: var(--color-b-primary);
+section > h2::after {
+  content: "";
+  width: 10px;
+  height: 2rem;
+  background-color: var(--color-b-primary);
 }
 
-.text-light{
-    color: var(--color-b-primary);
+.text-light {
+  color: var(--color-b-primary);
 }
 
-a{
-    color: var(--color-black);
-    transition: var(--transition);
+a {
+  color: var(--color-black);
+  transition: var(--transition);
 }
 
-
-
-.btn{
-    width: max-content;
-    display: inline-block;
-    color: var(--color-b-primary);
-    padding: 0.75rem 1.2rem;
-    border-radius: 1.3rem;
-    cursor: pointer;
-    border: 2px solid var(--color-black);
-    transition: var(--transition);
-    font-weight: bolder;
-
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-b-primary);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  border: 2px solid var(--color-purple);
+  transition: var(--transition);
+  font-weight: bolder;
 }
 
-.btn:hover{
-    background-color: var(--color-b-primary);
-    color: var(--color-white);
-    border-color: transparent;
+.btn:hover {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  border-color: transparent;
 }
 
-.btn-primary{
-    background: var(--color-black);
-    color: var(--color-white);
+.btn-primary {
+  background: var(--color-purple);
+  color: var(--color-white);
 }
 
-.btn-primary:hover{
-    background: transparent;
-    color: var(--color-b-primary);
-    border: 2px solid var(--color-black);
+.btn-primary:hover {
+  background: transparent;
+  color: var(--color-b-primary);
+  border: 2px solid var(--color-purple);
 }
 
-img{
-    display: block;
-    width: 100%;
+img {
+  display: block;
+  width: 100%;
 }
 
 /* ----------Medium Device design----- */
 
 @media screen and (max-width: 1024px) {
-        .container{
-            width: var(--container-width-md);
-        }    
+  body {
+    background-image: url(../src/asset/white4.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+  }
 
-        section{
-            margin-top: 3rem;
-        }
+  .container {
+    width: var(--container-width-md);
+  }
 
-        section > .text{
-            align-items: center;
-            color: var(--color-white);
-            width: fit-content;
-            font-weight: bolder;
-            margin: auto;
-            padding-bottom: 0;
-            border-bottom: 2px solid var(--color-b-primary);
-        }
+  section {
+    margin-top: 3rem;
+  }
 
-        #about > h5{
-            text-align: center;
-            margin: auto;
-            color: var(--color-b-primary);
-            font-weight: bolder;
-            padding-top: 10px;
-            
-        }
+  section > .text {
+    align-items: center;
+    color: var(--color-white);
+    width: fit-content;
+    font-weight: bolder;
+    margin: auto;
+    padding-bottom: 0;
+    border-bottom: 2px solid var(--color-b-primary);
+  }
+
+  #about > h5 {
+    text-align: center;
+    margin: auto;
+    color: var(--color-b-primary);
+    font-weight: bolder;
+    padding-top: 10px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .container{
-        width: var(--container-width-ms);
-    }
+  .container {
+    width: var(--container-width-ms);
+  }
 
-    section > h2{
-        margin-bottom: 1rem;
-    }
+  section > h2 {
+    margin-bottom: 1rem;
+  }
 }
-
-
