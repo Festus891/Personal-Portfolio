@@ -1,7 +1,5 @@
 import React from "react";
 import "./Experience.css";
-import { BsPatchCheckFill } from "react-icons/bs";
-import html from "../../asset/skills/html.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -30,117 +28,44 @@ const Experience = () => {
 
   return (
     <motion.section id="skills" ref={ref}>
-      <div className="skills_text">
-        <h2>My Skills </h2>
-      </div>
-      <h5>My Stacks</h5>
+      <h2>MY SKILLS </h2>
+      <div className="text"></div>
+      <h5>
+        Here you get to know my current skills mostly in terms of programming
+        and technology
+      </h5>
 
       <motion.div
         className="container experience_container"
         animate={animations}
       >
         <motion.div className="experience_frontend">
-          <h3>Frontend Development </h3>
           <div className="experience_content">
-            <article className="experience_details">
-              {/* <BsPatchCheckFill className='experience_details_icon' /> */}
-              <img src={html} alt="html" />
-              <div>
-                <h4>HTML</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>CSS</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>JAVACRIPT</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>REACT</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>Tailwind</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>Bootstrap</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>Github</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>Version Control/Git</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-          </div>
-        </motion.div>
-        {/* END OF FRONTEND  */}
-        <motion.div className="experience_backend">
-          <h3>Additional Skills</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>Figma</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>Interactive Design</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
+            <div className="experience_details">HTML</div>
 
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>Responsive Design</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>Graphics designing</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BsPatchCheckFill className="experience_details_icon" />
-              <div>
-                <h4>Corel Draw</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
+            <div className="experience_details">CSS</div>
+
+            <div className="experience_details">JAVACRIPT</div>
+
+            <div className="experience_details">REACT</div>
+
+            <div className="experience_details">Tailwind</div>
+
+            <div className="experience_details">Bootstrap</div>
+
+            <div className="experience_details">Github</div>
+
+            <div className="experience_details">Version Control/Git</div>
+
+            <div className="experience_details">Figma</div>
+
+            <div className="experience_details">Interactive Design</div>
+
+            <div className="experience_details">Responsive Design</div>
+
+            <div className="experience_details">Graphics designing</div>
+
+            <div className="experience_details">Corel Draw</div>
           </div>
         </motion.div>
       </motion.div>

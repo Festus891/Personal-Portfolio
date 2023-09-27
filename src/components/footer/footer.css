@@ -1,79 +1,65 @@
-footer{
-    background: var(--color-white);
-    padding: 2rem 0;
-    font-size: 0.9rem;
-    margin: 2rem auto;
+footer {
+  background: var(--color-black);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  margin: 2rem auto;
 }
 
-footer a{
-    color: var(--color-b-primary);
-    font-weight: bold;
+footer a {
+  color: var(--color-white);
+  font-weight: bold;
 }
 
-
-
-.permalinks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 0 auto;
-    color: var(--color-b-primary);
-     
-}
-.permalinks li > a:hover{
-    border-bottom: 2px solid var(--color-black);
-    transition: var(--transition);
+.permalinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+  color: var(--color-white);
 }
 
-.footer_social{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
+.permalinks a {
+  color: var(--color-white);
 }
 
-/* .footer_social a{
-    background-color: transparent;
-    color: var(--color-b-primary);
-    padding: 0.7rem;
-    border: 1px solid var(--color-black);
-} */
-
-
-
-.footer_copyright{
-    color: var(--color-b-primary);
-    font-size: 1rem;
-    width: 100%;
-    text-align: center;
+.footer_social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
+.footer_copyright {
+  color: var(--color-white);
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+}
 
 /* RESPONSIVENESS FOR DEVICE */
 @media screen and (max-width: 1024px) {
-    .container.contact_container{
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+  .container.contact_container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .permalinks{
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
+  .permalinks {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
 
-    .footer_social{
-        margin-bottom: 1rem;
-    }
+  .footer_social {
+    margin-bottom: 1rem;
+  }
 
-    .footer_copyright{
-        color: var(--color-b-primary);
-        font-size: 1rem;
-        
-    }
+  .footer_copyright {
+    color: var(--color-white);
+    font-size: 1rem;
+  }
 }

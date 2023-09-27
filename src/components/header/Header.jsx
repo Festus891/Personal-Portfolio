@@ -8,9 +8,8 @@ const Header = () => {
   return (
     <header>
       <div className="header_container">
-        {/* <h2>Hello!, I'm</h2> */}
         <h1>Hello!, I'm Aderibigbe Festus</h1>
-        <h5 className="text-light">I'm a FRONTEND DEVELOPER</h5>
+        <h2>I'm a FRONTEND DEVELOPER</h2>
         <div className="me">
           <img src={myself} alt="profile" />
         </div>

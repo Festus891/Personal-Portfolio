@@ -17,10 +17,10 @@
   --transition: all 400ms ease;
   --color-light: rgba(255, 255, 255, 0.6);
   --color-white: #fff;
-  --color-whitesmoke: whitesmoke;
+  --color-whitesmoke: #fafafa;
   --color-purple: #694ac4;
   --color-black: black;
-  --color-b-primary: #191818;
+  --color-b-primary: #666;
 }
 
 html {
@@ -33,20 +33,18 @@ html {
 
 body {
   background-color: var(--color-white);
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Source Sans Pro", sans-serif;
   color: var(--color-black);
   line-height: 1.5;
-  /* background-image: url(../src/asset/white4.jpg); */
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 /* -------General styling----- */
 
 .container {
   width: var(--container-width-ms);
-  margin: 0 auto;
-  height: 80vh;
+  margin: 0 auto 3rem;
+  height: 100vh;
 }
 
 section {
@@ -65,20 +63,20 @@ section {
   margin-right: auto;
 }
 
-section > h2,
-section > h5 {
-  text-align: center;
-  color: var(--color-b-primary);
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
 section > h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+  text-align: center;
+  font-weight: 800;
 }
 
 section > h5 {
   font-size: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #666;
 }
 
 a {
@@ -89,29 +87,34 @@ a {
 .btn {
   width: max-content;
   display: inline-block;
-  color: var(--color-b-primary);
   padding: 0.75rem 1.2rem;
-  border-radius: 0.8rem;
   cursor: pointer;
-  border: 2px solid var(--color-purple);
-  transition: var(--transition);
   font-weight: bolder;
+  background: var(--color-purple);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
 }
 
 .btn:hover {
-  background-color: var(--color-purple);
-  color: var(--color-white);
-  border-color: transparent;
+  background-color: transparent;
+  color: var(--color-b-primary);
+  border: 2px solid var(--color-purple);
 }
 
 .btn-primary {
-  background: var(--color-purple);
-  color: var(--color-white);
+  background: transparent;
+  color: var(--color-b-primary);
+  border: 2px solid var(--color-purple);
 }
 
 .btn-primary:hover {
-  background: transparent;
-  color: var(--color-b-primary);
+  background: var(--color-purple);
+  color: var(--color-white);
   border: 2px solid var(--color-purple);
 }
 
@@ -132,12 +135,20 @@ img {
     margin-top: 0rem;
   }
 
-  #about > h5 {
+  section > h2 {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    color: var(--color-black);
     text-align: center;
-    margin: auto;
-    color: var(--color-b-primary);
-    font-weight: bolder;
-    padding-top: 2px;
+    font-weight: 800;
+  }
+
+  section > h5 {
+    font-size: 0.75rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #666;
   }
 }
 

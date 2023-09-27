@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
 import "./about.css";
 import profile from "../../asset/profile.png";
-import { FaAward } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
-import { VscFolderLibrary } from "react-icons/vsc";
+// import { FaAward } from "react-icons/fa";
+// import { FiUsers } from "react-icons/fi";
+// import { VscFolderLibrary } from "react-icons/vsc";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { BsLinkedin } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 
 const About = () => {
   const { ref, inView } = useInView();
@@ -24,16 +29,19 @@ const About = () => {
     }
 
     if (!inView) {
-      animations.start({ x: "100vw" });
+      animations.start({ x: "-100vw" });
     }
     console.log("use effect hook, inView=", inView);
-  }, [inView, animations]);
+  }, [inView]);
   return (
     <motion.section id="about" ref={ref}>
       <h2>ABOUT ME</h2>
       <div className="text"></div>
 
-      <h5>Get to know me!</h5>
+      <h5>
+        Get to know me!, Here you will find more information about me and what I
+        do
+      </h5>
 
       <motion.div className="container about_container" animate={animations}>
         <div className="about_me">
@@ -61,14 +69,17 @@ const About = () => {
             </article>
           </div> */}
           <p>
-            Hello!, I am passionate self taught frontend web developer, I can
-            create user friendly and interactive website with the skills and
-            knowledge I have acquired so far, I bring a unique blend of
-            technical skills and creativity to the table. As a Frontend Web
-            Developer, I specialize in creating beautiful and functional
-            websites and web applications that are optimized for user
-            experience. My expertise lies in HTML, CSS, JavaScript, React and
-            other libraries and frameworks.
+            Hello!, I am passionate self taught{" "}
+            <strong>Frontend Developer</strong>, building the Front-end of
+            Websites and Web Applications that leads to the success of the
+            overall product. Check out some of my work in the{" "}
+            <strong>Projects</strong> section. I can create user friendly and
+            interactive website with the skills and knowledge I have acquired so
+            far, I bring a unique blend of technical skills and creativity to
+            the table. As a Frontend Web Developer, I specialize in creating
+            beautiful and functional websites and web applications that are
+            optimized for user experience. My expertise lies in HTML, CSS,
+            JavaScript, React and other libraries and frameworks.
             <br />
             <br />I am open to great job opportunities to collaborate, learn and
             grow as a developer and creator. If you're interested in my skills
@@ -76,7 +87,26 @@ const About = () => {
             hesitate to connect with me. Let's work together to bring your ideas
             to life and make a real impact!
           </p>
-
+          <div className="about_social">
+            <a
+              href="https://www.linkedin.com/in/aderibigbe-festus/"
+              target="_blank"
+            >
+              <BsLinkedin />
+            </a>
+            <a href="https://twitter.com/AdeHimself12" target="_blank">
+              <BsTwitter />
+            </a>
+            <a href="Mailto:festus891@yahoo.com" target="_blank">
+              <MdEmail />
+            </a>
+            <a href="https://github.com/Festus891" target="_blank">
+              <FaGithub />
+            </a>
+            <a href="https://wa.me/+2348143430827" target="_blank">
+              <IoLogoWhatsapp />
+            </a>
+          </div>
           <a href="#contact" className="btn btn-primary">
             Contact Me
           </a>

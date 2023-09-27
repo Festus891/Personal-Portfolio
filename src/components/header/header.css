@@ -2,10 +2,14 @@ header {
   height: 100vh;
   padding-top: 6rem;
   overflow: hidden;
-  background-image: url(../../asset/white1.jpg);
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url(../../asset/common-bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 4px 7px 10px 3px var(--color-white);
 }
 
 .header_container {
@@ -22,16 +26,11 @@ h1 {
   font-weight: bolder;
 }
 
-h2 {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.header_container h5 {
+/* .header_container h5 {
   font-size: 1.8rem;
   color: var(--color-b-primary);
   font-weight: bold;
-}
+} */
 
 /* CTA Button */
 

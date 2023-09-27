@@ -9,7 +9,7 @@
 }
 
 .about_me {
-  width: 100%;
+  width: 90%;
   aspect-ratio: 1/1;
   border-radius: 5rem;
   background: linear-gradient(
@@ -42,18 +42,13 @@
   gap: 1.5rem;
 }
 
-.about_card {
+/* .about_card {
   border: 1px solid var(--color-black);
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
   background: transparent;
-}
-
-.about_card h5 {
-  font-size: 0.95rem;
-  font-weight: bold;
-}
+} */
 
 .about_card small {
   font-size: 0.7rem;
@@ -62,11 +57,22 @@
 }
 
 .about_content p {
-  margin: 2rem;
+  margin: 1rem;
   text-align: left;
   line-height: 1.6rem;
+  word-spacing: 3px;
   color: var(--color-b-primary);
   font-weight: 500;
+}
+
+.about_social {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 /* ----------Medium Device design----- */
