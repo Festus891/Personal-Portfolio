@@ -27,7 +27,7 @@ const About = () => {
       animations.start({ x: "100vw" });
     }
     console.log("use effect hook, inView=", inView);
-  }, [inView]);
+  }, [inView, animations]);
   return (
     <motion.section id="about" ref={ref}>
       <h2>ABOUT ME</h2>
