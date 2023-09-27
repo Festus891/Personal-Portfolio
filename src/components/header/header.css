@@ -5,6 +5,7 @@ header {
   background-image: url(../../asset/white1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 4px 7px 10px 3px var(--color-white);
 }
 
 .header_container {
@@ -26,7 +27,7 @@ h2 {
   font-weight: bold;
 }
 
-h5 {
+.header_container h5 {
   font-size: 1.8rem;
   color: var(--color-b-primary);
   font-weight: bold;
@@ -71,33 +72,6 @@ h5 {
   padding: 18px;
 }
 
-/* .header_socials_left::after {
-  content: "";
-  width: 2px;
-  height: 2rem;
-  background-color: var(--color-b-primary);
-}
-.header_socials_left::before {
-  content: "";
-  width: 2px;
-  height: 2rem;
-  background-color: var(--color-b-primary);
-}
-
-.header_socials_right::after {
-  content: "";
-  width: 2px;
-  height: 2rem;
-  background-color: var(--color-b-primary);
-}
-
-.header_socials_right::before {
-  content: "";
-  width: 2px;
-  height: 2rem;
-  background-color: var(--color-b-primary);
-} */
-
 /* myself */
 
 .me {
@@ -117,6 +91,24 @@ h5 {
 @media screen and (max-width: 1024px) {
   header {
     height: 100vh;
+  }
+
+  .header_socials_left {
+    display: none;
+  }
+  .header_socials_right {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  .header_container h5 {
+    font-size: 1.3rem;
+    color: var(--color-b-primary);
+    font-weight: bold;
   }
 }
 

@@ -17,6 +17,7 @@
   --transition: all 400ms ease;
   --color-light: rgba(255, 255, 255, 0.6);
   --color-white: #fff;
+  --color-whitesmoke: whitesmoke;
   --color-purple: #694ac4;
   --color-black: black;
   --color-b-primary: #191818;
@@ -31,7 +32,7 @@ html {
 } */
 
 body {
-  background-color: var(--color-light);
+  background-color: var(--color-white);
   font-family: "Poppins", sans-serif;
   color: var(--color-black);
   line-height: 1.5;
@@ -43,37 +44,41 @@ body {
 /* -------General styling----- */
 
 .container {
-  width: var(--container-width-lg);
+  width: var(--container-width-ms);
   margin: 0 auto;
+  height: 80vh;
 }
 
 section {
-  margin-top: 5rem;
+  padding-top: 4rem;
   overflow: hidden;
+}
+
+.text {
+  width: 3rem;
+  height: 4.5px;
+  border-radius: 15px;
+  background-color: var(--color-purple);
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section > h2,
 section > h5 {
   text-align: center;
   color: var(--color-b-primary);
-  font-weight: bolder;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 
 section > h2 {
-  color: var(--color-white);
-  margin-bottom: 0.2rem;
+  font-size: 2.5rem;
 }
 
-section > h2::after {
-  content: "";
-  width: 10px;
-  height: 2rem;
-  background-color: var(--color-b-primary);
-}
-
-.text-light {
-  color: var(--color-b-primary);
+section > h5 {
+  font-size: 1rem;
 }
 
 a {
@@ -118,28 +123,13 @@ img {
 /* ----------Medium Device design----- */
 
 @media screen and (max-width: 1024px) {
-  body {
-    background-image: url(../src/asset/white4.jpg);
-    background-size: contain;
-    background-repeat: repeat;
-  }
-
   .container {
     width: var(--container-width-md);
+    height: 140vh;
   }
 
   section {
-    margin-top: 3rem;
-  }
-
-  section > .text {
-    align-items: center;
-    color: var(--color-white);
-    width: fit-content;
-    font-weight: bolder;
-    margin: auto;
-    padding-bottom: 0;
-    border-bottom: 2px solid var(--color-b-primary);
+    margin-top: 0rem;
   }
 
   #about > h5 {
@@ -147,7 +137,7 @@ img {
     margin: auto;
     color: var(--color-b-primary);
     font-weight: bolder;
-    padding-top: 10px;
+    padding-top: 2px;
   }
 }
 
