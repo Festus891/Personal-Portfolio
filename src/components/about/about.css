@@ -78,9 +78,12 @@
 /* ----------Medium Device design----- */
 
 @media screen and (max-width: 1024px) {
+  #about {
+    height: 150vh;
+  }
   .about_container {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1;
   }
 
   .about_me {

@@ -26,8 +26,8 @@ footer a {
 .footer_social {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  font-size: 1.2rem;
+  gap: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }

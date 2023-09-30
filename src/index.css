@@ -43,12 +43,12 @@ body {
 
 .container {
   width: var(--container-width-ms);
-  margin: 0 auto 3rem;
+  margin: 0 auto 0rem;
   height: 100vh;
 }
 
 section {
-  padding-top: 4rem;
+  padding-top: 3rem;
   overflow: hidden;
 }
 
@@ -107,14 +107,14 @@ a {
 }
 
 .btn-primary {
-  background: transparent;
-  color: var(--color-b-primary);
-  border: 2px solid var(--color-purple);
+  background: var(--color-purple);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 .btn-primary:hover {
-  background: var(--color-purple);
-  color: var(--color-white);
+  background: transparent;
+  color: var(--color-b-primary);
   border: 2px solid var(--color-purple);
 }
 
@@ -128,7 +128,6 @@ img {
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
-    height: 140vh;
   }
 
   section {
@@ -145,8 +144,9 @@ img {
   }
 
   section > h5 {
-    font-size: 0.75rem;
-    margin-bottom: 3rem;
+    font-size: 1rem;
+    margin: 0 2rem 3rem;
+
     text-align: center;
     color: #666;
   }
