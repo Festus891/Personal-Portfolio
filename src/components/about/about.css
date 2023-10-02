@@ -1,5 +1,8 @@
 #about {
   background-color: var(--color-whitesmoke);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .about_container {
   display: grid;
@@ -28,6 +31,10 @@
   transform: rotate(5deg);
   transition: var(--transition);
 }
+
+/* .about_me_image img {
+  border-radius: 12rem 12rem 0 0;
+} */
 
 .about_me_image:hover {
   transform: rotate(0);
@@ -92,7 +99,7 @@
   }
 
   .about_content p {
-    margin: 0rem 0 1.5rem;
+    margin: 1rem 0 1.5rem;
   }
 }
 

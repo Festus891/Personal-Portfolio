@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./about.css";
-import profile from "../../asset/profile.png";
+import profile from "../../asset/festus3.png";
 // import { FaAward } from "react-icons/fa";
 // import { FiUsers } from "react-icons/fi";
 // import { VscFolderLibrary } from "react-icons/vsc";
@@ -71,10 +71,10 @@ const About = () => {
             </article>
           </div> */}
           <p>
-            Hello!, I am passionate self taught{" "}
-            <strong>Frontend Developer</strong>, building the Front-end of
-            Websites and Web Applications that leads to the success of the
-            overall product. Check out some of my work in the{" "}
+            Hello!, I am <strong>Aderibigbe Festus</strong>, I am passionate
+            self taught <strong>Frontend Developer</strong>, building the
+            Front-end of Websites and Web Applications that leads to the success
+            of the overall product. Check out some of my work in the{" "}
             <strong>Projects</strong> section. I can create user friendly and
             interactive website with the skills and knowledge I have acquired so
             far, I bring a unique blend of technical skills and creativity to
