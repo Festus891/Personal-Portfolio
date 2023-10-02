@@ -88,8 +88,18 @@ small {
     gap: 1rem;
   }
 
+  #skills {
+    height: 190vh;
+  }
+
   .experience_container > div {
     width: 100%;
     padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #skills {
+    height: 150vh;
   }
 }

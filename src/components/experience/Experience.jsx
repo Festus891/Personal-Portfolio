@@ -25,7 +25,7 @@ const Experience = () => {
     }
     console.log("use effect hook, inView=", inView);
   }, [inView]);
-
+  console.log("skills in view");
   return (
     <motion.section id="skills" ref={ref}>
       <h2>MY SKILLS </h2>

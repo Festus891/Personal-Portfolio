@@ -102,6 +102,10 @@
     margin: 0 auto 0rem;
   }
 
+  #about {
+    height: 190vh;
+  }
+
   .about_cards {
     grid-template-columns: 1fr;
     /* for more than one card in the container */
@@ -112,4 +116,10 @@
   /* .about_content {
     text-align: center;
   } */
+}
+
+@media screen and (max-width: 450px) {
+  #about {
+    height: 150vh;
+  }
 }

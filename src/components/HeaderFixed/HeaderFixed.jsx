@@ -57,7 +57,7 @@ const HeaderFixed = () => {
           <a
             href="#skills"
             onClick={() => setActive("#experience")}
-            className={active === "#eskills" ? "active" : ""}
+            className={active === "#skills" ? "active" : ""}
           >
             <BiBook className="list_icon" />
             SKILLS

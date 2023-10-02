@@ -29,7 +29,7 @@ const Porfolio = () => {
     }
     console.log("use effect hook, inView=", inView);
   }, [inView]);
-
+  console.log("portfolio in view");
   return (
     <motion.section id="portfolio" ref={ref}>
       <h2>Portfolio</h2>

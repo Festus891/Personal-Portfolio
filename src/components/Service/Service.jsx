@@ -25,7 +25,7 @@ const Service = () => {
     }
     console.log("use effect hook, inView=", inView);
   }, [inView]);
-
+  console.log("service in view");
   return (
     <motion.section id="service" ref={ref}>
       <h2>Service</h2>

@@ -33,6 +33,8 @@ const About = () => {
     }
     console.log("use effect hook, inView=", inView);
   }, [inView]);
+
+  console.log("about in view");
   return (
     <motion.section id="about" ref={ref}>
       <h2>ABOUT ME</h2>

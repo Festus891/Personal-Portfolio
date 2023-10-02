@@ -61,4 +61,14 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
+  #portfolio {
+    height: 250vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #portfolio {
+    height: 160vh;
+  }
 }

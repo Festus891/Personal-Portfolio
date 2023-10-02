@@ -28,7 +28,6 @@ const Contact = () => {
     if (!inView) {
       animations.start({ x: "-100vw" });
     }
-    console.log("use effect hook, inView=", inView);
   }, [inView]);
 
   const form = useRef();
@@ -53,7 +52,7 @@ const Contact = () => {
       );
     e.target.reset();
   };
-
+  console.log("Contact in view");
   return (
     <motion.section id="contact" ref={ref}>
       <h2>Contact</h2>

@@ -86,4 +86,14 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  #service {
+    height: 190vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #service {
+    height: 150vh;
+  }
 }

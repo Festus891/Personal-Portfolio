@@ -29,6 +29,10 @@ div > a > img {
   padding: 0.9rem 2rem;
 }
 
+.active {
+  color: var(--color-purple);
+}
+
 ul > li > a {
   color: var(--color-black);
   padding: 0.9rem 1.5rem;

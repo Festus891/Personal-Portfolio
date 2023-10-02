@@ -1,5 +1,5 @@
 header {
-  height: 100vh;
+  height: 120vh;
   padding-top: 6rem;
   overflow: hidden;
   background: linear-gradient(
@@ -24,6 +24,7 @@ header {
 h1 {
   font-size: 2.9rem;
   font-weight: bolder;
+  padding-top: 2.5rem;
 }
 
 /* .header_container h5 {
@@ -49,7 +50,7 @@ h1 {
   align-items: center;
   position: absolute;
   left: 0;
-  bottom: 7rem;
+  bottom: 12rem;
   font-size: 1.9rem;
   border: 10px;
   background: var(--color-white);
@@ -64,7 +65,7 @@ h1 {
   align-items: center;
   position: absolute;
   right: 0;
-  bottom: 7rem;
+  bottom: 12rem;
   background: var(--color-white);
   font-size: 1.9rem;
   width: 58px;
@@ -89,7 +90,7 @@ h1 {
 /* ----Media Queries (Medium Device) -----*/
 @media screen and (max-width: 1024px) {
   header {
-    height: 100vh;
+    height: 120vh;
   }
 
   .header_socials_left {
@@ -114,7 +115,7 @@ h1 {
 /* ----Media Queries (Small Device) -----*/
 @media screen and (max-width: 600px) {
   header {
-    height: 100vh;
+    height: 120vh;
   }
 
   .header_socials_left {
@@ -150,7 +151,7 @@ h1 {
 
 @media screen and (max-width: 450px) {
   header {
-    height: 70vh;
+    height: 85vh;
   }
   .header_socials_left {
     bottom: 15rem;
