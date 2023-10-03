@@ -1,7 +1,3 @@
-#portfolio {
-  height: 200vh;
-}
-
 .portfolio_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -50,25 +46,11 @@
     padding-bottom: 0;
     border-bottom: 2px solid var(--color-black);
   }
-
-  .portfolio_text::before {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 600px) {
   .portfolio_container {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-
-  #portfolio {
-    height: 250vh;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  #portfolio {
-    height: 160vh;
   }
 }

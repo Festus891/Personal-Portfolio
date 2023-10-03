@@ -1,6 +1,6 @@
 header {
-  height: 120vh;
   padding-top: 6rem;
+  padding-bottom: 3rem;
   overflow: hidden;
   background: linear-gradient(
       to right,
@@ -94,10 +94,6 @@ h1 {
 
 /* ----Media Queries (Medium Device) -----*/
 @media screen and (max-width: 1024px) {
-  header {
-    height: 120vh;
-  }
-
   .header_socials_left {
     display: none;
   }
@@ -119,10 +115,6 @@ h1 {
 
 /* ----Media Queries (Small Device) -----*/
 @media screen and (max-width: 600px) {
-  header {
-    height: 120vh;
-  }
-
   .header_socials_left {
     display: none;
   }
@@ -151,15 +143,5 @@ h1 {
     font-size: 0.8rem;
     color: var(--color-b-primary);
     font-weight: bold;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  header {
-    height: 85vh;
-  }
-  .header_socials_left {
-    bottom: 15rem;
-    left: -0.8rem;
   }
 }

@@ -43,8 +43,7 @@ body {
 
 .container {
   width: var(--container-width-ms);
-  margin: 0 auto 0rem;
-  height: 100vh;
+  margin: 0rem auto 2rem;
 }
 
 section {
@@ -161,3 +160,13 @@ img {
     margin-bottom: 1rem;
   }
 }
+
+/* @media (min-width: 320px) and (max-width: 1920px) {
+  header,
+  #about,
+  #skills,
+  #portfolio,
+  #service {
+    min-height: 100vh;
+  }
+} */

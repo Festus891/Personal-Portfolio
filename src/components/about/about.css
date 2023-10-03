@@ -85,12 +85,9 @@
 /* ----------Medium Device design----- */
 
 @media screen and (max-width: 1024px) {
-  #about {
-    height: 150vh;
-  }
   .about_container {
     grid-template-columns: 1fr;
-    gap: 1;
+    gap: 1rem;
   }
 
   .about_me {
@@ -109,10 +106,6 @@
     margin: 0 auto 0rem;
   }
 
-  #about {
-    height: 190vh;
-  }
-
   .about_cards {
     grid-template-columns: 1fr;
     /* for more than one card in the container */
@@ -123,10 +116,4 @@
   /* .about_content {
     text-align: center;
   } */
-}
-
-@media screen and (max-width: 450px) {
-  #about {
-    height: 150vh;
-  }
 }
