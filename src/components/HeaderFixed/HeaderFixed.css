@@ -54,7 +54,7 @@ ul > li > a:hover {
 }
 
 /* ----Media Queries (Medium Device) -----*/
-@media screen and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   .header_fixed_container {
     z-index: 99;
     width: 100%;
@@ -73,14 +73,14 @@ ul > li > a:hover {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     border-radius: 13px;
     backdrop-filter: blur(4px);
-    width: 100%;
+    width: 50%;
     height: 100vh;
     position: absolute;
     top: 0;
     left: -120%;
     align-items: center;
     padding: 50px 0 10px 0;
-    margin: 0 50px 0 290px;
+    margin: 0 0px 0 380px;
     z-index: -1;
     transition: all 0.3s ease-in-out;
   }
