@@ -71,7 +71,7 @@ const About = () => {
             </article>
           </div> */}
           <p>
-            Hello!, I am <strong>Aderibigbe Festus</strong>, I am passionate
+            Hello!, I am <strong>Aderibigbe Festus</strong>, I am a passionate
             self taught <strong>Frontend Developer</strong>, building the
             Front-end of Websites and Web Applications that leads to the success
             of the overall product. Check out some of my work in the{" "}
