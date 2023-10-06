@@ -49,12 +49,14 @@ const Experience = () => {
 
             <div className="experience_details">REACT</div>
 
-            <div className="experience_details">Tailwind</div>
+            <div className="experience_details">Tailwind css</div>
 
             <div className="experience_details">Bootstrap</div>
 
             <div className="experience_details">Github</div>
+            <div className="experience_details">GitLab</div>
 
+            <div className="experience_details">Redux</div>
             <div className="experience_details">Version Control/Git</div>
 
             <div className="experience_details">Figma</div>

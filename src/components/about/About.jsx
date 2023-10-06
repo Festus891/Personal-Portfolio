@@ -71,23 +71,25 @@ const About = () => {
             </article>
           </div> */}
           <p>
-            Hello!, I am <strong>Aderibigbe Festus</strong>, I am a passionate
-            self taught <strong>Frontend Developer</strong>, building the
-            Front-end of Websites and Web Applications that leads to the success
+            Hello!, I am <strong>Aderibigbe Festus</strong>. I am a passionate,
+            self-taught <strong>frontend developer</strong> who builds the
+            front-end of websites and web applications that leads to the success
             of the overall product. Check out some of my work in the{" "}
-            <strong>Projects</strong> section. I can create user friendly and
-            interactive website with the skills and knowledge I have acquired so
-            far, I bring a unique blend of technical skills and creativity to
-            the table. As a Frontend Web Developer, I specialize in creating
-            beautiful and functional websites and web applications that are
-            optimized for user experience. My expertise lies in HTML, CSS,
-            JavaScript, React and other libraries and frameworks.
-            <br />
-            <br />I am open to great job opportunities to collaborate, learn and
-            grow as a developer and creator. If you're interested in my skills
-            and expertise and got a great opportunity for me then please don't
-            hesitate to connect with me. Let's work together to bring your ideas
-            to life and make a real impact!
+            <a href="#portfolio">
+              <strong>Projects</strong>
+            </a>{" "}
+            section. I can create a user-friendly and interactive website with
+            the skills and knowledge I have acquired so far. I bring a unique
+            blend of technical skills and creativity to the table. As a frontend
+            web developer, I specialize in creating beautiful and functional
+            websites and web applications that are optimized for the user
+            experience. My expertise lies in HTML, CSS, JavaScript, React, and
+            other libraries and frameworks.
+            <br /> <br />I am open to great job opportunities to collaborate,
+            learn, and grow as a developer and creator. If you're interested in
+            my skills and expertise and have a great opportunity for me, then
+            please don't hesitate to connect with me. Let's work together to
+            bring your ideas to life and make a real impact!
           </p>
           <div className="about_social">
             <a

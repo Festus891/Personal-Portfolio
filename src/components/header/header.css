@@ -76,7 +76,8 @@ h1 {
 /* myself */
 
 .me {
-  background: linear-gradient(var(--color-purple), transparent);
+  background: linear-gradient(var(--color-b-primary
+  ), transparent);
   width: 22rem;
   height: 18rem;
   justify-content: center;

@@ -42,16 +42,16 @@ const Service = () => {
             <li>
               <BiCheck className="service_list-icon" />
               <p>
-                I develope websites from scratch and also ensure a responsive,
-                well-designed, and functional user interface is implemented
+                Development of websites from scratch ensuring responsive and
+                functional user interface is implemented.
               </p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
               <p>
-                I Ensuring that the website I develope function consistently and
-                correctly across different web browsers, including Chrome,
-                Firefox, Safari, and Edge.
+                Ensuring websites developed function consistently and correctly
+                across different web browsers including chrome, safari, Firefox
+                and Edge.
               </p>
             </li>
             <li>
@@ -73,24 +73,21 @@ const Service = () => {
             <li>
               <BiCheck className="service_list-icon" />
               <p>
-                I Collaborating with backend developers to integrate frontend
+                Collaborating with backend developers to integrate frontend
                 components with server-side functionality and APIs.
               </p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
               <p>
-                I am also into designing of logos, flyers, Business card,
-                Stationary, Banner, invitation, letterhead design with one of
-                the popular tools use for designing
+                Designing of logos, flyers, Business card, Stationary, Banner,
+                invitation, letterhead design with one of the popular tools use
+                for designing
               </p>
             </li>
             <li>
               <BiCheck className="service_list-icon" />
-              <p>
-                I am into designing of Advertisment flyers for social media
-                advert
-              </p>
+              <p>Designing of Advertisment flyers for social media advert</p>
             </li>
           </ul>
         </motion.article>
