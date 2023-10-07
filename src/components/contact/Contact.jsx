@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
+import { GiCancel } from "react-icons/gi";
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 import { motion, useAnimation } from "framer-motion";
@@ -12,6 +13,8 @@ import { useEffect } from "react";
 const Contact = () => {
   const { ref, inView } = useInView();
   const animations = useAnimation();
+
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     if (inView) {
@@ -51,6 +54,11 @@ const Contact = () => {
         }
       );
     e.target.reset();
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
   console.log("Contact in view");
   return (
@@ -108,7 +116,7 @@ const Contact = () => {
               Name
             </label>
             <input
-              required=""
+              required
               placeholder="Enter Your Full Name"
               type="text"
               className="contact__form-input"
@@ -121,7 +129,7 @@ const Contact = () => {
               Email
             </label>
             <input
-              required=""
+              required
               placeholder="Enter Your Email"
               type="email"
               className="contact__form-input"
@@ -134,7 +142,7 @@ const Contact = () => {
               Subject
             </label>
             <input
-              required=""
+              required
               placeholder="Enter Your subject"
               type="text"
               className="contact__form-input"
@@ -147,7 +155,7 @@ const Contact = () => {
               Message
             </label>
             <textarea
-              required=""
+              required
               cols="30"
               rows="10"
               className="contact__form-input"
@@ -159,6 +167,13 @@ const Contact = () => {
           <button type="submit" className="btn btn-primary contact__btn">
             Send Message
           </button>
+          {showPopup && (
+            <div className="popup">
+              <p>Message Sent successfully!</p>
+              <p>You will receive a reply shortly</p>
+              <button onClick={closePopup}>close</button>
+            </div>
+          )}
         </motion.form>
       </motion.div>
     </motion.section>
