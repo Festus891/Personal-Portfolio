@@ -1,10 +1,11 @@
 import React from "react";
-import "./Experience.css";
+import "./Skills.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import data from "./SkillsData";
 
-const Experience = () => {
+const Skills = () => {
   const { ref, inView } = useInView();
   const animations = useAnimation();
 
@@ -41,33 +42,13 @@ const Experience = () => {
       >
         <motion.div className="experience_frontend">
           <div className="experience_content">
-            <div className="experience_details">HTML</div>
-
-            <div className="experience_details">CSS</div>
-
-            <div className="experience_details">JAVACRIPT</div>
-
-            <div className="experience_details">REACT</div>
-
-            <div className="experience_details">Tailwind css</div>
-
-            <div className="experience_details">Bootstrap</div>
-
-            <div className="experience_details">Github</div>
-            <div className="experience_details">GitLab</div>
-
-            <div className="experience_details">Redux</div>
-            <div className="experience_details">Version Control/Git</div>
-
-            <div className="experience_details">Figma</div>
-
-            <div className="experience_details">Interactive Design</div>
-
-            <div className="experience_details">Responsive Design</div>
-
-            <div className="experience_details">Graphics designing</div>
-
-            <div className="experience_details">Corel Draw</div>
+            {data.map(({ id, image, skill }) => {
+              return (
+                <div key={id} className="experience_details">
+                  <img src={image} alt="icon" /> {skill}
+                </div>
+              );
+            })}
           </div>
         </motion.div>
       </motion.div>
@@ -75,4 +56,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Skills;
