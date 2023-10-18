@@ -64,7 +64,7 @@ const data = [
   {
     id: 10,
     image: gitlab,
-    skill: "GITHUB",
+    skill: "GITLAB",
   },
   {
     id: 11,
