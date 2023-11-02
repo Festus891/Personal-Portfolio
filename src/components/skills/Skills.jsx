@@ -45,7 +45,7 @@ const Skills = () => {
             {data.map(({ id, image, skill }) => {
               return (
                 <div key={id} className="experience_details">
-                  <img src={image} alt="icon" /> {skill}
+                  <img src={image} alt="icon" /> <p>{skill}</p>
                 </div>
               );
             })}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./HeaderFixed.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
@@ -9,10 +9,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { GiCancel } from "react-icons/gi";
 import NewLogo from "../../asset/logo.png";
 
-import { useState } from "react";
-
 const HeaderFixed = () => {
   const [active, setActive] = useState("#");
+  const [show, handleShow] = useState(false);
 
   const [clicked, setClick] = useState(false);
 
@@ -20,8 +19,21 @@ const HeaderFixed = () => {
     setClick(!clicked);
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        handleShow(true);
+      } else {
+        handleShow(false);
+      }
+    });
+    return () => {
+      window.removeEventListener("scroll");
+    };
+  }, []);
+
   return (
-    <div className="header_fixed_container">
+    <div className={`header_fixed_container ${show && "nav_background"}`}>
       <div className="header_logo">
         <a href="#">
           <img src={NewLogo} alt="logo" />

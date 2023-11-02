@@ -15,9 +15,12 @@ div > a > img {
   left: 50px;
   z-index: 99;
   border-radius: 3rem;
-  background-color: var(--color-white);
   /* filter: drop-shadow(12px 8px 4px grey); */
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+}
+
+.nav_background {
+  background-color: var(--color-white);
 }
 
 .header_link {
