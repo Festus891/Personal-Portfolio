@@ -36,20 +36,11 @@ const About = () => {
 
   console.log("about in view");
   return (
-    <motion.section id="about" ref={ref}>
-      <h2>ABOUT ME</h2>
-      <div className="text"></div>
-
-      <h5>
-        Get to know me!, Here you will find more information about me and what I
-        do
-      </h5>
-
-      <motion.div className="container about_container" animate={animations}>
+    <motion.section id="about" ref={ref} className="container">
+      <motion.div className="about_container container" animate={animations}>
         <div className="about_me">
-          <div className="about_me_image">
-            <img src={profile} alt="profile" />
-          </div>
+          <h4>About Me</h4>
+          <p>Get to know me</p>
         </div>
 
         <motion.div className="about_content">

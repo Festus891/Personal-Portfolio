@@ -63,49 +63,36 @@ const Contact = () => {
   console.log("Contact in view");
   return (
     <motion.section id="contact" ref={ref}>
-      <h2>Contact</h2>
-      <div className="text"></div>
-      <h5>
-        Feel free to Contact me through my social handles or by submitting the
-        form below and I will get back to you as soon as possible
-      </h5>
+      <div className="contact_header">
+        <h2>Get In Touch!</h2>
+        <p>
+          I’m currently open to joining a new team of creative developers. Also,
+          if you have a question, proposal, idea or just want to say hi, Go
+          ahead.
+        </p>
+      </div>
 
       <motion.div className="container contact_container" animate={animations}>
         <motion.div className="contact_options">
           <article className="contact_option">
             <MdOutlineEmail className="contact_option-icon" />
-            <h4>Email</h4>
-            <h5>festus891@yahoo.com</h5>
-            <a
-              className="btn"
-              href="mailto:festus891@yahoo.com"
-              target="_blank"
-            >
-              Send Message
+            <a href="mailto:festus4537@gmail.com" target="_blank">
+              festus4537@gmail.com
             </a>
           </article>
           <article className="contact_option">
             <BsLinkedin className="contact_option-icon" />
-            <h4>LinkedIn</h4>
-            <h5>Aderibigbe festus</h5>
             <a
-              className="btn"
-              href="https://www.linkedin.com/in/aderibigbe-festus/detail/recent-activity/shares/"
+              href="https://www.linkedin.com/in/aderibigbe-festus"
               target="_blank"
             >
-              Send Message
+              Aderibigbe festus
             </a>
           </article>
           <article className="contact_option">
             <BsWhatsapp className="contact_option-icon" />
-            <h4>Whatsapp</h4>
-            <h5>+2348143430827</h5>
-            <a
-              className="btn"
-              href="https://wa.me/+2348143430827"
-              target="_blank"
-            >
-              Send Message
+            <a href="https://wa.me/+2348143430827" target="_blank">
+              +2348143430827
             </a>
           </article>
         </motion.div>
@@ -156,8 +143,8 @@ const Contact = () => {
             </label>
             <textarea
               required
-              cols="30"
-              rows="10"
+              // cols="30"
+              // rows="10"
               className="contact__form-input"
               placeholder="Enter Your Message"
               name="message"
@@ -171,7 +158,9 @@ const Contact = () => {
             <div className="popup">
               <p>Message Sent successfully!</p>
               <p>You will receive a reply shortly</p>
-              <button onClick={closePopup}>close</button>
+              <button className="close" onClick={closePopup}>
+                close
+              </button>
             </div>
           )}
         </motion.form>

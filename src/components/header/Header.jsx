@@ -9,18 +9,19 @@ const Header = () => {
     <header>
       <div className="header_container">
         <h1>Hello!, I'm Aderibigbe Festus</h1>
-        <h2>
-          I'm a <strong>FRONTEND DEVELOPER</strong>
-        </h2>
+        <h4>
+          I'm a <strong>FRONTEND DEVELOPER</strong> passionate about building
+          accessible and user friendly websites.
+        </h4>
         <div className="me">
           <img src={myself} alt="profile" />
         </div>
 
-        <CTA />
+        {/* <CTA /> */}
 
         <HeaderSociial />
-        <HeaderSociial />
       </div>
+      <div className="horizontal-line"></div>
     </header>
   );
 };

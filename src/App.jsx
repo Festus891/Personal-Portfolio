@@ -14,9 +14,9 @@ const App = () => {
       <HeaderFixed />
       <Header />
       <About />
-      <Skills />
-      <Service />
       <Portfolio />
+      <Skills />
+      {/* <Service /> */}
       <Contact />
       <Footer />
     </>

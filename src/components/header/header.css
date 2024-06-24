@@ -2,15 +2,33 @@ header {
   padding-top: 6rem;
   padding-bottom: 3rem;
   overflow: hidden;
-  background: linear-gradient(
+  /* background: linear-gradient(
       to right,
       rgba(245, 245, 245, 0.8),
       rgba(245, 245, 245, 0.8)
     ),
-    url(../../asset/common-bg.svg);
+    url(../../asset/common-bg.svg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.horizontal-line {
+  margin-top: 5rem;
+  width: 2px;
+  background-color: var(--color-white);
+  margin: auto;
+  height: 4rem;
+  animation: lineup 10s forwards;
+}
+
+@keyframes lineup {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 20rem;
+  }
 }
 
 .header_container {
@@ -20,12 +38,14 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 4rem;
 }
 
 h1 {
   font-size: 2.9rem;
   font-weight: bolder;
   padding-top: 2.5rem;
+  font-family: "Noto Serif JP", sans-serif;
 }
 
 /* .header_container h5 {
@@ -49,14 +69,26 @@ h1 {
   flex-direction: column;
   gap: 0.8rem;
   align-items: center;
-  position: absolute;
-  left: 0;
+  /* position: absolute; */
+  position: fixed;
+  top: 15rem;
+  left: 2rem;
   bottom: 6rem;
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   border: 10px;
-  background: var(--color-white);
+  height: 100%;
+  /* background: var(--color-white); */
   width: 58px;
   padding: 18px;
+  color: #b9b9b9;
+}
+
+/*----- Social styling ----*/
+.header_socials_left::after {
+  content: "";
+  background: #fff;
+  width: 2px;
+  height: 50rem;
 }
 
 .header_socials_right {
@@ -64,20 +96,37 @@ h1 {
   flex-direction: column;
   gap: 0.8rem;
   align-items: center;
-  position: absolute;
-  right: 0;
+  /* position: absolute; */
+  position: fixed;
+  top: 23rem;
+  right: 2rem;
   bottom: 6rem;
-  background: var(--color-white);
-  font-size: 1.9rem;
+  font-size: 1.3rem;
+  border: 10px;
+  height: 100%;
+  /* background: var(--color-white); */
   width: 58px;
   padding: 18px;
 }
 
+.header_socials_right a {
+  transform: rotate(-90deg);
+  color: #b9b9b9;
+  width: 20rem;
+  margin-bottom: 3rem;
+}
+
+/*----- Social styling ----*/
+.header_socials_right::after {
+  content: "";
+  background: #fff;
+  width: 2px;
+  height: 50rem;
+}
 /* myself */
 
 .me {
-  background: linear-gradient(var(--color-b-primary
-  ), transparent);
+  background: linear-gradient(var(--color-b-primary), transparent);
   width: 22rem;
   height: 18rem;
   justify-content: center;

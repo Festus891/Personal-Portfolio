@@ -28,18 +28,15 @@ const Skills = () => {
   }, [inView]);
   console.log("skills in view");
   return (
-    <motion.section id="skills" ref={ref}>
-      <h2>MY SKILLS </h2>
-      <div className="text"></div>
-      <h5>
-        Here you get to know my current skills mostly in terms of programming
-        and technology
-      </h5>
-
+    <motion.section className="container " id="skills" ref={ref}>
       <motion.div
         className="container experience_container"
         animate={animations}
       >
+        <div className="skills_heading">
+          <h2>MY SKILLS </h2>
+          <p>The tools i work with</p>
+        </div>
         <motion.div className="experience_frontend">
           <div className="experience_content">
             {data.map(({ id, image, skill }) => {

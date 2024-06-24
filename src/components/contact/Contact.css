@@ -1,59 +1,56 @@
-#contact {
-  background: linear-gradient(
-      to right,
-      rgba(245, 245, 245, 0.8),
-      rgba(245, 245, 245, 0.8)
-    ),
-    url(../../asset/common-bg.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .container.contact_container {
   width: 70%;
   display: grid;
-  grid-template-columns: 35% 50%;
+  grid-template-columns: 30% 65%;
   gap: 12%;
-  background-color: var(--color-white);
-  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
-  padding: 3rem;
+  /* padding: 1rem; */
   height: 100%;
+}
+
+.contact_header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact_header h2 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.contact_header p {
+  font-size: 0.7rem;
 }
 
 .contact_options {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
 }
 
 .contact_option {
-  background: #f0f0f0;
-  padding: 1.2rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row;
+  padding: 0.2rem;
   border-radius: 1.2rem;
-  text-align: center;
-  border: 1px solid #ebebeb;
+  text-align: left;
+  /* border: 1px solid #ebebeb; */
   transition: var(--transition);
   color: var(--color-b-primary);
 }
 
-.contact_option:hover {
-  background: var(--color-white);
-  border: 2px solid #f0f0f0;
-}
-
 .contact_option-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--color-b-primary);
+  /* font-size: 1.5rem; */
+  /* margin-bottom: 0.5rem; */
+  /* font-weight: 600; */
+  /* color: var(--color-b-primary); */
 }
 
-.contact_option a {
+/* .contact_option a {
   margin-top: 0.7rem;
   display: inline-block;
   font-size: 0.8rem;
   font-weight: bold;
-}
+} */
 
 /* =====Form Styling===== */
 
@@ -75,40 +72,44 @@ form {
   text-align: left;
 }
 
+.contact__form-field {
+  border-bottom: 1px solid #fff;
+  padding-top: 3rem;
+}
+
 .contact__form-input {
-  color: #333;
+  color: #fff;
   padding: 2rem;
   width: 100%;
-  border: 1px solid #ebebeb;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0;
-  background: #f0f0f0;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 500;
+  outline: none;
+  background: none;
 }
 
 input {
-  height: 20px;
+  height: 10px;
 }
 
 .popup {
-  background: #f0f0f0;
   text-align: center;
   font-weight: 600;
-  color: var(--color-b-primary);
+  color: var(--color-white);
   padding: 2rem 0;
 }
-.popup button {
-  background: var(--color-purple);
-  width: 50%;
-  height: max-content;
-  padding: auto;
-  margin: auto;
+.popup .close {
+  border: 1px solid #fff;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 40%;
   text-align: center;
   font-size: 1.4rem;
   color: var(--color-white);
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 25px;
+  background: none;
 }
 
 /* RESPONSIVENESS FOR DEVICE */

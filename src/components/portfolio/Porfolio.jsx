@@ -1,8 +1,6 @@
 import React from "react";
 import "./Portfolio.css";
-import img1 from "../../asset/ImageGetter.jpg";
-import img2 from "../../asset/CountDownApp.jpg";
-import img3 from "../../asset/Cloned-Whatsapp.jpg";
+
 import data from "./data";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -31,32 +29,39 @@ const Porfolio = () => {
   }, [inView]);
   console.log("portfolio in view");
   return (
-    <motion.section id="portfolio" ref={ref}>
-      <h2>Portfolio</h2>
-      <div className="text"></div>
-      <h5>
-        Here you will find some of the personal and clients projects that I
-        created with each project containing its own case study
-      </h5>
-
+    <motion.section id="portfolio " className="container" ref={ref}>
       <motion.div
         className="container portfolio_container"
         animate={animations}
       >
-        {data.map(({ id, image, title, github, demo }) => {
+        <div className="portfolio_head">
+          <h2>My Projects</h2>
+          <p>
+            Here are some of the selected projects that showcase my passion for
+            front-end development
+          </p>
+        </div>
+
+        {data.map(({ id, image, title, github, demo, case_study, stack }) => {
           return (
             <article key={id} className="portfolio_item">
               <div className="portfolio_item_image">
                 <img src={image} alt="project1" />
               </div>
-              <h3>{title}</h3>
               <div className="portfolio_item-cta">
-                <a href={github} className="btn">
-                  GitHub
-                </a>
-                <a href={demo} className="btn btn-primary" target="_blank">
-                  Live Demo
-                </a>
+                <h3>
+                  <a href={demo} target="_blank">
+                    {title}
+                  </a>
+                </h3>
+                <p>{case_study}</p>
+                <h6>Stacks: {stack}</h6>
+                <div className="portfolio_item-cta_link">
+                  <a href={github}>GitHub</a>
+                  <a href={demo} target="_blank">
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </article>
           );
