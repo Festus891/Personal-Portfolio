@@ -4,28 +4,22 @@
   gap: 4%;
   margin-top: 0;
   background-color: #1f1f1f;
-  padding: 3rem;
-}
-
-.about_me {
-  text-align: left;
-  padding-top: 1rem;
+  padding: 2rem;
 }
 
 .about_me h4 {
-  font-size: 2rem;
-}
-.about_me p {
-  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Noto Serif JP", sans-serif;
+  color: var(--color-white);
 }
 
-.about_cards {
+/* .about_cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  /* for more than one cards in the container(three cards) */
-  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-}
+} */
 
 /* .about_card {
   border: 1px solid var(--color-black);
@@ -35,18 +29,18 @@
   background: transparent;
 } */
 
-.about_card small {
-  font-size: 0.7rem;
-  color: var(--color-b-primary);
-  font-weight: bold;
-}
-
 .about_content p {
   text-align: left;
-  line-height: 1.6rem;
+  line-height: 2rem;
   word-spacing: 3px;
-  color: var(--color-white);
+  color: var(--color-b-primary);
   font-weight: 500;
+  padding-bottom: 2rem;
+}
+
+.about_content .more_about {
+  font-weight: bolder;
+  color: #d3e97a;
 }
 
 .about_social {
@@ -63,8 +57,13 @@
 
 @media screen and (max-width: 1024px) {
   .about_container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 1rem;
+  }
+
+  .about_me h4 {
+    text-align: left;
+    font-size: 2rem;
   }
 
   .about_me {
@@ -73,14 +72,28 @@
   }
 
   .about_content p {
-    margin: 1rem 0 1.5rem;
+    /* margin: 1rem 0 1.5rem; */
+    text-align: left;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .about_me {
-    width: 65%;
-    margin: 0 auto 0rem;
+  .about_container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .about_content {
+    width: 100%;
+  }
+
+  .about_content p {
+    text-align: left;
+    line-height: 1.8rem;
+    word-spacing: 2px;
+    color: var(--color-b-primary);
+    font-weight: 500;
+    padding-bottom: 1.5rem;
   }
 
   .about_cards {

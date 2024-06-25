@@ -6,11 +6,7 @@ import profile from "../../asset/festus3.png";
 // import { VscFolderLibrary } from "react-icons/vsc";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { BsLinkedin } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
-import { BsTwitter } from "react-icons/bs";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const { ref, inView } = useInView();
@@ -31,16 +27,16 @@ const About = () => {
     if (!inView) {
       animations.start({ x: "-100vw" });
     }
-    console.log("use effect hook, inView=", inView);
   }, [inView]);
 
   console.log("about in view");
   return (
     <motion.section id="about" ref={ref} className="container">
-      <motion.div className="about_container container" animate={animations}>
+      <motion.div
+        className="about_container container" /*animate={animations}*/
+      >
         <div className="about_me">
           <h4>About Me</h4>
-          <p>Get to know me</p>
         </div>
 
         <motion.div className="about_content">
@@ -61,50 +57,24 @@ const About = () => {
               <small>80+ project</small>
             </article>
           </div> */}
+
           <p>
-            Hello!, I am <strong>Aderibigbe Festus</strong>. I am a passionate,
-            self-taught <strong>frontend developer</strong> who builds the
-            front-end of websites and web applications that leads to the success
-            of the overall product. Check out some of my work in the{" "}
-            <a href="#portfolio">
-              <strong>Projects</strong>
-            </a>{" "}
-            section. I can create a user-friendly and interactive website with
-            the skills and knowledge I have acquired so far. I bring a unique
-            blend of technical skills and creativity to the table. As a frontend
-            web developer, I specialize in creating beautiful and functional
-            websites and web applications that are optimized for the user
-            experience. My expertise lies in HTML, CSS, JavaScript, React, and
-            other libraries and frameworks.
+            I'm Festus. I'm a Frontend web developer, I specialize in
+            transforming design concepts into clean and user-friendly
+            interfaces, whether it's crafting responsive websites or interactive
+            functional websites . With a keen eye for detail and a passion for
+            creativity, I strive to deliver engaging, visually appealing, and
+            functional solutions that exceed expectations .
             <br /> <br />I am open to great job opportunities to collaborate,
             learn, and grow as a developer and creator. If you're interested in
             my skills and expertise and have a great opportunity for me, then
             please don't hesitate to connect with me. Let's work together to
             bring your ideas to life and make a real impact!
           </p>
-          <div className="about_social">
-            <a
-              href="https://www.linkedin.com/in/aderibigbe-festus/"
-              target="_blank"
-            >
-              <BsLinkedin />
-            </a>
-            <a href="https://twitter.com/AdeHimself12" target="_blank">
-              <BsTwitter />
-            </a>
-            <a href="Mailto:festus891@yahoo.com" target="_blank">
-              <MdEmail />
-            </a>
-            <a href="https://github.com/Festus891" target="_blank">
-              <FaGithub />
-            </a>
-            <a href="https://wa.me/+2348143430827" target="_blank">
-              <IoLogoWhatsapp />
-            </a>
-          </div>
-          <a href="#contact" className="btn btn-primary">
-            Contact Me
-          </a>
+
+          <Link to="about" className="more_about">
+            MORE ABOUT ME
+          </Link>
         </motion.div>
       </motion.div>
     </motion.section>

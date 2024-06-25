@@ -31,11 +31,11 @@ const Skills = () => {
     <motion.section className="container " id="skills" ref={ref}>
       <motion.div
         className="container experience_container"
-        animate={animations}
+        /*animate={animations}*/
       >
         <div className="skills_heading">
           <h2>MY SKILLS </h2>
-          <p>The tools i work with</p>
+          <p>The tools I work with</p>
         </div>
         <motion.div className="experience_frontend">
           <div className="experience_content">

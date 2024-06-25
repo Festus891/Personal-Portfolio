@@ -8,11 +8,11 @@ const Header = () => {
   return (
     <header>
       <div className="header_container">
-        <h1>Hello!, I'm Aderibigbe Festus</h1>
-        <h4>
+        <h1>Hi!, I am Aderibigbe Festus</h1>
+        <p>
           I'm a <strong>FRONTEND DEVELOPER</strong> passionate about building
           accessible and user friendly websites.
-        </h4>
+        </p>
         <div className="me">
           <img src={myself} alt="profile" />
         </div>

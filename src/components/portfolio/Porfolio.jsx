@@ -1,10 +1,13 @@
 import React from "react";
 import "./Portfolio.css";
-
+import { Link } from "react-router-dom";
 import data from "./data";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { IoMdInformationCircle } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
 
 const Porfolio = () => {
   const { ref, inView } = useInView();
@@ -32,7 +35,7 @@ const Porfolio = () => {
     <motion.section id="portfolio " className="container" ref={ref}>
       <motion.div
         className="container portfolio_container"
-        animate={animations}
+        /*animate={animations}*/
       >
         <div className="portfolio_head">
           <h2>My Projects</h2>
@@ -55,12 +58,20 @@ const Porfolio = () => {
                   </a>
                 </h3>
                 <p>{case_study}</p>
-                <h6>Stacks: {stack}</h6>
+
                 <div className="portfolio_item-cta_link">
-                  <a href={github}>GitHub</a>
                   <a href={demo} target="_blank">
-                    Live Demo
+                    Live Demo <FaArrowUpRightFromSquare />
                   </a>
+
+                  <a href={github} target="_blank">
+                    GitHub
+                    <FaGithub />
+                  </a>
+                  <Link to="projectInfo">
+                    More Info
+                    <IoMdInformationCircle />
+                  </Link>
                 </div>
               </div>
             </article>

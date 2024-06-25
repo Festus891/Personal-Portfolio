@@ -11,23 +11,25 @@
 
 .skills_heading {
   text-align: left;
-  padding-top: 2rem;
 }
 
 .skills_heading h2 {
   font-size: 2rem;
+  font-family: "Noto Serif JP", sans-serif;
+  color: var(--color-white);
 }
 
-h4,
-small {
-  font-weight: bold;
+.skills_heading p {
+  color: var(--color-b-primary);
+  text-align: left;
 }
 
 .experience_content {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
+  padding: 1rem;
 }
 
 .experience_details {
@@ -36,6 +38,11 @@ small {
   align-items: center;
   gap: 2px;
   font-size: 0.7rem;
+}
+
+.experience_details p {
+  font-size: 0.9rem;
+  color: var(--color-b-primary);
 }
 
 .experience_details img {
@@ -51,4 +58,13 @@ small {
 }
 
 @media screen and (max-width: 600px) {
+  .experience_content {
+    gap: 2rem;
+    align-items: center;
+    padding: 0.8rem;
+  }
+  .experience_details p {
+    font-size: 0.9rem;
+    color: var(--color-b-primary);
+  }
 }

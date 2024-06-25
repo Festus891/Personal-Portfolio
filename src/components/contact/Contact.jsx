@@ -4,6 +4,10 @@ import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
 import { GiCancel } from "react-icons/gi";
+import { FaGithub } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 import { motion, useAnimation } from "framer-motion";
@@ -72,7 +76,9 @@ const Contact = () => {
         </p>
       </div>
 
-      <motion.div className="container contact_container" animate={animations}>
+      <motion.div
+        className="container contact_container" /*animate={animations}*/
+      >
         <motion.div className="contact_options">
           <article className="contact_option">
             <MdOutlineEmail className="contact_option-icon" />
@@ -95,6 +101,26 @@ const Contact = () => {
               +2348143430827
             </a>
           </article>
+          <div className="about_social">
+            <a
+              href="https://www.linkedin.com/in/aderibigbe-festus/"
+              target="_blank"
+            >
+              <BsLinkedin />
+            </a>
+            <a href="https://x.com/AdeHimself12" target="_blank">
+              <BsTwitterX />
+            </a>
+            <a href="Mailto:festus4537@gmail.com" target="_blank">
+              <MdEmail />
+            </a>
+            <a href="https://github.com/Festus891" target="_blank">
+              <FaGithub />
+            </a>
+            <a href="https://wa.me/+2348143430827" target="_blank">
+              <IoLogoWhatsapp />
+            </a>
+          </div>
         </motion.div>
         {/* end of contact optiom */}
         <motion.form ref={form} onSubmit={sendEmail}>

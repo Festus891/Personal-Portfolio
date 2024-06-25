@@ -2,12 +2,6 @@ header {
   padding-top: 6rem;
   padding-bottom: 3rem;
   overflow: hidden;
-  /* background: linear-gradient(
-      to right,
-      rgba(245, 245, 245, 0.8),
-      rgba(245, 245, 245, 0.8)
-    ),
-    url(../../asset/common-bg.svg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -42,10 +36,23 @@ header {
 }
 
 h1 {
-  font-size: 2.9rem;
+  font-size: 4rem;
   font-weight: bolder;
   padding-top: 2.5rem;
   font-family: "Noto Serif JP", sans-serif;
+  color: var(--color-white);
+}
+
+p {
+  color: var(--color-light);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p strong {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 /* .header_container h5 {
@@ -126,7 +133,8 @@ h1 {
 /* myself */
 
 .me {
-  background: linear-gradient(var(--color-b-primary), transparent);
+  /* background: linear-gradient(#1f1f1f, transparent); */
+  background-color: #1f1f1f;
   width: 22rem;
   height: 18rem;
   justify-content: center;
@@ -145,15 +153,10 @@ h1 {
 /* ----Media Queries (Medium Device) -----*/
 @media screen and (max-width: 1024px) {
   .header_socials_left {
-    display: none;
+    /* display: none; */
   }
   .header_socials_right {
     display: none;
-  }
-
-  h1 {
-    font-size: 2rem;
-    font-weight: bolder;
   }
 
   .header_container h5 {
@@ -173,25 +176,18 @@ h1 {
     display: none;
   }
 
-  span {
-    color: var(--color-b-primary);
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-
   h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-weight: bolder;
   }
 
-  h2 {
-    font-size: 1.4rem;
-    font-weight: bold;
+  p {
+    font-size: 1.2rem;
+    padding: auto;
+    text-align: center;
   }
 
-  h5 {
-    font-size: 0.8rem;
-    color: var(--color-b-primary);
-    font-weight: bold;
+  p strong {
+    font-size: 1.3rem;
   }
 }

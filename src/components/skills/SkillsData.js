@@ -9,6 +9,7 @@ import materialUi from "../../asset/skills/icons8-material-ui.svg";
 import github from "../../asset/skills/icons8-github.svg";
 import gitlab from "../../asset/skills/icons8-gitlab-project-planning-and-source-code-management-96.png";
 import git from "../../asset/skills/icons8-git-96.png";
+import next from "../../asset/skills/Next.js.png";
 import firebase from "../../asset/skills/icons8-firebase.svg";
 import figma from "../../asset/skills/icons8-figma-96.png";
 import coreldraw from "../../asset/skills/icons8-coreldraw.svg";
@@ -38,61 +39,66 @@ const data = [
   },
   {
     id: 5,
+    image: next,
+    skill: "NEXT.JS",
+  },
+  {
+    id: 6,
     image: redux,
     skill: "REDUX",
   },
   {
-    id: 6,
+    id: 7,
     image: tailwind,
     skill: "TAILWIND CSS",
   },
   {
-    id: 7,
+    id: 8,
     image: bootstrap,
     skill: "BOOTSTRAP",
   },
   {
-    id: 8,
+    id: 9,
     image: materialUi,
     skill: "MATERIAL UI",
   },
   {
-    id: 9,
+    id: 10,
     image: github,
     skill: "GITHUB",
   },
   {
-    id: 10,
+    id: 11,
     image: gitlab,
     skill: "GITLAB",
   },
   {
-    id: 11,
+    id: 13,
     image: git,
     skill: "GIT",
   },
   {
-    id: 12,
+    id: 14,
     image: firebase,
     skill: "FIREBASE",
   },
   {
-    id: 12,
+    id: 15,
     image: figma,
     skill: "FIGMA",
   },
   {
-    id: 12,
+    id: 16,
     image: coreldraw,
     skill: "CORELDRAW",
   },
   {
-    id: 12,
+    id: 17,
     image: vscode,
     skill: "VSCODE",
   },
   {
-    id: 12,
+    id: 18,
     image: responsive,
     skill: "RESPONSIVE DESIGN",
   },
