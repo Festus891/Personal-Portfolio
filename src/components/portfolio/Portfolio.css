@@ -104,4 +104,7 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  .portfolio_item-cta p {
+    text-align: left;
+  }
 }
