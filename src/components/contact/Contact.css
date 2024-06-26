@@ -13,12 +13,14 @@
 }
 
 .contact_header h2 {
-  font-size: 1.8rem;
-  color: #fff;
+  font-size: 2rem;
+  color: var(--color-white);
+  font-family: "Noto Serif JP", sans-serif;
 }
 
 .contact_header p {
   font-size: 0.7rem;
+  color: var(--color-b-primary);
 }
 
 .contact_options {

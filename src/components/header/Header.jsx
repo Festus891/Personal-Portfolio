@@ -1,7 +1,8 @@
 import React from "react";
 import "./header.css";
 import CTA from "./CTA";
-import myself from "../../asset/festus3.png";
+// import myself from "../../asset/festus3.png";
+import myself from "../../asset/festus.png";
 import HeaderSociial from "./HeaderSociial";
 
 const Header = () => {
@@ -21,7 +22,11 @@ const Header = () => {
 
         <HeaderSociial />
       </div>
-      <div className="horizontal-line"></div>
+      <div className="header_box">
+        <div className="header_box_left">Imaginative Ideas</div>
+        <div className="horizontal-line"></div>
+        <div className="header_box_right">Into Reality</div>
+      </div>
     </header>
   );
 };

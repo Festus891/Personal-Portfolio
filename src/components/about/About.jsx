@@ -72,7 +72,7 @@ const About = () => {
             bring your ideas to life and make a real impact!
           </p>
 
-          <Link to="about" className="more_about">
+          <Link to="/about" className="more_about">
             MORE ABOUT ME
           </Link>
         </motion.div>

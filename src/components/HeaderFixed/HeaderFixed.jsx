@@ -15,6 +15,7 @@ import { FaGithub } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const HeaderFixed = () => {
   const [active, setActive] = useState("#");
@@ -26,25 +27,30 @@ const HeaderFixed = () => {
     setClick(!clicked);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      handleShow(true);
+    } else {
+      handleShow(false);
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        handleShow(true);
-      } else {
-        handleShow(false);
-      }
-    });
+    // Add the event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener
     return () => {
-      window.removeEventListener("scroll");
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []); // Empty dependency array ensures this effect runs only once
 
   return (
     <div className={`header_fixed_container ${show && "nav_background"}`}>
       <div className="header_logo">
-        <a href="#">
+        <Link href="/">
           <img src={NewLogo} alt="logo" />
-        </a>
+        </Link>
       </div>
 
       <div onClick={handleClick} className="menu">

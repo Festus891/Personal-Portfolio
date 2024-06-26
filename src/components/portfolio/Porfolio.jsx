@@ -32,7 +32,7 @@ const Porfolio = () => {
   }, [inView]);
   console.log("portfolio in view");
   return (
-    <motion.section id="portfolio " className="container" ref={ref}>
+    <motion.section id="portfolio" className="container" ref={ref}>
       <motion.div
         className="container portfolio_container"
         /*animate={animations}*/

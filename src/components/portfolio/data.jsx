@@ -16,7 +16,7 @@ const data = [
     stack: "Reactjss, css, BootstrapCss, Mongodb, Express, Nodejs",
   },
   {
-    id: 1,
+    id: 2,
     image: img1,
     title: "Personal Portfolio",
     github: "https://github.com/Festus891/Personal-Portfolio",
@@ -25,16 +25,16 @@ const data = [
       "Welcome to my personal portfolio, which I have meticulously crafted to highlight my expertise in web development. This portfolio is designed with user-friendliness and responsiveness in mind, ensuring an engaging and seamless experience for all visitors. Explore my work and see how I bring professionalism and creativity to every project.",
     stack: "Javascript",
   },
-  {
-    id: 2,
-    image: img2,
-    title: "Whatsapp clone",
-    github: "https://github.com/Festus891/Whatsapp_clone_With_React",
-    demo: "https://whatsapp-clone-18f3f.web.app/",
-    case_study:
-      "Whatsapp cloning on web  using Reactjs and firebase to practically understand how data is being store on firebase realtime database and to how data is being retrieve in each collection of database",
-    stack: "Javascript",
-  },
+  // {
+  //   id: 2,
+  //   image: img2,
+  //   title: "Whatsapp clone",
+  //   github: "https://github.com/Festus891/Whatsapp_clone_With_React",
+  //   demo: "https://whatsapp-clone-18f3f.web.app/",
+  //   case_study:
+  //     "Whatsapp cloning on web  using Reactjs and firebase to practically understand how data is being store on firebase realtime database and to how data is being retrieve in each collection of database",
+  //   stack: "Javascript",
+  // },
   {
     id: 3,
     image: img3,

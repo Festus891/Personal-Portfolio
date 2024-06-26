@@ -7,10 +7,32 @@ header {
   background-attachment: fixed;
 }
 
-.horizontal-line {
+.header_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 25rem;
+}
+
+.header_box .header_box_left {
+  font-size: 2.5rem;
+  color: var(--color-b-primary);
+  font-family: "Noto Serif JP", sans-serif;
+  margin-bottom: 2rem;
+}
+
+.header_box .header_box_right {
+  font-size: 2.5rem;
+  color: var(--color-b-primary);
+  font-family: "Noto Serif JP", sans-serif;
+  margin-top: 2rem;
+}
+
+.header_box .horizontal-line {
   margin-top: 5rem;
   width: 2px;
-  background-color: var(--color-white);
+  background-color: var(--color-b-primary);
   margin: auto;
   height: 4rem;
   animation: lineup 10s forwards;
@@ -46,12 +68,12 @@ h1 {
 p {
   color: var(--color-light);
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p strong {
   color: var(--color-white);
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.3rem;
 }
 
@@ -177,17 +199,18 @@ p strong {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bolder;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: auto;
     text-align: center;
+    padding: 0 1rem;
   }
 
   p strong {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
