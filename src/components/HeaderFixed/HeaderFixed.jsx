@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./HeaderFixed.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
@@ -15,23 +16,30 @@ import { FaGithub } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 const HeaderFixed = () => {
-  const [active, setActive] = useState("#");
-  const [show, handleShow] = useState(false);
-
-  const [clicked, setClick] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState("/");
+  const [show, setShow] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    setClick(!clicked);
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = (path) => {
+    setMenuOpen(false);
+    setActive(path);
+    setTimeout(() => {
+      navigate(path);
+    }, 300); // Adjust delay as needed
   };
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
-      handleShow(true);
+      setShow(true);
     } else {
-      handleShow(false);
+      setShow(false);
     }
   };
 
@@ -48,22 +56,22 @@ const HeaderFixed = () => {
   return (
     <div className={`header_fixed_container ${show && "nav_background"}`}>
       <div className="header_logo">
-        <Link href="/">
+        <a href="#">
           <img src={NewLogo} alt="logo" />
-        </Link>
+        </a>
       </div>
 
       <div onClick={handleClick} className="menu">
-        {clicked ? <MdCancel /> : <HiMenuAlt2 />}
+        {menuOpen ? <MdCancel /> : <HiMenuAlt2 />}
       </div>
 
-      <div className={clicked ? "header_link active" : "header_link"}>
+      <div className={menuOpen ? "header_link active" : "header_link"}>
         <ul>
           <li>
             <a
               href="#"
-              onClick={() => setActive("#")}
-              className={active === "#" ? "active" : ""}
+              onClick={() => handleLinkClick("/")}
+              className={active === "/" ? "active" : ""}
             >
               <AiOutlineHome className="list_icon" />
               HOME
@@ -72,8 +80,8 @@ const HeaderFixed = () => {
           <li>
             <a
               href="#about"
-              onClick={() => setActive("#about")}
-              className={active === "#about" ? "active" : ""}
+              onClick={() => handleLinkClick("/#about")}
+              className={active === "/#about" ? "active" : ""}
             >
               <AiOutlineUser className="list_icon" />
               ABOUT
@@ -82,8 +90,8 @@ const HeaderFixed = () => {
           <li>
             <a
               href="#portfolio"
-              onClick={() => setActive("#portfolio")}
-              className={active === "#portfolio" ? "active" : ""}
+              onClick={() => handleLinkClick("/#portfolio")}
+              className={active === "/#portfolio" ? "active" : ""}
             >
               <MdHomeRepairService className="list_icon" />
               PORTFOLIO
@@ -92,46 +100,62 @@ const HeaderFixed = () => {
           <li>
             <a
               href="#skills"
-              onClick={() => setActive("#skills")}
-              className={active === "#skills" ? "active" : ""}
+              onClick={() => handleLinkClick("/#skills")}
+              className={active === "/#skills" ? "active" : ""}
             >
               <BiBook className="list_icon" />
               SKILLS
             </a>
           </li>
-
           <li>
             <a
               href="#contact"
-              onClick={() => setActive("#contact")}
-              className={active === "#contact" ? "active" : ""}
+              onClick={() => handleLinkClick("/#contact")}
+              className={active === "/#contact" ? "active" : ""}
             >
               <MdPermContactCalendar className="list_icon" />
               CONTACT
             </a>
           </li>
         </ul>
-        <div className=" header_fixed_text">
+        <div className="header_fixed_text">
           <h3>Have an idea?</h3>
           <p>Tell me about it</p>
         </div>
-        <div className="heade_fixed_social">
+        <div className="header_fixed_social">
           <a
             href="https://www.linkedin.com/in/aderibigbe-festus/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <BsLinkedin />
           </a>
-          <a href="https://twitter.com/AdeHimself12" target="_blank">
+          <a
+            href="https://twitter.com/AdeHimself12"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsTwitter />
           </a>
-          <a href="Mailto:festus891@yahoo.com" target="_blank">
+          <a
+            href="Mailto:festus891@yahoo.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <MdEmail />
           </a>
-          <a href="https://github.com/Festus891" target="_blank">
+          <a
+            href="https://github.com/Festus891"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub />
           </a>
-          <a href="https://wa.me/+2348143430827" target="_blank">
+          <a
+            href="https://wa.me/+2348143430827"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <IoLogoWhatsapp />
           </a>
         </div>

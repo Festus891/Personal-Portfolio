@@ -7,6 +7,9 @@
   padding: 2rem;
 }
 
+/* .back .icon {
+  padding: 2rem;
+} */
 .about_me h4 {
   font-size: 3rem;
   text-align: center;
@@ -85,6 +88,11 @@
 
   .about_content {
     width: 100%;
+  }
+
+  .about_me h4 {
+    font-size: 1.8rem;
+    text-align: left;
   }
 
   .about_content p {

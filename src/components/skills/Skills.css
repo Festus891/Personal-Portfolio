@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 600px) {
   .experience_content {
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     padding: 0.8rem;
   }

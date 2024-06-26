@@ -58,6 +58,7 @@ const Porfolio = () => {
                   </a>
                 </h3>
                 <p>{case_study}</p>
+                <p>Stacks: {stack}</p>
 
                 <div className="portfolio_item-cta_link">
                   <a href={demo} target="_blank">
@@ -68,10 +69,10 @@ const Porfolio = () => {
                     GitHub
                     <FaGithub />
                   </a>
-                  <Link to="projectInfo">
+                  {/* <Link to="projectInfo">
                     More Info
                     <IoMdInformationCircle />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </article>

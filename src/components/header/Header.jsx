@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./header.css";
 import CTA from "./CTA";
 // import myself from "../../asset/festus3.png";
@@ -6,6 +6,13 @@ import myself from "../../asset/festus.png";
 import HeaderSociial from "./HeaderSociial";
 
 const Header = () => {
+  useEffect(() => {
+    const line = document.querySelector(".header_box .vertical-line");
+    if (line) {
+      line.classList.add("animate-line");
+    }
+  }, []);
+
   return (
     <header>
       <div className="header_container">
@@ -24,7 +31,7 @@ const Header = () => {
       </div>
       <div className="header_box">
         <div className="header_box_left">Imaginative Ideas</div>
-        <div className="horizontal-line"></div>
+        <div className="vertical-line"></div>
         <div className="header_box_right">Into Reality</div>
       </div>
     </header>

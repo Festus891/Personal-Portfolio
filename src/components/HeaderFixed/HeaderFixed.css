@@ -99,7 +99,7 @@ ul > li > a:hover {
   font-size: 1rem;
 }
 
-.heade_fixed_social {
+.header_fixed_social {
   text-align: center;
   display: flex;
   flex-direction: row;
