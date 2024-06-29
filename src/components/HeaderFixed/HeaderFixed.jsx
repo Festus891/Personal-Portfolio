@@ -13,7 +13,7 @@ import { MdCancel } from "react-icons/md";
 import NewLogo from "../../asset/logo.png";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-import { BsTwitter } from "react-icons/bs";
+import { BsTwitterX } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 
@@ -131,11 +131,11 @@ const HeaderFixed = () => {
             <BsLinkedin />
           </a>
           <a
-            href="https://twitter.com/AdeHimself12"
+            href="https://x.com/AdeHimself12"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BsTwitter />
+            <BsTwitterX />
           </a>
           <a
             href="Mailto:festus891@yahoo.com"

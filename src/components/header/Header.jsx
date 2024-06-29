@@ -25,13 +25,13 @@ const Header = () => {
           <img src={myself} alt="profile" />
         </div>
 
-        {/* <CTA /> */}
+        <CTA />
 
         <HeaderSociial />
       </div>
       <div className="header_box">
         <div className="header_box_left">Imaginative Ideas</div>
-        <div className="vertical-line"></div>
+        <div className="vertical-line .animate-line"></div>
         <div className="header_box_right">Into Reality</div>
       </div>
     </header>

@@ -75,35 +75,38 @@ a {
 }
 
 .btn {
+  /* width: 10rem; */
   width: max-content;
   display: inline-block;
   padding: 0.75rem 1.2rem;
   cursor: pointer;
   font-weight: bold;
-  background: #b9b9b9;
-  color: #fff;
+  background: #d3e97a;
+  color: var(--color-dark);
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 25px;
+  border-radius: 20px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
 }
 
 .btn:hover {
   background-color: transparent;
-  color: var(--color-b-primary);
-  border: 2px solid var(--color-white);
+  color: #d3e97a;
+  border: 2px solid #d3e97a;
+  font-weight: bold;
 }
 
 .btn-primary {
   background: transparent;
-  color: var(--color-white);
-  border: 2px solid var(--color-white);
+  color: #d3e97a;
+  border: 2px solid #d3e97a;
+  font-weight: bold;
 }
 
 .btn-primary:hover {
-  background: #b9b9b9;
-  color: var(--color-white);
+  background: #d3e97a;
+  color: var(--color-dark);
 }
 
 img {
