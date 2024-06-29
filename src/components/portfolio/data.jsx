@@ -8,7 +8,7 @@ const data = [
   {
     id: 1,
     image: img5,
-    title: "OwnitMart E-commerce",
+    title: "OwnitMart",
     github: "https://github.com/Festus891/Ownitmart-fullstack",
     demo: "https://ownitmart.vercel.app/",
     case_study:
