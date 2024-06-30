@@ -58,6 +58,7 @@ ul > li > a {
   white-space: nowrap;
   font-weight: 500;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 ul > li {

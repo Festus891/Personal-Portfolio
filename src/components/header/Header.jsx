@@ -14,7 +14,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header>
+    <header id="home">
       <div className="header_container">
         <h1>Hi!, I am Aderibigbe Festus</h1>
         <p>

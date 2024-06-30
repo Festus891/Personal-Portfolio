@@ -1,38 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 import "./HeaderFixed.css";
-import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook } from "react-icons/bi";
-import { MdHomeRepairService } from "react-icons/md";
-import { MdPermContactCalendar } from "react-icons/md";
-// import { GiHamburgerMenu } from "react-icons/gi";
+import {
+  MdHomeRepairService,
+  MdPermContactCalendar,
+  MdCancel,
+  MdEmail,
+} from "react-icons/md";
 import { HiMenuAlt2 } from "react-icons/hi";
-// import { GiCancel } from "react-icons/gi";
-import { MdCancel } from "react-icons/md";
 import NewLogo from "../../asset/logo.png";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { MdEmail } from "react-icons/md";
 
 const HeaderFixed = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [active, setActive] = useState("/");
   const [show, setShow] = useState(false);
-  const navigate = useNavigate();
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
-  };
-
-  const handleLinkClick = (path) => {
-    setMenuOpen(false);
-    setActive(path);
-    setTimeout(() => {
-      navigate(path);
-    }, 300); // Adjust delay as needed
   };
 
   const handleScroll = () => {
@@ -56,8 +44,8 @@ const HeaderFixed = () => {
   return (
     <div className={`header_fixed_container ${show && "nav_background"}`}>
       <div className="header_logo">
-        <a href="#">
-          <img src={NewLogo} alt="logo" />
+        <a href="/">
+          <img src={NewLogo} alt="logo" onClick={() => scroll.scrollToTop()} />
         </a>
       </div>
 
@@ -68,54 +56,59 @@ const HeaderFixed = () => {
       <div className={menuOpen ? "header_link active" : "header_link"}>
         <ul>
           <li>
-            <a
-              href="#"
-              onClick={() => handleLinkClick("/")}
-              className={active === "/" ? "active" : ""}
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
             >
               <AiOutlineHome className="list_icon" />
               HOME
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about"
-              onClick={() => handleLinkClick("/#about")}
-              className={active === "/#about" ? "active" : ""}
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
             >
               <AiOutlineUser className="list_icon" />
               ABOUT
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#portfolio"
-              onClick={() => handleLinkClick("/#portfolio")}
-              className={active === "/#portfolio" ? "active" : ""}
+            <Link
+              to="portfolio"
+              smooth={true}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
             >
               <MdHomeRepairService className="list_icon" />
               PORTFOLIO
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#skills"
-              onClick={() => handleLinkClick("/#skills")}
-              className={active === "/#skills" ? "active" : ""}
+            <Link
+              to="skills"
+              smooth={true}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
             >
               <BiBook className="list_icon" />
               SKILLS
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contact"
-              onClick={() => handleLinkClick("/#contact")}
-              className={active === "/#contact" ? "active" : ""}
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              onClick={() => setMenuOpen(false)}
             >
               <MdPermContactCalendar className="list_icon" />
               CONTACT
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="header_fixed_text">
