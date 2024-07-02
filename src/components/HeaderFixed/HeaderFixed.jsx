@@ -14,6 +14,28 @@ import NewLogo from "../../asset/logo.png";
 import { BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { motion } from "framer-motion";
+const listVarant = {
+  hover: {
+    scale: 1.3,
+    originX: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+};
+
+const itemVariants = {
+  open: {
+    opacity: 1,
+    scale: 1.3,
+    originX: 0,
+    y: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 },
+  },
+  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
+};
 
 const HeaderFixed = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,18 +66,22 @@ const HeaderFixed = () => {
   return (
     <div className={`header_fixed_container ${show && "nav_background"}`}>
       <div className="header_logo">
-        <a href="/">
+        <Link to="home">
           <img src={NewLogo} alt="logo" onClick={() => scroll.scrollToTop()} />
-        </a>
+        </Link>
       </div>
 
-      <div onClick={handleClick} className="menu">
+      <motion.div
+        onClick={handleClick}
+        className="menu"
+        whileTap={{ scale: 0.97, rotate: -90, borderRadius: "100%" }}
+      >
         {menuOpen ? <MdCancel /> : <HiMenuAlt2 />}
-      </div>
+      </motion.div>
 
-      <div className={menuOpen ? "header_link active" : "header_link"}>
-        <ul>
-          <li>
+      <motion.div className={menuOpen ? "header_link active" : "header_link"}>
+        <motion.ul>
+          <motion.li variants={listVarant} whileHover="hover">
             <Link
               to="home"
               smooth={true}
@@ -65,8 +91,8 @@ const HeaderFixed = () => {
               <AiOutlineHome className="list_icon" />
               HOME
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={listVarant} whileHover="hover">
             <Link
               to="about"
               smooth={true}
@@ -76,8 +102,8 @@ const HeaderFixed = () => {
               <AiOutlineUser className="list_icon" />
               ABOUT
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={listVarant} whileHover="hover">
             <Link
               to="portfolio"
               smooth={true}
@@ -87,8 +113,8 @@ const HeaderFixed = () => {
               <MdHomeRepairService className="list_icon" />
               PORTFOLIO
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={listVarant} whileHover="hover">
             <Link
               to="skills"
               smooth={true}
@@ -98,8 +124,8 @@ const HeaderFixed = () => {
               <BiBook className="list_icon" />
               SKILLS
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={listVarant} whileHover="hover">
             <Link
               to="contact"
               smooth={true}
@@ -109,8 +135,8 @@ const HeaderFixed = () => {
               <MdPermContactCalendar className="list_icon" />
               CONTACT
             </Link>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
         <div className="header_fixed_text">
           <h3>Have an idea?</h3>
           <p>Tell me about it</p>
@@ -152,7 +178,7 @@ const HeaderFixed = () => {
             <IoLogoWhatsapp />
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -64,7 +64,6 @@ header {
 h1 {
   font-size: 4rem;
   font-weight: bolder;
-  padding-top: 2.5rem;
   font-family: "Noto Serif JP", sans-serif;
   color: var(--color-white);
 }

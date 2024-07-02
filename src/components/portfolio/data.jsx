@@ -23,7 +23,7 @@ const data = [
     demo: "https://adedev.vercel.app/",
     case_study:
       "Welcome to my personal portfolio, which I have meticulously crafted to highlight my expertise in web development. This portfolio is designed with user-friendliness and responsiveness in mind, ensuring an engaging and seamless experience for all visitors. Explore my work and see how I bring professionalism and creativity to every project.",
-    stack: "REACTJS, CSS",
+    stack: "REACTJS, CSS, Framer-motion",
   },
   // {
   //   id: 2,

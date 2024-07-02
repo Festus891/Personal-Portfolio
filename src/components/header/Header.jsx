@@ -4,6 +4,22 @@ import CTA from "./CTA";
 // import myself from "../../asset/festus3.png";
 import myself from "../../asset/festus.png";
 import HeaderSociial from "./HeaderSociial";
+import { motion } from "framer-motion";
+const variants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeOut",
+      duration: 1,
+      // delay: 0.2,
+    },
+  },
+};
 
 const Header = () => {
   useEffect(() => {
@@ -15,7 +31,12 @@ const Header = () => {
 
   return (
     <header id="home">
-      <div className="header_container">
+      <motion.div
+        className="header_container"
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+      >
         <h1>Hi!, I am Aderibigbe Festus</h1>
         <p>
           I'm a <strong>FRONTEND DEVELOPER</strong> passionate about building
@@ -28,7 +49,7 @@ const Header = () => {
         <CTA />
 
         <HeaderSociial />
-      </div>
+      </motion.div>
       <div className="header_box">
         <div className="header_box_left">Imaginative Ideas</div>
         <div className="vertical-line .animate-line"></div>
