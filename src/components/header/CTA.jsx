@@ -12,7 +12,10 @@ const CTA = () => {
         target="_blank"
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
-        whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px rgb(255, 255, 255)" }}
+        whileHover={{
+          scale: [1, 1.1, 1, 1.1, 1, 1.1],
+          boxShadow: "0px 0px 8px rgb(255, 255, 255)",
+        }}
       >
         Resume
         <FaDownload />

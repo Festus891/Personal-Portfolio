@@ -1,37 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Skills.css";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+
 import data from "./SkillsData";
+import { motion, useScroll } from "framer-motion";
 
 const Skills = () => {
-  const { ref, inView } = useInView();
-  const animations = useAnimation();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1"],
+  });
 
-  useEffect(() => {
-    if (inView) {
-      animations.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 4,
-          bounce: 0.4,
-        },
-      });
-    }
-
-    if (!inView) {
-      animations.start({ x: "100vw" });
-    }
-    console.log("use effect hook, inView=", inView);
-  }, [inView]);
-  console.log("skills in view");
   return (
     <motion.section className="container " id="skills" ref={ref}>
       <motion.div
         className="container experience_container"
         /*animate={animations}*/
+        ref={ref}
+        style={{
+          scale: scrollYProgress,
+          opacity: scrollYProgress,
+          transition: {
+            type: "spring",
+            stiffness: 300,
+          },
+        }}
       >
         <div className="skills_heading">
           <h2>MY SKILLS </h2>

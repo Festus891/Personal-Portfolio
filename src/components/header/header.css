@@ -196,6 +196,9 @@ p strong {
   .header_box .header_box_left {
     font-size: 2rem;
   }
+  h1 {
+    margin-top: 2.7rem;
+  }
 
   .me {
     /* background: linear-gradient(#1f1f1f, transparent); */

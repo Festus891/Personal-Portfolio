@@ -1,39 +1,33 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./about.css";
 import profile from "../../asset/festus3.png";
 // import { FaAward } from "react-icons/fa";
 // import { FiUsers } from "react-icons/fi";
 // import { VscFolderLibrary } from "react-icons/vsc";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 
 const About = () => {
-  const { ref, inView } = useInView();
-  const animations = useAnimation();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1"],
+  });
 
-  useEffect(() => {
-    if (inView) {
-      animations.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 4,
-          bounce: 0.4,
-        },
-      });
-    }
-
-    if (!inView) {
-      animations.start({ x: "-100vw" });
-    }
-  }, [inView]);
-
-  console.log("about in view");
   return (
     <motion.section id="about" ref={ref} className="container">
       <motion.div
-        className="about_container container" /*animate={animations}*/
+        className="about_container container"
+        ref={ref}
+        style={{
+          scale: scrollYProgress,
+          opacity: scrollYProgress,
+          transition: {
+            type: "spring",
+            stiffness: 300,
+          },
+        }}
       >
         <div className="about_me">
           <h4>About Me</h4>

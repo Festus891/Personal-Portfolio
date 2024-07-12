@@ -24,17 +24,13 @@ const listVarant = {
       stiffness: 300,
     },
   },
-};
-
-const itemVariants = {
   open: {
     opacity: 1,
-    scale: 1.3,
     originX: 0,
     y: 0,
     transition: { type: "spring", stiffness: 300, damping: 24 },
   },
-  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
+  closed: { opacity: 0, y: 100, transition: { duration: 1.5 } },
 };
 
 const HeaderFixed = () => {
@@ -81,7 +77,12 @@ const HeaderFixed = () => {
 
       <motion.div className={menuOpen ? "header_link active" : "header_link"}>
         <motion.ul>
-          <motion.li variants={listVarant} whileHover="hover">
+          <motion.li
+            variants={listVarant}
+            whileHover="hover"
+            whileInView="open"
+            initial="closed"
+          >
             <Link
               to="home"
               smooth={true}
@@ -92,7 +93,12 @@ const HeaderFixed = () => {
               HOME
             </Link>
           </motion.li>
-          <motion.li variants={listVarant} whileHover="hover">
+          <motion.li
+            variants={listVarant}
+            whileHover="hover"
+            whileInView="open"
+            initial="closed"
+          >
             <Link
               to="about"
               smooth={true}
@@ -103,7 +109,12 @@ const HeaderFixed = () => {
               ABOUT
             </Link>
           </motion.li>
-          <motion.li variants={listVarant} whileHover="hover">
+          <motion.li
+            variants={listVarant}
+            whileHover="hover"
+            whileInView="open"
+            initial="closed"
+          >
             <Link
               to="portfolio"
               smooth={true}
@@ -114,7 +125,12 @@ const HeaderFixed = () => {
               PORTFOLIO
             </Link>
           </motion.li>
-          <motion.li variants={listVarant} whileHover="hover">
+          <motion.li
+            variants={listVarant}
+            whileHover="hover"
+            whileInView="open"
+            initial="closed"
+          >
             <Link
               to="skills"
               smooth={true}
@@ -125,7 +141,12 @@ const HeaderFixed = () => {
               SKILLS
             </Link>
           </motion.li>
-          <motion.li variants={listVarant} whileHover="hover">
+          <motion.li
+            variants={listVarant}
+            whileHover="hover"
+            whileInView="open"
+            initial="closed"
+          >
             <Link
               to="contact"
               smooth={true}

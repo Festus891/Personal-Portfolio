@@ -1,42 +1,16 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import data from "./data";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useScroll, motion } from "framer-motion";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { IoMdInformationCircle } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 
 const Porfolio = () => {
-  const { ref, inView } = useInView();
-  const animations = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animations.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 4,
-          bounce: 0.4,
-        },
-      });
-    }
-
-    if (!inView) {
-      animations.start({ x: "100vw" });
-    }
-    console.log("use effect hook, inView=", inView);
-  }, [inView]);
-  console.log("portfolio in view");
   return (
-    <motion.section id="portfolio" className="container" ref={ref}>
-      <motion.div
-        className="container portfolio_container"
-        /*animate={animations}*/
-      >
+    <motion.section id="portfolio" className="container">
+      <motion.div className="container portfolio_container">
         <div className="portfolio_head">
           <h2>My Projects</h2>
           <p>
@@ -47,7 +21,7 @@ const Porfolio = () => {
 
         {data.map(({ id, image, title, github, demo, case_study, stack }) => {
           return (
-            <article key={id} className="portfolio_item">
+            <motion.article key={id} className="portfolio_item">
               <div className="portfolio_item_image">
                 <img src={image} alt="project1" />
               </div>
@@ -75,7 +49,7 @@ const Porfolio = () => {
                   </Link> */}
                 </div>
               </div>
-            </article>
+            </motion.article>
           );
         })}
       </motion.div>
