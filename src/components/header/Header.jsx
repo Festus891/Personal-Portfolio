@@ -5,6 +5,7 @@ import CTA from "./CTA";
 import myself from "../../asset/festus.png";
 import HeaderSociial from "./HeaderSociial";
 import { motion } from "framer-motion";
+import Availability from "./Availability";
 const variants = {
   hidden: {
     opacity: 0,
@@ -45,7 +46,7 @@ const Header = () => {
         <div className="me">
           <img src={myself} alt="profile" />
         </div>
-
+        <Availability />
         <CTA />
 
         <HeaderSociial />

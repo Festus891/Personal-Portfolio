@@ -7,6 +7,7 @@ import About from "./components/about/About";
 import Portfolio from "./components/portfolio/Porfolio";
 import Footer from "./components/footer/Footer";
 import HeaderFixed from "./components/HeaderFixed/HeaderFixed";
+import ScrollUp from "./components/scrollup/ScrollUp";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Skills />
       {/* <Service /> */}
       <Contact />
+      <ScrollUp />
     </>
   );
 };

@@ -1,0 +1,53 @@
+/* src/components/ScrollUp.css */
+.scroll-up-button {
+  position: fixed;
+  bottom: 40px;
+  right: 35px;
+  background-color: #000;
+  color: #d3e97a;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s, background-color 0.3s,
+    box-shadow 0.3s;
+  animation: bounce 0.5s infinite linear;
+}
+
+.scroll-up-button:hover {
+  background-color: #555;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  animation: bounce 0.5s infinite linear;
+}
+
+.scroll-up-button:active {
+  transform: scale(0.95);
+}
+
+.scroll-up-button.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ----Media Queries (Small Device) -----*/
+@media screen and (max-width: 600px) {
+  .scroll-up-button {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+  }
+}
