@@ -23,7 +23,11 @@ const Porfolio = () => {
           return (
             <motion.article key={id} className="portfolio_item">
               <div className="portfolio_item_image">
-                <img src={image} alt="project1" />
+                <img
+                  src={image}
+                  alt="project-image "
+                  className="portfolio_image"
+                />
               </div>
               <div className="portfolio_item-cta">
                 <h3>

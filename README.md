@@ -6,7 +6,7 @@ This project is a personal Portfolio, which aim to give information to users suc
 
 https://adedev.vercel.app/
 
-![Screenshoot](portfolio.jpg)
+![Screenshoot](portfolio.png)
 
 # Getting Started with Create React App
 
@@ -42,4 +42,4 @@ This project is deployed directing on [Vercel](https://vercel.com/login?next=%2F
 
 ## Tech Stack
 
-**Client:** React, Traditional CSS, FramerMotion Library, Email.Js Library
+**Stack:** React, Traditional CSS, FramerMotion Library, Email.Js Library

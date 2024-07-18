@@ -1,13 +1,13 @@
-import img1 from "../../asset/n-portfolio.jpg";
-import img2 from "../../asset/n-Cloned-Whatsapp.jpg";
-import img3 from "../../asset/n-ImageGetter.jpg";
-import img4 from "../../asset/n-CountDownApp.jpg";
-import img5 from "../../asset/ownit.png";
+import img3 from "../../asset/portfolio.png";
+import img2 from "../../asset/movieinsight.png";
+import img4 from "../../asset/n-ImageGetter.jpg";
+// import img4 from "../../asset/n-CountDownApp.jpg";
+import img1 from "../../asset/ownit.png";
 
 const data = [
   {
     id: 1,
-    image: img5,
+    image: img1,
     title: "OwnitMart",
     github: "https://github.com/Festus891/Ownitmart-fullstack",
     demo: "https://ownitmart.vercel.app/",
@@ -17,9 +17,19 @@ const data = [
   },
   {
     id: 2,
-    image: img1,
+    image: img2,
+    title: "Movie-Insight",
+    // github: "https://github.com/Festus891/TheYearCountDown-App",
+    demo: "https://movieinsight.vercel.app/",
+    case_study:
+      "A fully functional movie information website that allows users to search for and view details about any movie they want to watch. This is achieved by utilizing the TMDB APIs to fetch and display movie data on the frontend.",
+    stack: "Reactjs, CSS, Material Ui, Api Integration",
+  },
+  {
+    id: 3,
+    image: img3,
     title: "Personal Portfolio",
-    github: "https://github.com/Festus891/Personal-Portfolio",
+    github: "",
     demo: "https://adedev.vercel.app/",
     case_study:
       "Welcome to my personal portfolio, which I have meticulously crafted to highlight my expertise in web development. This portfolio is designed with user-friendliness and responsiveness in mind, ensuring an engaging and seamless experience for all visitors. Explore my work and see how I bring professionalism and creativity to every project.",
@@ -36,24 +46,14 @@ const data = [
   //   stack: "Javascript",
   // },
   {
-    id: 3,
-    image: img3,
+    id: 4,
+    image: img4,
     title: "Image Getter",
     github: "https://github.com/Festus891/ImageGetter-App",
     demo: "https://image-getter-app.vercel.app/",
     case_study:
       "Image Getter is a responsive and efficient website designed to search for various types of images across the internet. Utilizing the Unsplash API, it fetches data from their extensive image repository, providing users with a seamless and diverse image search experience.",
     stack: "HTML, CSS, Javascript",
-  },
-  {
-    id: 4,
-    image: img4,
-    title: "Year CountDown Timer",
-    github: "https://github.com/Festus891/TheYearCountDown-App",
-    demo: "https://the-year-count-down-app.vercel.app/",
-    case_study:
-      "Year Countdown Timer is a functional and elegantly designed tool that tracks the remaining months, weeks, and days left in the year. It provides an intuitive way to visualize the passage of time and helps users stay aware of how much time is left until the year's end.",
-    stack: "Reactjs, css",
   },
 ];
 
