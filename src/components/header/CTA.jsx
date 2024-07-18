@@ -18,7 +18,7 @@ const CTA = () => {
         }}
       >
         Resume
-        <FaDownload />
+        <FaDownload style={{ paddingLeft: "5px", paddingTop: "2px" }} />
       </motion.a>
       <motion.a
         href="#contact"

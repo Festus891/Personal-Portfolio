@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer_social">
-        <h2>Dont be a stranger!</h2>
+        <h2>Don't be a stranger!</h2>
         <p>Let connet, let's chat</p>
         <a href="https://wa.me/+2348143430827" target="_blank">
           <BsWhatsapp />
