@@ -13,7 +13,7 @@ const data = [
     demo: "https://ownitmart.vercel.app/",
     case_study:
       "OwnitMart is a fully functional e-commerce website offering a diverse range of products across various categories. Customers can easily browse through the selections, find items they desire, and make purchases seamlessly. The platform also features an admin interface for efficient product and order management.",
-    stack: "REACTJS, CSS, BootstrapCss, Mongodb, Express, Nodejs",
+    stack: "REACTJS, Redux, CSS,BootstrapCss, Mongodb, Express, Nodejs",
   },
   {
     id: 2,
