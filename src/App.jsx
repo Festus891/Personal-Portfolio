@@ -8,6 +8,7 @@ import Portfolio from "./components/portfolio/Porfolio";
 import Footer from "./components/footer/Footer";
 import HeaderFixed from "./components/HeaderFixed/HeaderFixed";
 import ScrollUp from "./components/scrollup/ScrollUp";
+import Cursor from "./components/scrollup/Cursor";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       {/* <Service /> */}
       <Contact />
       <ScrollUp />
+      <Cursor />
     </>
   );
 };

@@ -43,6 +43,34 @@
   }
 }
 
+/* src/components/Cursor.css */
+._cursorWrapper_p627f_1 {
+  z-index: 1000;
+  border-radius: 50%;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translateZ(0);
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
+    transform 0.45s cubic-bezier(0, -0.1, 0, 0.99);
+}
+
+._animate_p627f_14 ._default_p627f_19 {
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.7); /* Adjust transparency */
+  mix-blend-mode: difference;
+  border-radius: 50%;
+}
+
+._animate_p627f_14 {
+  transition: all 0.3s cubic-bezier(0.59, -0.09, 0, 1);
+  overflow: hidden;
+}
+
 /* ----Media Queries (Small Device) -----*/
 @media screen and (max-width: 600px) {
   .scroll-up-button {
