@@ -74,8 +74,8 @@ a {
   transition: var(--transition);
 }
 
-.btn {
-  /* width: 10rem; */
+/* .btn {
+ 
   width: max-content;
   display: inline-block;
   padding: 0.75rem 1.2rem;
@@ -88,14 +88,57 @@ a {
   border-radius: 20px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
+} */
+
+.btn {
+  display: inline-block;
+  width: max-content;
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  z-index: 0;
+  background: #d3e97a;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .btn:hover {
+  color: #d3e97a;
+  background-color: transparent;
+  font-weight: bold;
+  border: 2px solid #d3e97a;
+}
+.btn:hover:after {
+  height: 100%;
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+}
+
+/* .btn:hover {
   background-color: transparent;
   color: #d3e97a;
   border: 2px solid #d3e97a;
   font-weight: bold;
-}
+} */
 
 .btn-primary {
   background: transparent;
@@ -106,7 +149,7 @@ a {
 
 .btn-primary:hover {
   background: #d3e97a;
-  color: var(--color-dark);
+  color: var(--color-white);
 }
 
 img {

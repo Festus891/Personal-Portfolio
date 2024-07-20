@@ -14,7 +14,6 @@ const CTA = () => {
         animate={{ x: 0 }}
         whileHover={{
           scale: [1, 1.1, 1, 1.1, 1, 1.1],
-          boxShadow: "0px 0px 8px rgb(255, 255, 255)",
         }}
       >
         Resume
@@ -25,7 +24,7 @@ const CTA = () => {
         className="btn btn-primary"
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}
-        whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px rgb(255, 255, 255)" }}
+        whileHover={{ scale: 1.1 }}
       >
         Contact me
       </motion.a>
