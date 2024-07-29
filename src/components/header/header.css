@@ -1,5 +1,5 @@
 header {
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-bottom: 3rem;
   overflow: hidden;
   background-size: cover;
@@ -37,36 +37,6 @@ header {
   margin: auto;
   height: 0; /* Start with height 0 */
   animation: lineup 10s forwards ease-in-out;
-}
-
-.dotgrid_dotGrid__fIloK {
-  position: absolute;
-  width: 75%; /* Adjust width as needed */
-  display: grid;
-  z-index: -1; /* Send behind the text */
-  background-color: transparent;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.dotgrid_dotWrapper__Qf5dS {
-  padding: 0.8rem;
-  cursor: crosshair;
-  transition-behavior: normal;
-  transition-duration: 0.25s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-  border-radius: 8px;
-}
-
-.dotgrid_dot__JnSZ6 {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #111, #ebecf3);
-  opacity: 0.35;
-  transform: scale(1) translateY(1px);
 }
 
 @keyframes lineup {
@@ -112,12 +82,6 @@ p strong {
   font-size: 1.3rem;
 }
 
-/* .header_container h5 {
-  font-size: 1.8rem;
-  color: var(--color-b-primary);
-  font-weight: bold;
-} */
-
 /* CTA Button */
 
 .cta {
@@ -160,7 +124,6 @@ p strong {
   flex-direction: column;
   gap: 0.8rem;
   align-items: center;
-  /* position: absolute; */
   position: fixed;
   top: 23rem;
   right: 2rem;
@@ -168,7 +131,6 @@ p strong {
   font-size: 1.3rem;
   border: 10px;
   height: 100%;
-  /* background: var(--color-white); */
   width: 58px;
   padding: 18px;
 }
@@ -180,7 +142,15 @@ p strong {
   margin-bottom: 3rem;
 }
 
-/*----- Social styling ----*/
+.header_socials_right a:hover {
+  color: #d3e97a;
+}
+
+.header_socials_left a:hover {
+  color: #d3e97a;
+}
+
+/*----- Right Social styling  ----*/
 .header_socials_right::after {
   content: "";
   background: #fff;
@@ -190,8 +160,8 @@ p strong {
 /* myself */
 
 .me {
-  /* background: linear-gradient(#1f1f1f, transparent); */
-  background-color: #1f1f1f;
+  background: linear-gradient(#1f1f1f, transparent);
+  /* background-color: #1f1f1f; */
   width: 22rem;
   height: 18rem;
   justify-content: center;
@@ -220,6 +190,9 @@ p strong {
     font-size: 1.3rem;
     color: var(--color-b-primary);
     font-weight: bold;
+  }
+  .dotgrid_dotGrid__fIloK {
+    width: 100%;
   }
 }
 
@@ -272,6 +245,6 @@ p strong {
   }
 
   .dotgrid_dotGrid__fIloK {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 100%;
   }
 }
