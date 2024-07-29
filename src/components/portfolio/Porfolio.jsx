@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import data from "./data";
-import { useScroll, motion } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { IoMdInformationCircle } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
@@ -29,7 +29,7 @@ const Porfolio = () => {
                   className="portfolio_image"
                 />
               </div>
-              <div className="portfolio_item-cta">
+              <motion.div className="portfolio_item-cta">
                 <h3>
                   <a href={demo} target="_blank">
                     {title}
@@ -52,7 +52,7 @@ const Porfolio = () => {
                     <IoMdInformationCircle />
                   </Link> */}
                 </div>
-              </div>
+              </motion.div>
             </motion.article>
           );
         })}
