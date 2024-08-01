@@ -2,14 +2,33 @@ import React, { useRef, useState, useEffect } from "react";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import data from "./data";
-import { useInView, motion } from "framer-motion";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { IoMdInformationCircle } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import { useInView, useAnimation, motion } from "framer-motion";
 
-const Porfolio = () => {
+const Portfolio = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animations = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animations.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 4,
+          bounce: 0.5,
+        },
+      });
+    } else {
+      animations.start({ x: "-100vw" });
+    }
+  }, [isInView, animations]);
+
   return (
-    <motion.section id="portfolio" className="container">
+    <motion.section id="portfolio" className="container" ref={ref}>
       <motion.div className="container portfolio_container">
         <div className="portfolio_head">
           <h2>My Projects</h2>
@@ -29,21 +48,25 @@ const Porfolio = () => {
                   className="portfolio_image"
                 />
               </div>
-              <motion.div className="portfolio_item-cta">
+              <motion.div
+                className="portfolio_item-cta"
+                animate={animations}
+                initial={{ x: "-100vw" }}
+              >
                 <h3>
-                  <a href={demo} target="_blank">
+                  <a href={demo} target="_blank" rel="noopener noreferrer">
                     {title}
                   </a>
                 </h3>
                 <p>{case_study}</p>
-                <p>Stacks: {stack}</p>
+                <p className="stacks">Stacks: {stack}</p>
 
                 <div className="portfolio_item-cta_link">
-                  <a href={demo} target="_blank">
+                  <a href={demo} target="_blank" rel="noopener noreferrer">
                     Live Demo <FaArrowUpRightFromSquare />
                   </a>
 
-                  <a href={github} target="_blank">
+                  <a href={github} target="_blank" rel="noopener noreferrer">
                     GitHub
                     <FaGithub />
                   </a>
@@ -61,4 +84,4 @@ const Porfolio = () => {
   );
 };
 
-export default Porfolio;
+export default Portfolio;

@@ -6,18 +6,18 @@ import { BsLinkedin } from "react-icons/bs";
 
 import { useRef } from "react";
 import emailjs from "emailjs-com";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect } from "react";
 
 const Contact = () => {
-  const { ref, inView } = useInView();
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const animations = useAnimation();
 
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    if (inView) {
+    if (isInView) {
       animations.start({
         x: 0,
         transition: {
@@ -28,10 +28,10 @@ const Contact = () => {
       });
     }
 
-    if (!inView) {
+    if (!isInView) {
       animations.start({ x: "-100vw" });
     }
-  }, [inView]);
+  }, [isInView]);
 
   const form = useRef();
 
@@ -62,7 +62,7 @@ const Contact = () => {
   };
   console.log("Contact in view");
   return (
-    <motion.section id="contact" ref={ref}>
+    <motion.section id="contact" ref={ref} /*animate={animations}*/>
       <div className="contact_header">
         <h2>Get In Touch!</h2>
         <p>

@@ -58,6 +58,10 @@
   color: var(--color-b-primary);
 }
 
+.portfolio_item-cta .stacks {
+  color: #d3e97a;
+}
+
 .portfolio_item-cta_link {
   margin-top: 2rem;
   display: flex;

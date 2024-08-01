@@ -1,5 +1,5 @@
 // MainLayout.js
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Outlet } from "react-router-dom";
 import HeaderFixed from "./HeaderFixed/HeaderFixed";
 import Footer from "./footer/Footer";
@@ -8,11 +8,12 @@ import Loader from "./loader/Loader";
 
 const MainLayout = () => {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {}, []);
   useEffect(() => {
-    // Simulate a loading delay
     setTimeout(() => {
       setLoading(false);
-    }, 2000); // Adjust the delay as needed
+    }, 2000);
   }, []);
 
   if (loading) {
