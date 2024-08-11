@@ -17,27 +17,27 @@
   color: var(--color-white);
 }
 
-/* .about_cards {
+.about_cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-} */
+}
 
-/* .about_card {
+.about_card {
   border: 1px solid var(--color-black);
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
   background: transparent;
-} */
+}
 
 .about_content p {
   text-align: left;
-  line-height: 2rem;
-  word-spacing: 3px;
-  color: var(--color-b-primary);
+  line-height: 1.5rem;
   font-weight: 500;
+  word-spacing: 2px;
+  color: var(--color-b-primary);
   padding-bottom: 2rem;
 }
 

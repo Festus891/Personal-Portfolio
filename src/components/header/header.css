@@ -10,6 +10,7 @@ header {
 .header_box {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   margin: auto;
   width: 25rem;
@@ -62,7 +63,7 @@ header {
   margin-bottom: 4rem;
 }
 
-h1 {
+.header_container h1 {
   font-size: 4rem;
   text-align: center;
   font-weight: bolder;
@@ -70,9 +71,10 @@ h1 {
   color: var(--color-white);
 }
 
-p {
+.header_container p {
   color: var(--color-light);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  width: 70%;
   font-weight: 500;
 }
 
@@ -180,7 +182,7 @@ p strong {
 /* ----Media Queries (Medium Device) -----*/
 @media screen and (max-width: 1024px) {
   .header_socials_left {
-    /* display: none; */
+    display: none;
   }
   .header_socials_right {
     display: none;
@@ -192,6 +194,9 @@ p strong {
     font-weight: bold;
   }
   .dotgrid_dotGrid__fIloK {
+    width: 100%;
+  }
+  .header_container p {
     width: 100%;
   }
 }
@@ -228,13 +233,13 @@ p strong {
     display: none;
   }
 
-  h1 {
-    font-size: 1.8rem;
+  .header_container h1 {
+    font-size: 3rem;
     font-weight: bolder;
   }
 
-  p {
-    font-size: 1rem;
+  .header_container p {
+    font-size: 1.2rem;
     padding: auto;
     text-align: center;
     padding: 0 1rem;

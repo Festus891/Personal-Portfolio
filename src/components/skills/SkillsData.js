@@ -15,6 +15,7 @@ import figma from "../../asset/skills/icons8-figma-96.png";
 import coreldraw from "../../asset/skills/icons8-coreldraw.svg";
 import vscode from "../../asset/skills/icons8-visual-studio-code-2019.svg";
 import responsive from "../../asset/skills/icons8-responsive-design-96.png";
+import typescript from "../../asset/skills/typescript.png";
 
 const data = [
   {
@@ -34,71 +35,76 @@ const data = [
   },
   {
     id: 4,
+    image: typescript,
+    skill: "TYPESCRIPT",
+  },
+  {
+    id: 5,
     image: react,
     skill: "REACT",
   },
   {
-    id: 5,
+    id: 6,
     image: next,
     skill: "NEXT.JS",
   },
   {
-    id: 6,
+    id: 7,
     image: redux,
     skill: "REDUX",
   },
   {
-    id: 7,
+    id: 8,
     image: tailwind,
     skill: "TAILWIND CSS",
   },
   {
-    id: 8,
+    id: 9,
     image: bootstrap,
     skill: "BOOTSTRAP",
   },
   {
-    id: 9,
+    id: 10,
     image: materialUi,
     skill: "MATERIAL UI",
   },
   {
-    id: 10,
+    id: 11,
     image: github,
     skill: "GITHUB",
   },
   {
-    id: 11,
+    id: 12,
     image: gitlab,
     skill: "GITLAB",
   },
   {
-    id: 13,
+    id: 14,
     image: git,
     skill: "GIT",
   },
   {
-    id: 14,
+    id: 15,
     image: firebase,
     skill: "FIREBASE",
   },
   {
-    id: 15,
+    id: 16,
     image: figma,
     skill: "FIGMA",
   },
   {
-    id: 16,
+    id: 17,
     image: coreldraw,
     skill: "CORELDRAW",
   },
   {
-    id: 17,
+    id: 18,
     image: vscode,
     skill: "VSCODE",
   },
   {
-    id: 18,
+    id: 19,
     image: responsive,
     skill: "RESPONSIVE DESIGN",
   },

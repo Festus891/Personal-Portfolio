@@ -38,10 +38,15 @@ const Header = () => {
         initial="hidden"
         animate="visible"
       >
-        <h1>Hi!, I am Aderibigbe Festus</h1>
+        <h1>Aderibigbe F.A</h1>
         <p>
           I'm a <strong>FRONTEND DEVELOPER</strong> passionate about building
           accessible and user friendly websites.
+        </p>
+        <p>
+          I blend creativity with technical expertise to cook up lightning-fast
+          websites and apps that solve real problems and leave users hungry for
+          more.
         </p>
         <div className="me">
           <img src={myself} alt="profile" />
@@ -52,9 +57,9 @@ const Header = () => {
         <HeaderSociial />
       </motion.div>
       <div className="header_box">
-        <div className="header_box_left">Imaginative Ideas</div>
+        <div className="header_box_left">Transforming Ideas Into Reality </div>
         <div className="vertical-line"></div>
-        <div className="header_box_right">Into Reality</div>
+        <div className="header_box_right">Through Coding And Design.</div>
       </div>
     </header>
   );

@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import HeaderFixed from "./components/HeaderFixed/HeaderFixed";
 import ScrollUp from "./components/scrollup/ScrollUp";
 import Cursor from "./components/scrollup/Cursor";
+import Testimonial from "./components/testimonial/Testimonial";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <About />
       <Portfolio />
       <Skills />
+      {/* <Testimonial /> */}
       <Contact />
       <ScrollUp />
       <Cursor />
