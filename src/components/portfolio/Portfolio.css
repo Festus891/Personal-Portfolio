@@ -34,8 +34,13 @@
   transition: transform 0.2s ease;
 }
 
+.portfolio_image {
+  border-radius: 10px;
+}
+
 .portfolio_image:hover {
   transform: scale(1.1);
+  transition: ease-in-out;
 }
 
 .portfolio_item-cta {
@@ -66,7 +71,9 @@
   margin-top: 2rem;
   display: flex;
   justify-content: space-around;
-  border-bottom: 1px solid #fff;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom: 2px solid var(--color-white);
   padding-bottom: 10px;
   color: #d3e97a;
 }
