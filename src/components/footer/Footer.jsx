@@ -39,7 +39,7 @@ const Footer = () => {
       </div>
 
       <div className="footer_copyright">
-        <p>&copy; Copyright - Aderibigbe festus 2023</p>
+        <p>&copy; Copyright - All rights reserved by Aderibigbe festus</p>
         <p>{formatDate(currentTime)}</p>
       </div>
     </footer>

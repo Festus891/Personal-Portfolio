@@ -17,7 +17,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: -1, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
@@ -56,9 +56,13 @@ const Header = () => {
         <HeaderSociial />
       </motion.div>
       <div className="header_box">
-        <div className="header_box_left">Transforming Ideas Into Reality </div>
+        <div className="header_box_left" variants={itemVariants}>
+          Transforming Ideas Into Reality{" "}
+        </div>
         <div className="vertical-line"></div>
-        <div className="header_box_right">Through Coding And Design.</div>
+        <div className="header_box_right" variants={itemVariants}>
+          Through Coding And Design.
+        </div>
       </div>
     </header>
   );
