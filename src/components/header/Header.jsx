@@ -37,7 +37,7 @@ const Header = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.h1 variants={itemVariants}>Aderibigbe F.A</motion.h1>
+        <motion.h1 variants={itemVariants}>Aderibigbe Festus .A</motion.h1>
         <motion.p variants={itemVariants}>
           I'm a <strong>FRONTEND DEVELOPER</strong> passionate about building
           accessible and user friendly websites.
