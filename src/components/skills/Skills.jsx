@@ -5,26 +5,26 @@ import data from "./SkillsData";
 import { motion, useScroll } from "framer-motion";
 
 const Skills = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1 1"],
-  });
+  // const ref = useRef(null);
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["0 1", "1 1"],
+  // });
 
   return (
-    <motion.section className="container " id="skills" ref={ref}>
+    <motion.section className="container " id="skills">
       <motion.div
         className="container experience_container"
         /*animate={animations}*/
-        ref={ref}
-        style={{
-          scale: scrollYProgress,
-          opacity: scrollYProgress,
-          transition: {
-            type: "spring",
-            stiffness: 300,
-          },
-        }}
+        // ref={ref}
+        // style={{
+        //   scale: scrollYProgress,
+        //   opacity: scrollYProgress,
+        //   transition: {
+        //     type: "spring",
+        //     stiffness: 300,
+        //   },
+        // }}
       >
         <div className="skills_heading">
           <h2>MY SKILLS </h2>

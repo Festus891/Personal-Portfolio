@@ -6,20 +6,19 @@ import myself from "../../asset/festus.png";
 import HeaderSociial from "./HeaderSociial";
 import { motion } from "framer-motion";
 import Availability from "./Availability";
-const variants = {
-  hidden: {
-    opacity: 0,
-    y: 75,
-  },
+const containerVariants = {
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    y: 0,
     transition: {
-      ease: "easeOut",
-      duration: 0.5,
-      delay: 0.25,
+      staggerChildren: 0.5, // Delay between animations of child elements
     },
   },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
 const Header = () => {
@@ -34,23 +33,23 @@ const Header = () => {
     <header id="home">
       <motion.div
         className="header_container"
-        variants={variants}
+        variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <h1>Aderibigbe F.A</h1>
-        <p>
+        <motion.h1 variants={itemVariants}>Aderibigbe F.A</motion.h1>
+        <motion.p variants={itemVariants}>
           I'm a <strong>FRONTEND DEVELOPER</strong> passionate about building
           accessible and user friendly websites.
-        </p>
-        <p>
+        </motion.p>
+        {/* <p> 
           I blend creativity with technical expertise to cook up lightning-fast
           websites and apps that solve real problems and leave users hungry for
           more.
-        </p>
-        <div className="me">
+        </p> */}
+        <motion.div className="me" variants={itemVariants}>
           <img src={myself} alt="profile" />
-        </div>
+        </motion.div>
         <Availability />
         <CTA />
 
