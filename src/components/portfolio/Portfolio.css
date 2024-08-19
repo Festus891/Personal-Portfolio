@@ -12,6 +12,7 @@
 .portfolio_head p {
   font-size: 1rem;
   color: var(--color-b-primary);
+  font-weight: 600;
 }
 
 .portfolio_item {
@@ -55,12 +56,14 @@
   text-decoration: none;
   font-family: "Noto Serif JP", sans-serif;
   font-size: 2rem;
+  font-weight: 600;
 }
 
 .portfolio_item-cta p {
   margin-top: 1rem;
   font-size: 1rem;
   color: var(--color-b-primary);
+  font-weight: 600;
 }
 
 .portfolio_item-cta .stacks {

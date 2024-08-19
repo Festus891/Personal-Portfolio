@@ -17,11 +17,13 @@
   font-size: 2rem;
   font-family: "Noto Serif JP", sans-serif;
   color: var(--color-white);
+  font-weight: 600;
 }
 
 .skills_heading p {
   color: var(--color-b-primary);
   text-align: left;
+  font-weight: 600;
 }
 
 .experience_content {
@@ -43,6 +45,7 @@
 .experience_details p {
   font-size: 0.9rem;
   color: var(--color-b-primary);
+  font-weight: 600;
 }
 
 .experience_details img {

@@ -74,14 +74,14 @@ header {
 .header_container p {
   color: var(--color-light);
   font-size: 1.3rem;
-  text-align: justify;
+  text-align: center;
   width: 70%;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 p strong {
   color: var(--color-white);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.3rem;
 }
 
