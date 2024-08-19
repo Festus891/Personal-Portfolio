@@ -3,35 +3,66 @@ import "./Contact.css";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
-
 import { useRef } from "react";
 import emailjs from "emailjs-com";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useScroll, useAnimation, useInView } from "framer-motion";
 import { useEffect } from "react";
 
 const Contact = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   const ref = useRef(null);
   const isInView = useInView(ref);
-  const animations = useAnimation();
 
-  const [showPopup, setShowPopup] = useState(false);
+  // Animation hook for the h4 tag
+  const h4Animation = useAnimation();
+
+  // Animation hook for the p tags
+  const pAnimation = useAnimation();
+
+  const contentVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Delay between animations of child elements
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  };
 
   useEffect(() => {
     if (isInView) {
-      animations.start({
+      // Animate h4 tag
+      h4Animation.start({
         x: 0,
         transition: {
           type: "spring",
           duration: 4,
-          bounce: 0.5,
+          bounce: 0.3,
         },
       });
-    }
 
-    if (!isInView) {
-      animations.start({ x: "-100vw" });
+      // Animate p tags
+      pAnimation.start("visible");
+    } else {
+      // Reset h4 tag
+      h4Animation.start({ x: "-100vw" });
+
+      // Reset p tags
+      pAnimation.start("hidden");
     }
-  }, [isInView]);
+  }, [isInView, h4Animation, pAnimation]);
 
   const form = useRef();
 
@@ -62,41 +93,96 @@ const Contact = () => {
   };
   console.log("Contact in view");
   return (
-    <motion.section id="contact" ref={ref} /*animate={animations}*/>
-      <div className="contact_header">
-        <h2>Get In Touch!</h2>
-        <p>
+    <motion.section
+      id="contact"
+      ref={ref}
+      className="containers"
+      variants={contentVariants}
+      initial="hidden"
+      animate={pAnimation}
+    >
+      <div className=" contact_header">
+        <motion.h2 animate={h4Animation}>Get In Touch!</motion.h2>
+        <motion.p variants={childVariants}>
           I’m currently open to joining a new team of creative developers. Also,
           if you have a question, proposal, idea or just want to say hi, Go
           ahead.
-        </p>
+        </motion.p>
       </div>
 
       <motion.div
-        className="container contact_container" /*animate={animations}*/
+        className="containers contact_container" /*animate={animations}*/
       >
-        <motion.div className="contact_options">
-          <article className="contact_option">
-            <MdOutlineEmail className="contact_option-icon" />
-            <a href="mailto:festus4537@gmail.com" target="_blank">
-              festus4537@gmail.com
-            </a>
-          </article>
-          <article className="contact_option">
-            <BsLinkedin className="contact_option-icon" />
-            <a
-              href="https://www.linkedin.com/in/aderibigbe-festus"
-              target="_blank"
-            >
-              Aderibigbe festus
-            </a>
-          </article>
-          <article className="contact_option">
-            <BsWhatsapp className="contact_option-icon" />
-            <a href="https://wa.me/+2348143430827" target="_blank">
-              +2348143430827
-            </a>
-          </article>
+        <motion.div className="contact_options ">
+          <div className="relative">
+            <div className="absolute inset-0 bg-white rounded-3xl transform translate-x-2 translate-y-3"></div>
+            <article className="relative bg-black text-white p-6 rounded-3xl border-2 border-white  border-solid shadow-lg z-10 ">
+              <div className="flex flex-col items-center">
+                <MdOutlineEmail className="contact_option-icon text-4xl mb-2" />
+                <h3 className="text-lg font-semibold">Email</h3>
+                <a
+                  href="mailto:festus4537@gmail.com"
+                  target="_blank"
+                  className="mt-2"
+                >
+                  festus4537@gmail.com
+                </a>
+                <a
+                  href="mailto:festus4537@gmail.com"
+                  target="_blank"
+                  className="mt-4 flex items-center cursor-pointer"
+                >
+                  Write Me <span className="ml-2">➔</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-white rounded-3xl transform translate-x-2 translate-y-3"></div>
+            <article className="relative bg-black text-white p-6 rounded-3xl border-2 border-white  border-solid shadow-lg z-10 ">
+              <div className="flex flex-col items-center">
+                <BsLinkedin className="contact_option-icon text-4xl mb-2" />
+                <h3 className="text-lg font-semibold">LinkedIn</h3>
+                <a
+                  href="https://www.linkedin.com/in/aderibigbe-festus"
+                  target="_blank"
+                  className="mt-2"
+                >
+                  Aderibigbe festus
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/aderibigbe-festus"
+                  target="_blank"
+                  className="mt-4 flex items-center cursor-pointer"
+                >
+                  Write Me <span className="ml-2">➔</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-white rounded-3xl transform translate-x-2 translate-y-3"></div>
+            <article className="relative bg-black text-white p-6 rounded-3xl border-2 border-white  border-solid shadow-lg z-10 ">
+              <div className="flex flex-col items-center">
+                <BsWhatsapp className="contact_option-icon text-4xl mb-2" />
+                <h3 className="text-lg font-semibold">WhatSapp</h3>
+                <a
+                  href="https://wa.me/+2348143430827"
+                  target="_blank"
+                  className="mt-2"
+                >
+                  +2348143430827
+                </a>
+                <a
+                  href="https://wa.me/+2348143430827"
+                  target="_blank"
+                  className="mt-4 flex items-center cursor-pointer"
+                >
+                  Write Me <span className="ml-2">➔</span>
+                </a>
+              </div>
+            </article>
+          </div>
         </motion.div>
         {/* end of contact optiom */}
         <motion.form ref={form} onSubmit={sendEmail}>

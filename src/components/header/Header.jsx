@@ -6,6 +6,8 @@ import myself from "../../asset/festus.png";
 import HeaderSociial from "./HeaderSociial";
 import { motion } from "framer-motion";
 import Availability from "./Availability";
+import BackgroundCircles from "./BackgroundCircles";
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -31,8 +33,9 @@ const Header = () => {
 
   return (
     <header id="home">
+      <BackgroundCircles />
       <motion.div
-        className="header_container"
+        className="header_container "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -51,6 +54,7 @@ const Header = () => {
           <img src={myself} alt="profile" />
         </motion.div>
         <Availability />
+
         <CTA />
 
         <HeaderSociial />

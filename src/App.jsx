@@ -10,10 +10,12 @@ import HeaderFixed from "./components/HeaderFixed/HeaderFixed";
 import ScrollUp from "./components/scrollup/ScrollUp";
 import Cursor from "./components/scrollup/Cursor";
 import Testimonial from "./components/testimonial/Testimonial";
+import BackgroundCircles from "./components/header/BackgroundCircles";
 
 const App = () => {
   return (
     <>
+      {/* <BackgroundCircles/> */}
       <Header />
       <About />
       <Portfolio />

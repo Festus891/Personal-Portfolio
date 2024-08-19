@@ -39,8 +39,8 @@ const Skills = () => {
   }, [isInView, headingAnimation, imageAnimation]);
 
   return (
-    <motion.section className="container" id="skills" ref={ref}>
-      <motion.div className="container experience_container">
+    <motion.section className="containers" id="skills" ref={ref}>
+      <motion.div className="containers experience_container">
         <motion.div
           className="skills_heading"
           initial={{ opacity: 0, y: -100 }}

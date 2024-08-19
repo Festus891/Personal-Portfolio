@@ -63,8 +63,8 @@ const About = () => {
   }, [isInView, h4Animation, pAnimation]);
 
   return (
-    <motion.section id="about" className="container" ref={ref}>
-      <motion.div className="about_container container">
+    <motion.section id="about" className="containers" ref={ref}>
+      <motion.div className="about_container containers">
         <motion.div className="about_me">
           <motion.h4 animate={h4Animation}>About Me</motion.h4>
         </motion.div>

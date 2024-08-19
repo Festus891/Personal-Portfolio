@@ -28,8 +28,8 @@ const Portfolio = () => {
   }, [isInView, animations]);
 
   return (
-    <motion.section id="portfolio" className="container" ref={ref}>
-      <motion.div className="container portfolio_container">
+    <motion.section id="portfolio" className="containers" ref={ref}>
+      <motion.div className="containers portfolio_container">
         <div className="portfolio_head">
           <h2>My Projects</h2>
           <p>

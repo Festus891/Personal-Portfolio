@@ -1,4 +1,3 @@
-/* src/components/ScrollUp.css */
 .scroll-up-button {
   position: fixed;
   bottom: 40px;
@@ -16,6 +15,7 @@
   transition: opacity 0.3s, transform 0.3s, background-color 0.3s,
     box-shadow 0.3s;
   animation: bounce 0.5s infinite linear;
+  z-index: 1000;
 }
 
 .scroll-up-button:hover {

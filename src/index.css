@@ -44,7 +44,7 @@ body {
 
 /* -------General styling----- */
 
-.container {
+.containers {
   width: var(--container-width-ms);
   margin: 3rem auto 2rem;
 }
@@ -160,7 +160,7 @@ img {
 /* ----------Medium Device design----- */
 
 @media screen and (max-width: 1024px) {
-  .container {
+  .containers {
     width: var(--container-width-md);
   }
 
@@ -186,7 +186,7 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-  .container {
+  .containers {
     width: var(--container-width-lg);
   }
 }
@@ -200,3 +200,7 @@ img {
     min-height: 100vh;
   }
 } */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
