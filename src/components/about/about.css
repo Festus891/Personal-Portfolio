@@ -97,10 +97,10 @@
 
   .about_content p {
     text-align: left;
-    line-height: 1.8rem;
+    line-height: 1.5rem;
     word-spacing: 2px;
     color: var(--color-b-primary);
-    font-weight: 500;
+    font-weight: 600;
     padding-bottom: 1.5rem;
   }
 
