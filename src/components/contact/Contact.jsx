@@ -132,7 +132,7 @@ const Contact = () => {
                   target="_blank"
                   className="mt-4 flex items-center cursor-pointer"
                 >
-                  Write Me <span className="ml-2">➔</span>
+                  Send a mail <span className="ml-2">➔</span>
                 </a>
               </div>
             </article>
@@ -155,7 +155,7 @@ const Contact = () => {
                   target="_blank"
                   className="mt-4 flex items-center cursor-pointer"
                 >
-                  Write Me <span className="ml-2">➔</span>
+                  Check my profile <span className="ml-2">➔</span>
                 </a>
               </div>
             </article>
@@ -178,7 +178,7 @@ const Contact = () => {
                   target="_blank"
                   className="mt-4 flex items-center cursor-pointer"
                 >
-                  Write Me <span className="ml-2">➔</span>
+                  Message me <span className="ml-2">➔</span>
                 </a>
               </div>
             </article>

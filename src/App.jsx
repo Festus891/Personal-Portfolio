@@ -18,6 +18,7 @@ const App = () => {
       {/* <BackgroundCircles/> */}
       <Header />
       <About />
+      {/* <Service /> */}
       <Portfolio />
       <Skills />
       {/* <Testimonial /> */}

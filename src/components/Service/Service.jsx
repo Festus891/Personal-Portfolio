@@ -27,12 +27,15 @@ const Service = () => {
   }, [inView]);
   console.log("service in view");
   return (
-    <motion.section id="service" ref={ref}>
+    <motion.section id="service" ref={ref} className="containers">
       <h2>Service</h2>
       <div className="text"></div>
       <h5>Here you get to know what I offer</h5>
 
-      <motion.div className="container services_container" animate={animations}>
+      <motion.div
+        className="containers services_container"
+        animate={animations}
+      >
         <motion.article className="service">
           <div className="service_head">
             <h3>Web Development and Graphics Design</h3>

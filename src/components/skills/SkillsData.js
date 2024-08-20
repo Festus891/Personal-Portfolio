@@ -16,6 +16,9 @@ import coreldraw from "../../asset/skills/icons8-coreldraw.svg";
 import vscode from "../../asset/skills/icons8-visual-studio-code-2019.svg";
 import responsive from "../../asset/skills/icons8-responsive-design-96.png";
 import typescript from "../../asset/skills/typescript.png";
+import mongodb from "../../asset/skills/mongodb.png";
+import express from "../../asset/skills/express.png";
+import node from "../../asset/skills/nodejs.png";
 
 const data = [
   {
@@ -107,6 +110,21 @@ const data = [
     id: 19,
     image: responsive,
     skill: "RESPONSIVE DESIGN",
+  },
+  {
+    id: 20,
+    image: node,
+    skill: "NODE JS",
+  },
+  {
+    id: 21,
+    image: express,
+    skill: "EXPRESS JS",
+  },
+  {
+    id: 22,
+    image: mongodb,
+    skill: "MONGO DB",
   },
 ];
 

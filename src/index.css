@@ -165,6 +165,15 @@ img {
     width: var(--container-width-md);
   }
 
+  .containers {
+    width: var(--container-width-ms);
+    margin: 0 auto 2rem;
+  }
+
+  section {
+    padding-top: 4rem;
+  }
+
   section {
     margin-top: 0rem;
   }

@@ -16,10 +16,10 @@ div > a > img {
   z-index: 99;
   /* border-radius: 3rem; */
   /* filter: drop-shadow(12px 8px 4px grey); */
-  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
-  border-bottom-left-radius: 0.5rem;
+  /* box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1); */
+  /* border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  border-bottom: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white); */
 }
 
 .nav_background {
