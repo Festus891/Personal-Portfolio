@@ -62,6 +62,7 @@ const Header = () => {
         <motion.a
           variants={itemVariants}
           href="https://www.upwork.com/freelancers/~01a5ed37d86a8b7c03 "
+          target="_blank"
           className="w-[16rem] border-solid border-2 border-[#d3e97a] mt-2 p-1  rounded-xl text-[#fff]"
         >
           <SiUpwork style={{ paddingRight: "2px", fontSize: "1.2rem" }} />
