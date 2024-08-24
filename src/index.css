@@ -92,7 +92,7 @@ a {
 } */
 
 .btn {
-  display: inline-block;
+  /* display: inline-block; */
   width: max-content;
   display: inline-block;
   padding: 0.75rem 1.2rem;
@@ -142,10 +142,23 @@ a {
 } */
 
 .btn-primary {
-  background: transparent;
-  color: #d3e97a;
+  width: max-content;
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
   border: 2px solid #d3e97a;
-  font-weight: bold;
+  border-radius: 10px;
+  z-index: 0;
+  background: transparent;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary:hover {

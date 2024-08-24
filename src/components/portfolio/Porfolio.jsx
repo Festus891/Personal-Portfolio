@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import data from "./data";
@@ -38,47 +38,67 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {data.map(({ id, image, title, github, demo, case_study, stack }) => {
-          return (
-            <motion.article key={id} className="portfolio_item">
-              <div className="portfolio_item_image">
-                <img
-                  src={image}
-                  alt="project-image "
-                  className="portfolio_image"
-                />
-              </div>
-              <motion.div
-                className="portfolio_item-cta"
-                animate={animations}
-                initial={{ x: "-100vw" }}
-              >
-                <h3>
-                  <a href={demo} target="_blank" rel="noopener noreferrer">
-                    {title}
-                  </a>
-                </h3>
-                <p>{case_study}</p>
-                <p className="stacks">Stacks: {stack}</p>
+        {data.map(
+          ({ id, image, title, github, demo, case_study, stack, type }) => {
+            // Split the stack string into an array
+            const stackArray = stack.split(", ");
 
-                <div className="portfolio_item-cta_link">
-                  <a href={demo} target="_blank" rel="noopener noreferrer">
-                    Live Demo <FaArrowUpRightFromSquare />
-                  </a>
+            return (
+              <motion.article key={id} className="portfolio_item">
+                <div className="portfolio_item_image">
+                  <img
+                    src={image}
+                    alt="project-image "
+                    className="portfolio_image"
+                  />
+                </div>
+                <motion.div
+                  className="portfolio_item-cta"
+                  animate={animations}
+                  initial={{ x: "-100vw" }}
+                >
+                  <h3>
+                    <a href={demo} target="_blank" rel="noopener noreferrer">
+                      {title}
+                    </a>
+                    <span>
+                      <p class="text-sm font-bold  bg-[#1f1f1f] p-2 rounded-md">
+                        {type}
+                      </p>
+                    </span>
+                  </h3>
+                  <p>{case_study}</p>
 
-                  <a href={github} target="_blank" rel="noopener noreferrer">
-                    GitHub
-                    <FaGithub />
-                  </a>
-                  {/* <Link to="projectInfo">
+                  <div className="stack-container">
+                    {stackArray.map((tech, index) => (
+                      <p
+                        key={index}
+                        className="stacks border-2 border-solid rounded-md p-1 border-[#1f1f1f]"
+                      >
+                        {tech}
+                      </p>
+                    ))}
+                  </div>
+
+                  <div className="portfolio_item-cta_link">
+                    <a href={demo} target="_blank" rel="noopener noreferrer">
+                      Live Demo <FaArrowUpRightFromSquare />
+                    </a>
+
+                    <a href={github} target="_blank" rel="noopener noreferrer">
+                      GitHub
+                      <FaGithub />
+                    </a>
+                    {/* <Link to="projectInfo">
                     More Info
                     <IoMdInformationCircle />
                   </Link> */}
-                </div>
-              </motion.div>
-            </motion.article>
-          );
-        })}
+                  </div>
+                </motion.div>
+              </motion.article>
+            );
+          }
+        )}
       </motion.div>
     </motion.section>
   );

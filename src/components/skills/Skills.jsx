@@ -64,6 +64,71 @@ const Skills = () => {
               </motion.div>
             ))}
           </div>
+          <div className="w-full flex flex-col gap-3">
+            <h4 className="text-2xl font-semibold text-tertiary uppercase">
+              Core Professional Skills
+            </h4>
+            <div className="w-full flex flex-col gap-4">
+              <div>
+                <div className="flex flex-col gap-y-0.5">
+                  <div className="w-full flex gap-x-4 items-center flex-wrap">
+                    <p className="font-medium text-lg">
+                      Responsive and Mobile-First Design:{" "}
+                    </p>
+                  </div>
+                  <ul className="opacity-70 flex flex-col gap-2">
+                    <li>
+                      Ensure applications work seamlessly across different
+                      screen sizes and resolutions.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-col gap-y-0.5">
+                  <div className="w-full flex gap-x-4 items-center flex-wrap">
+                    <p className="font-medium text-lg">Version Control/Git: </p>
+                  </div>
+                  <ul className="opacity-70 flex flex-col gap-2">
+                    <li>
+                      Managing code changes, collaborating with other
+                      developers, and maintaining project history.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-col gap-y-0.5">
+                  <div className="w-full flex gap-x-4 items-center flex-wrap">
+                    <p className="font-medium text-lg">
+                      Cross-Browser Compatibility:{" "}
+                    </p>
+                  </div>
+                  <ul className="opacity-70 flex flex-col gap-2">
+                    <li>
+                      Ensuring that web applications work consistently across
+                      different browsers..
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-col gap-y-0.5">
+                  <div className="w-full flex gap-x-4 items-center flex-wrap">
+                    <p className="font-medium text-lg">
+                      Performance Optimization:{" "}
+                    </p>
+                  </div>
+                  <ul className="opacity-70 flex flex-col gap-2">
+                    <li>
+                      Optimizing web performance is essential for providing a
+                      fast and efficient user experience.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </motion.section>

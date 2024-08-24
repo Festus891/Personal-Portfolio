@@ -11,9 +11,10 @@ const data = [
     title: "OwnitMart",
     github: "https://github.com/Festus891/Ownitmart-fullstack",
     demo: "https://ownitmart.vercel.app/",
+    type: "E-commerce",
     case_study:
       "OwnitMart is a fully functional e-commerce website offering a diverse range of products across various categories. Customers can easily browse through the selections, find items they desire, and make purchases seamlessly. The platform also features an admin interface for efficient product and order management.",
-    stack: "REACTJS, Redux, CSS, Bootstrap, Mongodb, Express, Nodejs",
+    stack: "REACTJS, Redux, CSS, Bootstrap, Mongodb, Express, Nodejs, Vercel",
   },
   {
     id: 2,
@@ -21,19 +22,21 @@ const data = [
     title: "Movie-Insight",
     // github: "https://github.com/Festus891/TheYearCountDown-App",
     demo: "https://movieinsight.vercel.app/",
+    type: "Movie",
     case_study:
       "A fully functional movie information website that allows users to search for and view details about any movie they want to watch. This is achieved by utilizing the TMDB APIs to fetch and display movie data on the frontend.",
-    stack: "Reactjs, CSS, Material Ui, Api Integration",
+    stack: "Reactjs, CSS, Material Ui, Api Integration, Vercel",
   },
   {
     id: 3,
     image: img3,
     title: "Personal Portfolio",
     github: "",
+    type: "Personal",
     demo: "https://adedev.vercel.app/",
     case_study:
       "Welcome to my personal portfolio, which I have meticulously crafted to highlight my expertise in web development. This portfolio is designed with user-friendliness and responsiveness in mind, ensuring an engaging and seamless experience for all visitors. Explore my work and see how I bring professionalism and creativity to every project.",
-    stack: "REACTJS, CSS, Framer-motion",
+    stack: "REACTJS, CSS, TailwindCSS, Framer-motion, Vercel",
   },
   // {
   //   id: 2,
@@ -51,9 +54,10 @@ const data = [
     title: "Image Getter",
     github: "https://github.com/Festus891/ImageGetter-App",
     demo: "https://image-getter-app.vercel.app/",
+    type: "Image search",
     case_study:
       "Image Getter is a responsive and efficient website designed to search for various types of images across the internet. Utilizing the Unsplash API, it fetches data from their extensive image repository, providing users with a seamless and diverse image search experience.",
-    stack: "HTML, CSS, Javascript",
+    stack: "HTML, CSS, Javascript, Vercel",
   },
 ];
 

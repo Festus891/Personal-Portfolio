@@ -37,6 +37,7 @@
 
 .portfolio_image {
   border-radius: 10px;
+  filter: drop-shadow(1px 5px 4px grey);
 }
 
 .portfolio_image:hover {
@@ -48,6 +49,13 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
+}
+
+.portfolio_item-cta h3 {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.75rem;
+  align-items: center;
 }
 
 .portfolio_item-cta h3 a {
@@ -66,8 +74,15 @@
   font-weight: 500;
 }
 
+.stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .portfolio_item-cta .stacks {
-  color: #d3e97a;
+  color: var(--color-b-primary);
+  font-size: 0.8rem;
 }
 
 .portfolio_item-cta_link {

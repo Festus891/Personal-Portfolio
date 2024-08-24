@@ -65,8 +65,9 @@ const About = () => {
   return (
     <motion.section id="about" className="containers" ref={ref}>
       <motion.div className="about_container containers">
-        <motion.div className="about_me">
+        <motion.div className="about_me" variants={contentVariants}>
           <motion.h4 animate={h4Animation}>About Me</motion.h4>
+          <motion.p variants={childVariants}>Little About me</motion.p>
         </motion.div>
 
         <motion.div
@@ -95,6 +96,21 @@ const About = () => {
             great opportunity for me, then please don't hesitate to connect with
             me. Let's work together to bring your ideas to life and make a real
             impact!
+            <span class="block my-3">
+              I will help you achieve:
+              <br />- ✅ Pixel-perfect, responsive UI designs
+              <br />- ✅ Blazing-fast website performance
+              <br />- ✅ Robust state management and data fetching
+              <br /> - ✅ Accessibility and cross-browser compatibility
+              <br /> - ✅ Seamless animations for a delightful UX
+            </span>
+            <span class="block my-3">
+              - I am deeply passionate about minimalistic designs, firmly
+              believing that exceptional designs tend to remain inconspicuous.
+              Through a compelling design, one can effectively communicate their
+              narrative or the narrative of their business to a broader
+              audience.
+            </span>
           </motion.p>
 
           {/* <Link to="/moreAbout" className="more_about">

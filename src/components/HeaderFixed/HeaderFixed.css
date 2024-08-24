@@ -14,7 +14,6 @@ div > a > img {
   top: 0px;
   /* left: 50px; */
   z-index: 99;
-  border-radius: 3rem;
 }
 
 .nav_background {

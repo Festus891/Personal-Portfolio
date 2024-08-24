@@ -7,7 +7,7 @@ const CTA = () => {
   return (
     <div className="cta">
       <motion.a
-        href="https://drive.google.com/file/d/14GRlZQfl2kmjA4ta1RuapY3YzQQdUpKv/view?usp=drivesdk"
+        href="https://drive.google.com/file/d/1Pj9B9OyrvLKhZ2wTEpbL6cZv6YtXe66w/view?usp=sharing"
         className="btn"
         target="_blank"
         initial={{ x: "-100vw" }}
@@ -26,7 +26,7 @@ const CTA = () => {
         animate={{ x: 0 }}
         whileHover={{ scale: 1.1 }}
       >
-        Contact me
+        Let's Talk
       </motion.a>
     </div>
   );

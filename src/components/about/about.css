@@ -5,6 +5,7 @@
   margin-top: 0;
   background-color: #1f1f1f;
   padding: 2rem;
+  /* height: 100vh; */
 }
 
 /* .back .icon {
@@ -12,6 +13,12 @@
 } */
 .about_me h4 {
   font-size: 3rem;
+  text-align: center;
+  font-family: "Noto Serif JP", sans-serif;
+  color: var(--color-white);
+}
+
+.about_me {
   text-align: center;
   font-family: "Noto Serif JP", sans-serif;
   color: var(--color-white);
@@ -92,7 +99,7 @@
 
   .about_me h4 {
     font-size: 1.8rem;
-    text-align: left;
+    text-align: center;
   }
 
   .about_content p {

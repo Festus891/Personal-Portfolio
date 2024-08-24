@@ -3,6 +3,9 @@ import "./header.css";
 import CTA from "./CTA";
 // import myself from "../../asset/festus3.png";
 import myself from "../../asset/festus.png";
+import { BiLogoUpwork } from "react-icons/bi";
+import { SiUpwork } from "react-icons/si";
+import { FaUpwork } from "react-icons/fa";
 import HeaderSociial from "./HeaderSociial";
 import { motion } from "framer-motion";
 import Availability from "./Availability";
@@ -45,6 +48,7 @@ const Header = () => {
           I'm a <strong>FRONTEND DEVELOPER</strong> passionate about building
           accessible and user friendly websites.
         </motion.p>
+        <Availability />
         {/* <p> 
           I blend creativity with technical expertise to cook up lightning-fast
           websites and apps that solve real problems and leave users hungry for
@@ -53,10 +57,16 @@ const Header = () => {
         <motion.div className="me" variants={itemVariants}>
           <img src={myself} alt="profile" />
         </motion.div>
-        <Availability />
 
         <CTA />
-
+        <motion.a
+          variants={itemVariants}
+          href="https://www.upwork.com/freelancers/~01a5ed37d86a8b7c03 "
+          className="w-[16rem] border-solid border-2 border-[#d3e97a] mt-2 p-1  rounded-xl text-[#fff]"
+        >
+          <SiUpwork style={{ paddingRight: "2px", fontSize: "1.2rem" }} />
+          Upwork profile
+        </motion.a>
         <HeaderSociial />
       </motion.div>
       <div className="header_box">
