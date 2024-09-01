@@ -14,7 +14,8 @@ const data = [
     type: "E-commerce",
     case_study:
       "OwnitMart is a fully functional e-commerce website offering a diverse range of products across various categories. Customers can easily browse through the selections, find items they desire, and make purchases seamlessly. The platform also features an admin interface for efficient product and order management.",
-    stack: "REACTJS, Redux, CSS, Bootstrap, Mongodb, Express, Nodejs, Vercel",
+    stack:
+      "REACTJS, Redux, CSS, Bootstrap, Mongodb, Express, Nodejs, Api Integration, Vercel",
   },
   {
     id: 2,
