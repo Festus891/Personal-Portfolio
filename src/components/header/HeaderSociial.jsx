@@ -32,7 +32,7 @@ const HeaderSociial = () => {
       </div>
       <div className="header_socials_right ">
         <a
-          href="https://drive.google.com/file/d/1X2xcV3OL2EjQUqWBVvNLGZvKhG_FYO1U/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1U6fdHRCesqkWh11RWY0qW1gFew7efAIh/view?usp=sharing"
           target="_blank"
         >
           My Resume
