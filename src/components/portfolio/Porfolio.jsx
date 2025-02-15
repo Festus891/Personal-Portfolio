@@ -39,7 +39,17 @@ const Portfolio = () => {
         </div>
 
         {data.map(
-          ({ id, image, title, github, demo, case_study, stack, type }) => {
+          ({
+            id,
+            image,
+            title,
+            github,
+            demo,
+            case_study,
+            stack,
+            type,
+            status,
+          }) => {
             // Split the stack string into an array
             const stackArray = stack.split(", ");
 
@@ -61,9 +71,12 @@ const Portfolio = () => {
                     <a href={demo} target="_blank" rel="noopener noreferrer">
                       {title}
                     </a>
-                    <span>
-                      <p class="text-sm font-bold  bg-[#1f1f1f] p-2 rounded-md">
+                    <span className="flex gap-2 ">
+                      <p class="text-sm font-bold  bg-[#1f1f1f] p-2 rounded-md text-center">
                         {type}
+                      </p>
+                      <p class="text-sm font-bold  bg-[#1f1f1f] p-2 rounded-md text-center ">
+                        {status}
                       </p>
                     </span>
                   </h3>
