@@ -3,7 +3,7 @@ import img2 from "../../asset/movieinsight.png";
 import img4 from "../../asset/n-ImageGetter.jpg";
 // import img4 from "../../asset/n-CountDownApp.jpg";
 import img1 from "../../asset/ownit-2.png";
-import getNow from "../../asset/getnow1.png";
+import getNow from "../../asset/getNow.png";
 
 const data = [
   {
