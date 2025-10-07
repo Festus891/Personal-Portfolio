@@ -17,7 +17,8 @@
 .contact_header h2 {
   font-size: 2rem;
   color: var(--color-white);
-  font-family: "Noto Serif JP", sans-serif;
+  /* font-family: "Noto Serif JP", sans-serif; */
+  font-family: "Mulish", sans-serif;
 }
 
 .contact_header p {
@@ -80,7 +81,7 @@ form {
 }
 
 .contact__form-field {
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #fff; */
   padding-top: 3rem;
 }
 
@@ -90,6 +91,9 @@ form {
   width: 100%;
   font-size: 0.9rem;
   letter-spacing: 0;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+
   border-radius: 5px;
   font-weight: 500;
   outline: none;

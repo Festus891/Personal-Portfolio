@@ -34,7 +34,7 @@ const Portfolio = () => {
           <h2>My Projects</h2>
           <p>
             Here are some of the selected projects that showcase my passion for
-            front-end development
+            fullstack development
           </p>
         </div>
 

@@ -234,7 +234,7 @@ const Contact = () => {
               // cols="30"
               // rows="10"
               className="contact__form-input"
-              placeholder="Enter Your Message"
+              placeholder="How can I be of help , please put in details"
               name="message"
               id="message"
             ></textarea>

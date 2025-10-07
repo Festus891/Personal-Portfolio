@@ -7,7 +7,7 @@ const CTA = () => {
   return (
     <div className="cta">
       <motion.a
-        href="https://drive.google.com/file/d/1U6fdHRCesqkWh11RWY0qW1gFew7efAIh/view?usp=sharing"
+        href="https://drive.google.com/file/d/18QMV8Hxrf89sWcxNg2a4Tl8taR4j_2Vu/view?usp=sharing"
         className="btn"
         target="_blank"
         initial={{ x: "-100vw" }}

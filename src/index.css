@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;700;800;900&family=Lato:wght@400;700;900&display=swap");
 
 * {
   margin: 0;
@@ -35,7 +36,9 @@ html {
 
 body {
   background-color: var(--color-dark);
-  font-family: Comic Neue, sans-serif !important;
+  /* font-family: Comic Neue, sans-serif !important; */
+  font-family: "Mulish", sans-serif !important;
+
   /* font-family: "Noto Serif JP", sans-serif; */
   /* font-family: "Source Sans Pro", sans-serif; */
   color: var(--color-white);

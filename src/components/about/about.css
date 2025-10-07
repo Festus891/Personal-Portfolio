@@ -14,13 +14,13 @@
 .about_me h4 {
   font-size: 3rem;
   text-align: center;
-  font-family: "Noto Serif JP", sans-serif;
+  font-family: "Mulish", sans-serif;
   color: var(--color-white);
 }
 
 .about_me {
   text-align: center;
-  font-family: "Noto Serif JP", sans-serif;
+  font-family: "Mulish", sans-serif;
   color: var(--color-white);
 }
 

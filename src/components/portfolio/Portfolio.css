@@ -6,7 +6,7 @@
 
 .portfolio_head h2 {
   font-size: 3rem;
-  font-family: "Noto Serif JP", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 .portfolio_head p {
@@ -62,7 +62,7 @@
   color: var(--color-white);
   display: block;
   text-decoration: none;
-  font-family: "Noto Serif JP", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -88,10 +88,15 @@
 .portfolio_item-cta_link {
   margin-top: 2rem;
   display: flex;
+  padding-top: 1rem;
   justify-content: space-around;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   border-bottom: 2px solid var(--color-white);
+  border-top: 2px solid var(--color-white);
+
   padding-bottom: 10px;
   color: #d3e97a;
 }
@@ -125,7 +130,7 @@
   }
   .portfolio_head h2 {
     font-size: 3rem;
-    font-family: "Noto Serif JP", sans-serif;
+    font-family: "Mulish", sans-serif;
   }
 
   .portfolio_head p {

@@ -20,7 +20,8 @@ header {
 .header_box .header_box_left {
   font-size: 2.5rem;
   color: var(--color-b-primary);
-  font-family: "Noto Serif JP", sans-serif;
+  /* font-family: "Noto Serif JP", sans-serif; */
+  font-family: "Mulish", sans-serif;
   margin-bottom: 2rem;
 }
 
@@ -28,6 +29,8 @@ header {
   font-size: 2.5rem;
   color: var(--color-b-primary);
   font-family: "Noto Serif JP", sans-serif;
+  font-family: "Mulish", sans-serif;
+
   margin-top: 2rem;
 }
 
@@ -67,12 +70,13 @@ header {
   font-size: 4rem;
   text-align: center;
   font-weight: bolder;
-  font-family: "Noto Serif JP", sans-serif;
+  font-family: "Mulish", sans-serif;
   color: var(--color-white);
 }
 
 .header_container p {
-  color: var(--color-light);
+  /* color: var(--color-light); */
+  color: var(--color-white);
   font-size: 1.3rem;
   text-align: center;
   width: 70%;
@@ -163,8 +167,8 @@ p strong {
 /* myself */
 
 .me {
-  background: linear-gradient(#1f1f1f, transparent);
-  /* background-color: #1f1f1f; */
+  /* background: linear-gradient(#1f1f1f, transparent); */
+  background-color: black;
   width: 22rem;
   height: 18rem;
   justify-content: center;
@@ -175,7 +179,8 @@ p strong {
 }
 
 .me img {
-  /* border-radius: 12rem 12rem 0 0; */
+  border-radius: 12rem 12rem 0 0;
+  border: 4px white solid;
 }
 
 /* scroll down sytling */

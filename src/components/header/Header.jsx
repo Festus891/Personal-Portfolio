@@ -43,9 +43,9 @@ const Header = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.h1 variants={itemVariants}>Aderibigbe Festus .A</motion.h1>
+        <motion.h1 variants={itemVariants}>Aderibigbe Festus A.</motion.h1>
         <motion.p variants={itemVariants}>
-          I'm a <strong>FRONTEND DEVELOPER</strong> passionate about building
+          I'm a <strong>FULLSTACK DEVELOPER</strong> passionate about building
           accessible and user friendly websites and applications.
         </motion.p>
         <Availability />
@@ -59,7 +59,7 @@ const Header = () => {
         </motion.div>
 
         <CTA />
-        <motion.a
+        {/* <motion.a
           variants={itemVariants}
           href="https://www.upwork.com/freelancers/~01a5ed37d86a8b7c03 "
           target="_blank"
@@ -67,7 +67,7 @@ const Header = () => {
         >
           <SiUpwork style={{ paddingRight: "2px", fontSize: "1.2rem" }} />
           Upwork profile
-        </motion.a>
+        </motion.a> */}
         <HeaderSociial />
       </motion.div>
       <div className="header_box">

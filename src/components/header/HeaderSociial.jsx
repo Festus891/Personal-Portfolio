@@ -1,7 +1,6 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-// import { BsTwitter } from "react-icons/bs";
 import { BsTwitterX } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
@@ -32,7 +31,7 @@ const HeaderSociial = () => {
       </div>
       <div className="header_socials_right ">
         <a
-          href="https://drive.google.com/file/d/1U6fdHRCesqkWh11RWY0qW1gFew7efAIh/view?usp=sharing"
+          href="https://drive.google.com/file/d/18QMV8Hxrf89sWcxNg2a4Tl8taR4j_2Vu/view?usp=sharing"
           target="_blank"
         >
           My Resume
