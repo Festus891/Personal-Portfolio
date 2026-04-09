@@ -12,8 +12,8 @@ const data = [
     id: 1,
     image: meshken,
     title: "Meshken Led Solution",
-    github: "https://github.com/Festus891/Ownitmart-fullstack",
-    demo: "https://ownitmart.vercel.app/",
+    github: "",
+    demo: "https://www.meshken.com/",
     type: "Business",
     status: "Development",
     case_study:
