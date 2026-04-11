@@ -6,8 +6,10 @@ import img1 from "../../asset/ownit-2.png";
 import getNow from "../../asset/getNow.png";
 import meshken from "../../asset/meshken.png";
 
+
 const data = [
-  {
+
+    {
     id: 1,
     image: meshken,
     title: "Meshken Led Solution",
@@ -81,7 +83,7 @@ const data = [
   //   stack: "Javascript",
   // },
   {
-    id: 6,
+    id: 5,
     image: img4,
     title: "Image Getter",
     github: "https://github.com/Festus891/ImageGetter-App",
