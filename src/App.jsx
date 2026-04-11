@@ -11,17 +11,19 @@ import ScrollUp from "./components/scrollup/ScrollUp";
 import Cursor from "./components/scrollup/Cursor";
 import Testimonial from "./components/testimonial/Testimonial";
 import BackgroundCircles from "./components/header/BackgroundCircles";
+import Faq from "./components/faq/faq";
 
 const App = () => {
   return (
     <>
-      {/* <BackgroundCircles/> */}
+      <BackgroundCircles />
       <Header />
       <About />
       {/* <Service /> */}
       <Portfolio />
       <Skills />
-      {/* <Testimonial /> */}
+      <Testimonial />
+      <Faq />
       <Contact />
       <ScrollUp />
       <Cursor />

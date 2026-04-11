@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import "./header.css";
-import CTA from "./CTA";
+// import CTA from "./CTA";
 // import myself from "../../asset/festus3.png";
 import myself from "../../asset/festus.png";
 import { BiLogoUpwork } from "react-icons/bi";
-import { SiUpwork } from "react-icons/si";
-import { FaUpwork } from "react-icons/fa";
+// import { SiUpwork } from "react-icons/si";
+// import { FaUpwork } from "react-icons/fa";
 import HeaderSociial from "./HeaderSociial";
 import { motion } from "framer-motion";
 import Availability from "./Availability";
-import BackgroundCircles from "./BackgroundCircles";
+// import BackgroundCircles from "./BackgroundCircles";
+import { IoIosArrowDown } from "react-icons/io";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -36,19 +37,20 @@ const Header = () => {
 
   return (
     <header id="home">
-      <BackgroundCircles />
+      {/* <BackgroundCircles /> */}
       <motion.div
         className="header_container "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.h1 variants={itemVariants}>Aderibigbe Festus A.</motion.h1>
+        <motion.h1 variants={itemVariants}>Hello!</motion.h1>
         <motion.p variants={itemVariants}>
-          I'm a <strong>FULLSTACK DEVELOPER</strong> passionate about building
-          accessible and user friendly websites and applications.
+          <strong>Aderibigbe festus is here.</strong>
         </motion.p>
-        <Availability />
+        <motion.p variants={itemVariants}>
+          Fullstack Developer | React Specialist | Next.js Expert.
+        </motion.p>
         {/* <p> 
           I blend creativity with technical expertise to cook up lightning-fast
           websites and apps that solve real problems and leave users hungry for
@@ -57,8 +59,18 @@ const Header = () => {
         <motion.div className="me" variants={itemVariants}>
           <img src={myself} alt="profile" />
         </motion.div>
-
-        <CTA />
+        {/* <CTA /> */}
+        <Availability />
+        <div
+          className="scroll_glow_btn"
+          onClick={() => {
+            document.getElementById("about")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          <IoIosArrowDown className="scroll_arrow" />
+        </div>
         {/* <motion.a
           variants={itemVariants}
           href="https://www.upwork.com/freelancers/~01a5ed37d86a8b7c03 "

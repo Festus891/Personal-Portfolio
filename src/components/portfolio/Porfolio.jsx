@@ -1,119 +1,134 @@
-import React, { useRef, useEffect } from "react";
-import "./Portfolio.css";
-import { Link } from "react-router-dom";
+import React, { useState, useRef } from "react";
+import "./PortfolioNew.css";
 import data from "./data";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { IoMdInformationCircle } from "react-icons/io";
-import { FaGithub } from "react-icons/fa";
-import { useInView, useAnimation, motion } from "framer-motion";
+import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
+import { IoMdClose } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const animations = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      animations.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 4,
-          bounce: 0.5,
-        },
-      });
-    } else {
-      animations.start({ x: "-100vw" });
-    }
-  }, [isInView, animations]);
+  const [visible, setVisible] = useState(3);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <motion.section id="portfolio" className="containers" ref={ref}>
-      <motion.div className="containers portfolio_container">
-        <div className="portfolio_head">
-          <h2>My Projects</h2>
+    <section id="portfolio" className=" containers portfolio_section">
+      <div className="containers">
+        {/* HEADER */}
+        <div className="portfolio_header">
+          <h2>
+            My Top <span>Projects</span>
+          </h2>
           <p>
-            Here are some of the selected projects that showcase my passion for
-            fullstack development
+            Highlighting expertise in full-stack development and system design.
           </p>
         </div>
 
-        {data.map(
-          ({
-            id,
-            image,
-            title,
-            github,
-            demo,
-            case_study,
-            stack,
-            type,
-            status,
-          }) => {
-            // Split the stack string into an array
-            const stackArray = stack.split(", ");
+        {/* GRID */}
+        <div className="portfolio_grid">
+          {data.slice(0, visible).map((project, index) => (
+            <motion.div
+              key={project.id}
+              className="portfolio_card"
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1], // smooth premium easing
+                delay: index * 0.15,
+              }}
+              whileHover={{ scale: 1.04 }}
+              onClick={() => setSelectedProject(project)}
+            >
+              {/* IMAGE */}
+              <div className="portfolio_img_wrapper">
+                <img src={project.image} alt="" />
+              </div>
 
-            return (
-              <motion.article key={id} className="portfolio_item">
-                <div className="portfolio_item_image">
-                  <img
-                    src={image}
-                    alt="project-image "
-                    className="portfolio_image"
-                  />
-                </div>
-                <motion.div
-                  className="portfolio_item-cta"
-                  animate={animations}
-                  initial={{ x: "-100vw" }}
-                >
-                  <h3>
-                    <a href={demo} target="_blank" rel="noopener noreferrer">
-                      {title}
-                    </a>
-                    <span className="flex gap-2 ">
-                      <p class="text-sm font-bold  bg-[#1f1f1f] p-2 rounded-md text-center">
-                        {type}
-                      </p>
-                      <p class="text-sm font-bold  bg-[#1f1f1f] p-2 rounded-md text-center ">
-                        {status}
-                      </p>
-                    </span>
-                  </h3>
-                  <p>{case_study}</p>
+              {/* CONTENT */}
+              <div className="portfolio_content">
+                <h3>{project.title}</h3>
 
-                  <div className="stack-container">
-                    {stackArray.map((tech, index) => (
-                      <p
-                        key={index}
-                        className="stacks border-2 border-solid rounded-md p-1 border-[#1f1f1f]"
-                      >
-                        {tech}
-                      </p>
-                    ))}
-                  </div>
+                <p className="portfolio_desc">
+                  {project.case_study.slice(0, 100)}...
+                </p>
 
-                  <div className="portfolio_item-cta_link">
-                    <a href={demo} target="_blank" rel="noopener noreferrer">
-                      Live Demo <FaArrowUpRightFromSquare />
-                    </a>
+                <span className="status_badge">{project.status} Project</span>
+              </div>
 
-                    <a href={github} target="_blank" rel="noopener noreferrer">
-                      GitHub
-                      <FaGithub />
-                    </a>
-                    {/* <Link to="projectInfo">
-                    More Info
-                    <IoMdInformationCircle />
-                  </Link> */}
-                  </div>
-                </motion.div>
-              </motion.article>
-            );
-          }
+              {/* FOOTER */}
+              <div className="portfolio_footer">
+                <span>View case study</span>
+                <FaArrowUpRightFromSquare />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* LOAD MORE */}
+        {visible < data.length && (
+          <div className="portfolio_more">
+            <button onClick={() => setVisible((prev) => prev + 3)}>
+              Show More Projects ↓
+            </button>
+
+            <p>
+              Showing {visible} of {data.length} — more to explore.
+            </p>
+          </div>
         )}
-      </motion.div>
-    </motion.section>
+      </div>
+
+      {/* MODAL */}
+      {selectedProject && (
+        <div
+          className="project_modal_overlay"
+          onClick={() => setSelectedProject(null)}
+        >
+          <motion.div
+            className="project_modal"
+            initial={{ scale: 0.7, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 120 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="modal_close"
+              onClick={() => setSelectedProject(null)}
+            >
+              <IoMdClose />
+            </button>
+
+            <img src={selectedProject.image} alt="" className="modal_image" />
+
+            <h2>{selectedProject.title}</h2>
+
+            <p className="modal_desc">{selectedProject.case_study}</p>
+
+            <div className="modal_stack">
+              {selectedProject.stack.split(", ").map((tech, i) => (
+                <span key={i}>{tech}</span>
+              ))}
+            </div>
+
+            <div className="modal_links">
+              <a href={selectedProject.demo} target="_blank" rel="noreferrer">
+                Live Demo <FaArrowUpRightFromSquare />
+              </a>
+
+              {selectedProject.github && (
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub <FaGithub />
+                </a>
+              )}
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </section>
   );
 };
 

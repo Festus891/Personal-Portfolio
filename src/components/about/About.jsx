@@ -76,6 +76,7 @@ const About = () => {
           initial="hidden"
           animate={pAnimation}
         >
+          <h2>Overview</h2>
           <motion.p variants={childVariants}>
             - Hi, I'm Festus a Frontend web developer, I specialize in
             transforming design concepts into clean and user-friendly
@@ -98,11 +99,11 @@ const About = () => {
             impact!
             <span class="block my-3">
               I will help you achieve:
-              <br />- ✅ Pixel-perfect, responsive UI designs
-              <br />- ✅ Blazing-fast website performance
-              <br />- ✅ Robust state management and data fetching
-              <br /> - ✅ Accessibility and cross-browser compatibility
-              <br /> - ✅ Seamless animations for a delightful UX
+              <br />- Pixel-perfect, responsive UI designs
+              <br />- Blazing-fast website performance
+              <br />- Robust state management and data fetching
+              <br /> - Accessibility and cross-browser compatibility
+              <br /> - Seamless animations for a delightful UX
             </span>
             <span class="block my-3">
               - I am deeply passionate about minimalistic designs, firmly

@@ -4,10 +4,24 @@ import img4 from "../../asset/n-ImageGetter.jpg";
 // import img4 from "../../asset/n-CountDownApp.jpg";
 import img1 from "../../asset/ownit-2.png";
 import getNow from "../../asset/getNow.png";
+import meshken from "../../asset/meshken.png";
 
 const data = [
   {
     id: 1,
+    image: meshken,
+    title: "Meshken Led Solution",
+    github: "",
+    demo: "https://www.meshken.com/",
+    type: "Business",
+    status: "Development",
+    case_study:
+      "Meshken is a modern digital platform for LED display solutions, combining a product marketplace, rental services, and a quote/request system into one scalable web application.",
+    stack: "Nextjs, Tailwind, Supabase, TypeScript, Framer Motion, ShadCN UI",
+  },
+
+  {
+    id: 2,
     image: img1,
     title: "OwnitMart",
     github: "https://github.com/Festus891/Ownitmart-fullstack",
@@ -20,7 +34,7 @@ const data = [
       "REACTJS, Redux, CSS, Bootstrap, Mongodb, Express, Nodejs, Api Integration, Vercel",
   },
   {
-    id: 2,
+    id: 3,
     image: getNow,
     title: "GetNow ",
     github: "",
@@ -32,7 +46,7 @@ const data = [
     stack: "Nextjs, REACTJS, CSS, TailwindCSS, Framer-motion, Sanity, Vercel",
   },
   {
-    id: 3,
+    id: 4,
     image: img2,
     title: "Movie-Insight",
     // github: "https://github.com/Festus891/TheYearCountDown-App",
@@ -44,7 +58,7 @@ const data = [
     stack: "Reactjs, CSS, Material Ui, Api Integration, Vercel",
   },
   {
-    id: 4,
+    id: 5,
     image: img3,
     title: "Personal Portfolio",
     github: "",

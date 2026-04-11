@@ -2,8 +2,11 @@
 .availability {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
-  font-size: 1.5rem;
+  margin-top: 0.5rem;
+
+  margin-bottom: 0.5rem;
+
+  font-size: 1rem;
   color: var(--color-primary);
 }
 
