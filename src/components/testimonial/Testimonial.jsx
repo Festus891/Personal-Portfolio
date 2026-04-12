@@ -47,8 +47,11 @@ const Testimonial = () => {
     <section className="containers" id="testimonials_section" ref={ref}>
       <div className="containers testimonial_container">
         <div className="testimonial_heading">
+          <h2>
+            Client <span className="gradient_text"> Reviews</span>
+          </h2>
           <h5>What clients say</h5>
-          <h2>Client Reviews</h2>
+
           <p>
             Don&apos;t just take my word for it. Here is what people are saying
             about my work.

@@ -1,25 +1,44 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./PortfolioNew.css";
 import data from "./data";
 import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
-import { motion } from "framer-motion";
+import { motion, useScroll, useAnimation, useInView } from "framer-motion";
 
 const Portfolio = () => {
   const [visible, setVisible] = useState(3);
   const [selectedProject, setSelectedProject] = useState(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const h4Animation = useAnimation();
+  const pAnimation = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      h4Animation.start({
+        x: 0,
+        transition: { type: "spring", duration: 1.5 },
+      });
+      pAnimation.start("visible");
+    } else {
+      h4Animation.start({ x: "-100vw" });
+      pAnimation.start("hidden");
+    }
+  }, [isInView]);
 
   return (
-    <section id="portfolio" className=" containers portfolio_section">
-      <div className="containers">
+    <section id="portfolio" className="containers portfolio_section" ref={ref}>
+      <div className="containers portfolio_container">
         {/* HEADER */}
         <div className="portfolio_header">
-          <h2>
-            My Top <span>Projects</span>
-          </h2>
-          <p>
-            Highlighting expertise in full-stack development and system design.
-          </p>
+          <motion.h2 animate={h4Animation}>
+            My Top <span className="gradient_text">Projects</span>
+          </motion.h2>
+          <motion.p animate={pAnimation}>
+            A showcase of my best work, blending creativity with technical
+            expertise to solve real problems and leave users hungry for more.
+          </motion.p>
         </div>
 
         {/* GRID */}

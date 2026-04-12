@@ -74,7 +74,7 @@ const Contact = () => {
         "service_cv22a6c",
         "template_0hsa564",
         form.current,
-        "7cRlYFoaFx0rbf33P"
+        "7cRlYFoaFx0rbf33P",
       )
       .then(
         (result) => {
@@ -82,7 +82,7 @@ const Contact = () => {
         },
         (error) => {
           console.log(error.text);
-        }
+        },
       );
     e.target.reset();
     setShowPopup(true);
@@ -186,6 +186,8 @@ const Contact = () => {
         </motion.div>
         {/* end of contact optiom */}
         <motion.form ref={form} onSubmit={sendEmail}>
+          <h3>Send a Message</h3>
+
           <div className="contact__form-field">
             <label className="contact__form-label" htmlFor="name">
               Name

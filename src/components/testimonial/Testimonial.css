@@ -142,6 +142,13 @@
   margin-bottom: 1rem;
 }
 
+.gradient_text {
+  background: linear-gradient(90deg, #d3e97a, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .client_avatar_text {
   width: 3rem;
   height: 3rem;

@@ -9,7 +9,7 @@ import { BiLogoUpwork } from "react-icons/bi";
 import HeaderSociial from "./HeaderSociial";
 import { motion } from "framer-motion";
 import Availability from "./Availability";
-// import BackgroundCircles from "./BackgroundCircles";
+import BackgroundCircles from "./BackgroundCircles";
 import { IoIosArrowDown } from "react-icons/io";
 
 const containerVariants = {
@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
     <header id="home">
-      {/* <BackgroundCircles /> */}
+      <BackgroundCircles />
       <motion.div
         className="header_container "
         variants={containerVariants}
