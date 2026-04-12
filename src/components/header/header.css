@@ -80,12 +80,12 @@ header {
   font-size: 1.3rem;
   text-align: center;
   width: 70%;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p strong {
   color: var(--color-white);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
 }
 
@@ -167,20 +167,57 @@ p strong {
 /* myself */
 
 .me {
-  /* background: linear-gradient(#1f1f1f, transparent); */
-  background-color: black;
+  background-color: transparent;
   width: 22rem;
   height: 18rem;
+  display: flex;
   justify-content: center;
-  margin-top: 1rem;
-  /* border-radius: 12rem 12rem 0 0; */
+  align-items: center;
+  border-radius: 9999px;
   overflow: hidden;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem;
 }
 
+/* IMAGE BASE STATE */
 .me img {
-  border-radius: 12rem 12rem 0 0;
-  border: 4px white solid;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  border-radius: 9999px;
+  border: 1px #d3e97a solid;
+
+  filter: grayscale(100%) brightness(0.8);
+  transition:
+    filter 0.5s ease,
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* 🔥 HOVER MAGIC */
+.me:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(211, 233, 122, 0.4);
+}
+
+.me::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(211, 233, 122, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.me:hover::after {
+  opacity: 1;
 }
 
 /* scroll down sytling */
@@ -223,13 +260,11 @@ p strong {
     margin-top: 1rem;
   }
 
-  .me {
-    /* background: linear-gradient(#1f1f1f, transparent); */
-
+  /* .me {
     margin-top: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
-  }
+  } */
 
   .header_socials_left {
     display: none;

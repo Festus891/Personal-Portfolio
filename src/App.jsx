@@ -18,7 +18,7 @@ const App = () => {
   return (
     <>
       {/* <BackgroundCircles /> */}
-      <ParticlesBG />
+      {/* <ParticlesBG /> */}
       <Header />
       <About />
       {/* <Service /> */}

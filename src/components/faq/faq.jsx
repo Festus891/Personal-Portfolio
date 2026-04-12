@@ -12,8 +12,8 @@ const Faq = () => {
   };
 
   return (
-    <section id="faq" className="faq_section">
-      <div className="container">
+    <section id="faq" className="faq_section containers">
+      <div className="containers faq_container">
         <div className="faq_header">
           <h2>
             Common <span>Questions</span>

@@ -1,30 +1,41 @@
 .testimonials_section {
-  padding: 6rem 0;
   overflow: hidden;
-  background-color: red;
+  background: radial-gradient(circle at top, #0b0f17, #000);
 }
 
 .testimonial_heading {
   margin-bottom: 3rem;
-  max-width: 42rem;
+  /* max-width: 42rem; */
 }
 
 .testimonial_container {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .testimonial_heading h5 {
   color: var(--color-primary);
   margin-bottom: 0.6rem;
+  text-align: center;
 }
 
 .testimonial_heading h2 {
-  margin-bottom: 0.8rem;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-family: "Mulish", sans-serif;
+}
+
+.testimonial_heading h2 span {
+  background: linear-gradient(90deg, #d3e97a, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .testimonial_heading p {
   color: var(--color-light);
   line-height: 1.7;
+  text-align: center;
 }
 
 .testimonials_marquee {
@@ -37,6 +48,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+  padding: 1rem;
 }
 
 .marquee_track {
@@ -55,8 +67,8 @@
 
 .testimonial_card {
   position: relative;
-  width: 300px;
-  min-height: 200px;
+  width: 400px;
+  /* min-height: 200px; */
   flex-shrink: 0;
   background: linear-gradient(
     180deg,
@@ -65,7 +77,7 @@
   );
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.5rem;
-  padding: 1.5rem;
+  padding: 1rem;
   cursor: pointer;
   overflow: hidden;
   transition:
@@ -88,6 +100,9 @@
     rgba(0, 153, 255, 0.2) 75%,
     transparent 100%
   );
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -142,21 +157,14 @@
   margin-bottom: 1rem;
 }
 
-.gradient_text {
-  background: linear-gradient(90deg, #d3e97a, #ffffff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .client_avatar_text {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background-color: #ffffff57;
-  border: 1px solid white;
+  /* background-color: #ffffff57; */
+  border: 1px solid var(--color-bg-variant);
   color: var(--color-white);
   font-weight: 700;
   text-transform: uppercase;
@@ -225,7 +233,7 @@
   line-height: 1;
 }
 
-.modal_header {
+.testimo_modal_header {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -233,8 +241,8 @@
 }
 
 .modal_avatar {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .modal_rating {
@@ -255,6 +263,7 @@
 
 .modal_details strong {
   color: var(--color-white);
+  font-size: 1rem;
 }
 
 @keyframes scrollLeft {

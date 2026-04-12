@@ -27,13 +27,21 @@ const Portfolio = () => {
     }
   }, [isInView]);
 
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [selectedProject]);
+
   return (
     <section id="portfolio" className="containers portfolio_section" ref={ref}>
       <div className="containers portfolio_container">
         {/* HEADER */}
         <div className="portfolio_header">
           <motion.h2 animate={h4Animation}>
-            My Top <span className="gradient_text">Projects</span>
+            My Top <span>Projects</span>
           </motion.h2>
           <motion.p animate={pAnimation}>
             A showcase of my best work, blending creativity with technical
@@ -71,7 +79,7 @@ const Portfolio = () => {
                   {project.case_study.slice(0, 100)}...
                 </p>
 
-                <span className="status_badge">{project.status} Project</span>
+                <span className="status_badge">{project.type} Project</span>
               </div>
 
               {/* FOOTER */}
@@ -110,39 +118,67 @@ const Portfolio = () => {
             transition={{ type: "spring", stiffness: 120 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              className="modal_close"
-              onClick={() => setSelectedProject(null)}
-            >
-              <IoMdClose />
-            </button>
+            {/* 🔥 FIXED HEADER */}
+            <div className="modal_header">
+              <h2 className="modal_title">{selectedProject.title}</h2>
 
-            <img src={selectedProject.image} alt="" className="modal_image" />
-
-            <h2>{selectedProject.title}</h2>
-
-            <p className="modal_desc">{selectedProject.case_study}</p>
-
-            <div className="modal_stack">
-              {selectedProject.stack.split(", ").map((tech, i) => (
-                <span key={i}>{tech}</span>
-              ))}
+              <div
+                className="modal_close"
+                onClick={() => setSelectedProject(null)}
+              >
+                <IoMdClose />
+              </div>
             </div>
 
-            <div className="modal_links">
-              <a href={selectedProject.demo} target="_blank" rel="noreferrer">
-                Live Demo <FaArrowUpRightFromSquare />
-              </a>
+            {/* 🔥 SCROLLABLE BODY */}
+            <div className="modal_body">
+              {/* 🔥 PREVIEW SECTION */}
+              <div className="modal_preview">
+                <img
+                  src={selectedProject.image}
+                  alt=""
+                  className="modal_image"
+                />
 
-              {selectedProject.github && (
-                <a
-                  href={selectedProject.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub <FaGithub />
-                </a>
+                {/* 📱 MOBILE PREVIEW (optional) */}
+                {selectedProject.mobileImage && (
+                  <div className="mobile_preview">
+                    <img src={selectedProject.mobileImage} alt="mobile view" />
+                  </div>
+                )}
+              </div>
+
+              {/* 🔥 ROLE / CONTRIBUTION */}
+              {selectedProject.role && (
+                <div className="modal_role">
+                  <strong>Role:</strong> {selectedProject.role}
+                </div>
               )}
+
+              <p className="modal_desc">{selectedProject.case_study}</p>
+
+              <div className="modal_stack">
+                {selectedProject.stack.split(", ").map((tech, i) => (
+                  <span key={i}>{tech}</span>
+                ))}
+              </div>
+
+              {/* 🔥 LINKS */}
+              <div className="modal_links">
+                <a href={selectedProject.demo} target="_blank">
+                  Live Demo <FaArrowUpRightFromSquare />
+                </a>
+
+                {selectedProject.github ? (
+                  <a href={selectedProject.github} target="_blank">
+                    GitHub <FaGithub />
+                  </a>
+                ) : (
+                  <span className="confidential">
+                    GitHub <FaGithub />: Source Code Confidential
+                  </span>
+                )}
+              </div>
             </div>
           </motion.div>
         </div>

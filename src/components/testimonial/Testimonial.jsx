@@ -1,6 +1,7 @@
 import React, { useMemo, useRef, useState } from "react";
 import "./Testimonial.css";
 import testimonialData from "./TestimonialData";
+import { IoMdClose } from "react-icons/io";
 
 const Testimonial = () => {
   const [selectedClient, setSelectedClient] = useState(null);
@@ -44,11 +45,15 @@ const Testimonial = () => {
     ));
 
   return (
-    <section className="containers" id="testimonials_section" ref={ref}>
+    <section
+      className="containers testimonials_section"
+      id="testimonials_section"
+      ref={ref}
+    >
       <div className="containers testimonial_container">
         <div className="testimonial_heading">
           <h2>
-            Client <span className="gradient_text"> Reviews</span>
+            Client <span> Reviews</span>
           </h2>
           <h5>What clients say</h5>
 
@@ -82,10 +87,10 @@ const Testimonial = () => {
               className="modal_close"
               onClick={() => setSelectedClient(null)}
             >
-              ×
+              <IoMdClose />
             </button>
 
-            <div className="modal_header">
+            <div className="testimo_modal_header">
               <div className="client_avatar_text modal_avatar">
                 {selectedClient.avatar}
               </div>

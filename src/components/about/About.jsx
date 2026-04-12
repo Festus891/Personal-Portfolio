@@ -60,9 +60,9 @@ const About = () => {
       <div className="about_container containers">
         {/* LEFT SIDE */}
         <motion.div className="about_me">
-          <motion.h4 animate={h4Animation} className="gradient_text">
-            About Me
-          </motion.h4>
+          <motion.h2 animate={h4Animation}>
+            About <span>Me</span>
+          </motion.h2>
 
           <motion.p variants={childVariants}>Little About me</motion.p>
 
@@ -119,7 +119,7 @@ const About = () => {
             >
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>2+ years working</small>
+              <small>3+ years working</small>
             </motion.article>
 
             <motion.article
@@ -132,7 +132,7 @@ const About = () => {
             >
               <FiUsers className="about_icon" />
               <h5>Clients</h5>
-              <small>200+ worldwide</small>
+              <small>20+ and counting satisfied client</small>
             </motion.article>
 
             <motion.article
@@ -145,7 +145,7 @@ const About = () => {
             >
               <VscFolderLibrary className="about_icon" />
               <h5>Projects</h5>
-              <small>80+ completed</small>
+              <small>20+ completed and counting</small>
             </motion.article>
           </motion.div>
 

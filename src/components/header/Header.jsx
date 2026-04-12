@@ -49,7 +49,7 @@ const Header = () => {
           <strong>Aderibigbe festus is here.</strong>
         </motion.p>
         <motion.p variants={itemVariants}>
-          Fullstack Developer | React Specialist | Next.js Expert.
+          Fullstack Developer | React | Next.js | Typescript | Javascript.
         </motion.p>
         {/* <p> 
           I blend creativity with technical expertise to cook up lightning-fast
@@ -84,7 +84,7 @@ const Header = () => {
       </motion.div>
       <div className="header_box">
         <div className="header_box_left" variants={itemVariants}>
-          Transforming Ideas Into Reality{" "}
+          Transforming Ideas Into Reality
         </div>
         <div className="vertical-line"></div>
         <div className="header_box_right" variants={itemVariants}>

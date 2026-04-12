@@ -46,7 +46,9 @@ const Skills = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={headingAnimation}
         >
-          <motion.h2>MY SKILLS</motion.h2>
+          <motion.h2>
+            My <span>Skills</span>
+          </motion.h2>
           <motion.p>The tools I work with</motion.p>
         </motion.div>
 
