@@ -1,6 +1,6 @@
-import React from "react";
-import "./Service.css";
-import { BiCheck } from "react-icons/bi";
+// import React from "react";
+// import "./Service.css";
+// import { BiCheck } from "react-icons/bi";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
