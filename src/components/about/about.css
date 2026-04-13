@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 30% 65%;
   gap: 5%;
-  background: radial-gradient(circle at top, #0b0f17, #000);
 
   /* background: #1f1f1f; */
   padding: 1rem;
@@ -23,8 +22,16 @@
 .about_me h2 {
   text-align: center;
   color: white;
+  font-weight: 600;
   font-size: 3rem;
-  font-family: "Mulish", sans-serif;
+}
+
+.about_content-heading {
+  text-decoration: underline;
+  text-decoration-color: #d3e97a;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 3px;
+  margin-bottom: 1rem;
 }
 
 .about_me h2 span {
@@ -112,6 +119,11 @@
 @media screen and (max-width: 600px) {
   .about_cards {
     grid-template-columns: 1fr;
+  }
+
+  /* LEFT */
+  .about_me h2 {
+    font-size: 2rem;
   }
 
   .gradient_text {

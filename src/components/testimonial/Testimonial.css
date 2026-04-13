@@ -1,6 +1,6 @@
 .testimonials_section {
   overflow: hidden;
-  background: radial-gradient(circle at top, #0b0f17, #000);
+  /* background: radial-gradient(circle at top, #0b0f17, #000); */
 }
 
 .testimonial_heading {
@@ -19,10 +19,10 @@
 }
 
 .testimonial_heading h2 {
+  font-size: 3rem;
   text-align: center;
   color: white;
-  font-size: 3rem;
-  font-family: "Mulish", sans-serif;
+  font-weight: 600;
 }
 
 .testimonial_heading h2 span {
@@ -302,6 +302,10 @@
 @media screen and (max-width: 600px) {
   .testimonial_heading {
     margin-bottom: 2rem;
+  }
+
+  .testimonial_heading h2 {
+    font-size: 2rem;
   }
 
   .testimonial_card {

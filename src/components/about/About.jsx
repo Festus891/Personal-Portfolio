@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./about.css";
 // import profile from "../../asset/festus3.png";
+import writingCode from "../../asset/about-me.png";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
@@ -52,7 +53,7 @@ const About = () => {
 
   return (
     <motion.section id="about" className="containers" ref={ref}>
-      {/* 🔥 Scroll Progress Glow */}
+      {/*Scroll Progress Glow */}
       <motion.div
         className="about_progress containers "
         style={{ scaleX: scrollYProgress }}
@@ -67,14 +68,14 @@ const About = () => {
           <motion.p variants={childVariants}>Little About me</motion.p>
 
           {/* Profile Image */}
-          {/* <motion.div
+          <motion.div
             className="about_image"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <img src={profile} alt="profile" />
-          </motion.div> */}
+            <img src={writingCode} alt="profile" />
+          </motion.div>
         </motion.div>
 
         {/* RIGHT SIDE */}
@@ -84,7 +85,7 @@ const About = () => {
           initial="hidden"
           animate={pAnimation}
         >
-          <h2>Overview</h2>
+          <h2 className="about_content-heading">Overview</h2>
 
           <motion.p variants={childVariants}>
             Hi, I'm <span className="highlight">Festus</span>, a{" "}
@@ -94,9 +95,9 @@ const About = () => {
           </motion.p>
 
           <motion.p variants={childVariants}>
-            I specialize in crafting seamless user experiences on the frontend
-            while engineering robust, efficient systems on the backend —
-            ensuring everything works flawlessly together.
+            Experienced in building scalable web applications from front-end to
+            back-end with modern frameworks and technologies, ensuring seamless
+            user experiences and robust functionality.
           </motion.p>
 
           <motion.p variants={childVariants}>
@@ -107,7 +108,25 @@ const About = () => {
             <br />- Smooth, engaging user experiences
           </motion.p>
 
-          {/* 🔥 CARDS */}
+          <h2 className="about_content-heading">Service</h2>
+          <motion.p variants={childVariants}>
+            I help businesses and individuals establish a strong online presence
+            through my web development services.Whether you need a simple
+            portfolio site or a complex e-commerce platform, Real Estate
+            platform I have the skills and expertise to deliver high-quality
+            results. With my services, you can expect a seamless and
+            professional experience that will help you stand out in the digital
+            world.
+          </motion.p>
+
+          {/* <motion.p variants={childVariants}>
+            I help businesses build scalable and secure web applications with
+            seanless user experiences, from backend systems and database to
+            responsive modern interface and accessible interfaces ensuring
+            everything works flawlessly together.
+          </motion.p> */}
+
+          {/*CARDS */}
           <motion.div className="about_cards" variants={contentVariants}>
             <motion.article
               className="about_card"
@@ -119,7 +138,7 @@ const About = () => {
             >
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>3+ years working</small>
+              <small>4+ years working</small>
             </motion.article>
 
             <motion.article
@@ -132,7 +151,7 @@ const About = () => {
             >
               <FiUsers className="about_icon" />
               <h5>Clients</h5>
-              <small>20+ and counting satisfied client</small>
+              <small>20+ counting and satisfied client</small>
             </motion.article>
 
             <motion.article
@@ -149,7 +168,7 @@ const About = () => {
             </motion.article>
           </motion.div>
 
-          {/* 🔥 CTA */}
+          {/*CTA */}
           <motion.a
             href="#contact"
             className="cta_btn"

@@ -13,12 +13,12 @@
   margin-bottom: 3rem;
 }
 
-.portfolio_header h2 {
+.portfolio_header .heading {
   font-size: 3rem;
   font-weight: 600;
 }
 
-.portfolio_header h2 span {
+.portfolio_header .heading span {
   background: linear-gradient(90deg, #d3e97a, #ffffff);
   background-clip: text;
   -webkit-background-clip: text;
@@ -305,6 +305,9 @@
     grid-template-columns: 1fr;
   }
 
+  .portfolio_header .heading {
+    font-size: 2rem;
+  }
   /* FULL SCREEN MODAL */
   .project_modal {
     width: 100%;

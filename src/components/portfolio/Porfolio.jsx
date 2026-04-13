@@ -40,7 +40,7 @@ const Portfolio = () => {
       <div className="containers portfolio_container">
         {/* HEADER */}
         <div className="portfolio_header">
-          <motion.h2 animate={h4Animation}>
+          <motion.h2 className="heading" animate={h4Animation}>
             My Top <span>Projects</span>
           </motion.h2>
           <motion.p animate={pAnimation}>
