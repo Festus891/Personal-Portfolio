@@ -1,7 +1,7 @@
 .experience_container {
   display: grid;
   /* background-color: #1f1f1f; */
-  /* background: radial-gradient(circle at top, #0b0f17, #000); */
+  background: radial-gradient(circle at top, #0b0f17, #000);
 
   grid-template-columns: 20% 80%;
   gap: 2rem;

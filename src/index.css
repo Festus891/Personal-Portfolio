@@ -50,7 +50,7 @@ body {
 .containers {
   width: var(--container-width-ms);
   margin: 2.5rem auto 2rem;
-  background: radial-gradient(circle at top, #0b0f17, #000);
+  /* background: radial-gradient(circle at top, #0b0f17, #000); */
 }
 
 .particles_canvas {

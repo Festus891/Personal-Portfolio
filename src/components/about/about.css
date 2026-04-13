@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 30% 65%;
   gap: 5%;
+  background: radial-gradient(circle at top, #0b0f17, #000);
 
   /* background: #1f1f1f; */
   padding: 1rem;
