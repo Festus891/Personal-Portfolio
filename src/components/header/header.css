@@ -249,6 +249,7 @@ p strong {
 @media screen and (max-width: 600px) {
   .header_box {
     width: 100%;
+    padding: 1rem;
   }
   /* .header_box .header_box_left {
     font-size: 1.5rem;
