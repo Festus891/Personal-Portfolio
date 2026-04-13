@@ -1,6 +1,6 @@
 .testimonials_section {
   overflow: hidden;
-  background: radial-gradient(circle at top, #0b0f17, #000);
+  /* background: radial-gradient(circle at top, #0b0f17, #000); */
 }
 
 .testimonial_heading {
