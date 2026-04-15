@@ -111,7 +111,7 @@ const About = () => {
           <h2 className="about_content-heading">Service</h2>
           <motion.p variants={childVariants}>
             I help businesses and individuals establish a strong online presence
-            through my web development services.Whether you need a simple
+            through my web development services. Whether you need a simple
             portfolio site or a complex e-commerce platform, Real Estate
             platform I have the skills and expertise to deliver high-quality
             results. With my services, you can expect a seamless and

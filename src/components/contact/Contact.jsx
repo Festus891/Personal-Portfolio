@@ -1,7 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Contact.css";
-import { BsWhatsapp, BsLinkedin } from "react-icons/bs";
+import { BsWhatsapp, BsLinkedin, BsGithub, BsTwitterX } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
+// import { FaInstagram, FaFacebookF } from "react-icons/fa";
+// import { PiThreadsLogoLight } from "react-icons/pi";
+import { IoLogoYoutube } from "react-icons/io5";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
@@ -11,9 +14,8 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
-  // ✅ INIT EMAILJS
   useEffect(() => {
-    emailjs.init("7cRlYFoaFx0rbf33P"); // your public key
+    emailjs.init("7cRlYFoaFx0rbf33P");
   }, []);
 
   const sendEmail = async (e) => {
@@ -37,6 +39,57 @@ const Contact = () => {
     setLoading(false);
   };
 
+  const socials = [
+    {
+      icon: <BsLinkedin />,
+      title: "LinkedIn",
+      value: "Aderibigbe Festus",
+      link: "https://www.linkedin.com/in/aderibigbe-festus",
+    },
+    {
+      icon: <BsWhatsapp />,
+      title: "WhatsApp",
+      value: "+2348143430827",
+      link: "https://wa.me/2348143430827",
+    },
+    {
+      icon: <BsGithub />,
+      title: "GitHub",
+      value: "@Festus891",
+      link: "https://github.com/Festus891",
+    },
+    {
+      icon: <BsTwitterX />,
+      title: "X (Twitter)",
+      value: "@OmoAde_One",
+      link: "https://x.com/OmoAde_One",
+    },
+    // {
+    //   icon: <FaInstagram />,
+    //   title: "Instagram",
+    //   value: "@yourhandle",
+    //   link: "https://instagram.com/",
+    // },
+    // {
+    //   icon: <PiThreadsLogoLight />,
+    //   title: "Threads",
+    //   value: "@yourhandle",
+    //   link: "https://threads.net/",
+    // },
+    // {
+    //   icon: <FaFacebookF />,
+    //   title: "Facebook",
+    //   value: "Your Name",
+    //   link: "https://facebook.com/",
+    // },
+    // {
+    //   icon: <IoLogoYoutube />,
+    //   title: "YouTube",
+    //   value: "@yourchannel",
+    //   link: "https://youtube.com/",
+    // },
+  ];
+
   return (
     <motion.section
       id="contact"
@@ -46,105 +99,115 @@ const Contact = () => {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      {" "}
-      <div className="contact_header">
-        <h2>
-          Get In <span>Touch</span>
-        </h2>
-        <p>
-          Let’s build something amazing together. Got a project or idea? I’m
-          ready.
-        </p>
-      </div>
-      <div className="contact_container">
-        {/* 🔥 LEFT CONTACT CARDS */}
-
+      <div className="contact_container containers">
         <motion.div
-          className="contact_options"
-          initial="hidden"
-          whileInView="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: { staggerChildren: 0.2 },
-            },
-          }}
-        >
-          <div className="contact_card">
-            <MdOutlineEmail />
-            <h3>Email</h3>
-            <p>festus4537@gmail.com</p>
-            <a href="mailto:festus4537@gmail.com">Send Message →</a>
-          </div>
-
-          <motion.div
-            className="contact_card"
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <BsLinkedin />
-            <h3>LinkedIn</h3>
-            <p>Aderibigbe Festus</p>
-            <a
-              href="https://www.linkedin.com/in/aderibigbe-festus"
-              target="_blank"
-            >
-              Visit Profile →
-            </a>
-          </motion.div>
-
-          <motion.div
-            className="contact_card"
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <BsWhatsapp />
-            <h3>WhatsApp</h3>
-            <p>+2348143430827</p>
-            <a href="https://wa.me/2348143430827" target="_blank">
-              Message Me →
-            </a>
-          </motion.div>
-        </motion.div>
-
-        {/* 🔥 FORM */}
-        <motion.form
-          ref={form}
-          onSubmit={sendEmail}
-          className="contact_form"
-          initial={{ opacity: 0, x: 100 }}
+          className="contact_left"
+          initial={{ opacity: 0, x: -70 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          {" "}
-          <div className="form_group">
-            <input type="text" name="name" required />
-            <label>Name</label>
+          <div className="contact_intro">
+            <h2>Let’s connect and create something awesome.</h2>
+            <p>
+              Whether you have a project in mind, need a frontend developer, or
+              just want to talk about your next idea, I’d love to hear from you.
+            </p>
+
+            <a
+              href="mailto:festus4537@gmail.com"
+              className="contact_email_link"
+            >
+              <MdOutlineEmail />
+              <span>festus4537@gmail.com</span>
+            </a>
           </div>
-          <div className="form_group">
-            <input type="email" name="email" required />
-            <label>Email</label>
+
+          <div className="contact_social_grid">
+            {socials.map((item, index) => (
+              <motion.a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="contact_social_card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.06 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="contact_social_icon">{item.icon}</div>
+                <div className="contact_social_text">
+                  <h3>{item.title}</h3>
+                  <p>{item.value}</p>
+                </div>
+              </motion.a>
+            ))}
           </div>
-          <div className="form_group">
-            <input type="text" name="subject" required />
-            <label>Subject</label>
+        </motion.div>
+
+        <motion.div
+          className="contact_form_wrap"
+          initial={{ opacity: 0, x: 70 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="contact_form_box">
+            <h3>Send me a message</h3>
+
+            <form ref={form} onSubmit={sendEmail} className="contact_form">
+              <div className="form_row">
+                <div className="form_group">
+                  <label>Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+
+                <div className="form_group">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="form_group">
+                <label>Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="What’s this about?"
+                  required
+                />
+              </div>
+
+              <div className="form_group">
+                <label>Message</label>
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Tell me more..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" className="contact_btn">
+                {loading ? "Sending..." : "Send Message →"}
+              </button>
+            </form>
           </div>
-          <div className="form_group">
-            <textarea name="message" required rows="5"></textarea>
-            <label>Message</label>
-          </div>
-          <button type="submit" className="contact_btn">
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-        </motion.form>
+        </motion.div>
       </div>
-      {/* 🔥 POPUP */}
+
       {showPopup && (
         <div className="popup">
           <div className="popup_box">
