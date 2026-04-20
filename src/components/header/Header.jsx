@@ -65,7 +65,7 @@ const Header = () => {
         <div
           className="scroll_glow_btn"
           onClick={() => {
-            document.getElementById("about")?.scrollIntoView({
+            document.getElementById("portfolio")?.scrollIntoView({
               behavior: "smooth",
             });
           }}
