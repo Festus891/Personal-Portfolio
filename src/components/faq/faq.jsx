@@ -13,7 +13,7 @@ const Faq = () => {
 
   return (
     <section id="faq" className="faq_section containers">
-      <div className="containers faq_container">
+      <div className="faq_wrapper">
         <div className="faq_header">
           <h2>
             Common <span>Questions</span>
@@ -24,29 +24,33 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="faq_container">
+        <div className="faq_list">
           {faqData.map((item, index) => (
             <div
               key={index}
               className={`faq_item ${activeIndex === index ? "active" : ""}`}
             >
-              {/* QUESTION */}
-              <div className="faq_question" onClick={() => toggle(index)}>
+              <button
+                className="faq_question"
+                onClick={() => toggle(index)}
+                type="button"
+              >
                 <h4>{item.question}</h4>
                 <span>{activeIndex === index ? <IoRemove /> : <IoAdd />}</span>
-              </div>
+              </button>
 
-              {/* ANSWER */}
-              <AnimatePresence>
+              <AnimatePresence initial={false}>
                 {activeIndex === index && (
                   <motion.div
-                    className="faq_answer"
+                    className="faq_answer_wrap"
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.4 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <p>{item.answer}</p>
+                    <div className="faq_answer">
+                      <p>{item.answer}</p>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>

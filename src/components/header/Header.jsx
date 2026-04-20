@@ -46,10 +46,11 @@ const Header = () => {
       >
         <motion.h1 variants={itemVariants}>Hello!</motion.h1>
         <motion.p variants={itemVariants}>
-          <strong>Aderibigbe festus is here.</strong>
+          <strong>Festus Aderibigbe is here.</strong>
         </motion.p>
         <motion.p variants={itemVariants}>
-          Fullstack Developer | React | Next.js | Typescript | Javascript.
+          Fullstack Developer | React | Next.js | React Native | Typescript |
+          Javascript.
         </motion.p>
         {/* <p> 
           I blend creativity with technical expertise to cook up lightning-fast

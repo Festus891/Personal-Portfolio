@@ -151,7 +151,7 @@ const About = () => {
             >
               <FiUsers className="about_icon" />
               <h5>Clients</h5>
-              <small>20+ counting and satisfied client</small>
+              <small>20+ satisfied client and counting</small>
             </motion.article>
 
             <motion.article

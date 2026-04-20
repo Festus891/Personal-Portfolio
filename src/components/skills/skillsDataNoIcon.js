@@ -1,0 +1,58 @@
+const skillsData = [
+  {
+    id: 1,
+    category: "Frontend Skills",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Material UI",
+      "Mantine UI",
+      "Bootstrap",
+      "Framer Motion",
+      "Responsive Design",
+      "Redux",
+      "Redux Toolkit",
+      "Figma",
+    ],
+  },
+  {
+    id: 2,
+    category: "Backend Skills",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "GraphQL",
+      "AWS",
+      "MongoDB",
+      "MySQL",
+      "Firebase",
+      "Supabase",
+      "Authentication",
+      "API Integration",
+      "Server-Side Rendering",
+      "Database Management",
+      "Sanity",
+    ],
+  },
+  {
+    id: 3,
+    category: "CMS Skills",
+    skills: [
+      "WordPress",
+      "Contentful",
+      "Sanity",
+      "Strapi",
+      "Shopify",
+      "Webflow",
+    ],
+  },
+];
+
+export default skillsData;
