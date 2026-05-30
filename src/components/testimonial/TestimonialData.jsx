@@ -1,53 +1,54 @@
 const testimonialData = [
   {
-    avatar: "AD",
-    name: "Anonymous Developer",
-    role: "Developer",
+    avatar: "EC",
+    name: "Engineer Chris",
+    role: "Full Stack Developer",
     rating: 5,
-    project: "Personal Portfolio Website",
+    project: "Business Website",
     location: "Lagos, Nigeria",
     workingStyle: "Professional and detail-oriented",
-    review: "Clean design, smooth navigation, and excellent work presentation.",
+    review:
+      "One of the cleanest full stack website implementations I’ve seen in a while.",
     fullReview:
-      "The portfolio feels modern and professional from start to finish. Every section is structured well, and the visual consistency really stands out. It shows strong frontend skill and thoughtful presentation.",
+      "I was really impressed by how structured and intentional everything felt. The interaction are effective, and the responsiveness across devices is solid. You can tell a lot of thought went into both the UX and performance. It’s not just visually appealing, it actually feels engineered properly.",
   },
   {
     avatar: "TO",
-    name: "Tomilola",
-    role: "Developer",
+    name: "Tomilola Adeyemi",
+    role: "Frontend Developer",
     rating: 5,
-    project: "Frontend Landing Page",
+    project: "E-commerce ",
     location: "Ibadan, Nigeria",
     workingStyle: "Creative and collaborative",
-    review:
-      "Exceptional work with impressive attention to detail and polished animations.",
+    review: "Very smooth collaboration and a strong eye for frontend details.",
     fullReview:
-      "The animations are smooth, the sections are balanced, and the final result looks polished. It is clear that good care was taken in both design and performance.",
+      "Working together was seamless. Communication was clear, and changes were implemented quickly without breaking existing features. The final UI came out clean, responsive, and matched the design vision closely. I especially liked how animations were handled — not overdone, just right.",
   },
   {
     avatar: "PK",
-    name: "Pappy Kay",
-    role: "Student",
+    name: "Kehinde Adebayo",
+    role: "Startup Founder",
     rating: 5,
     project: "Portfolio Redesign",
     location: "Abuja, Nigeria",
     workingStyle: "Fast and reliable",
     review:
-      "The introduction section immediately captures attention and feels engaging.",
+      "Delivered faster than expected and the result exceeded what I had in mind.",
     fullReview:
-      "The site is easy to explore and every part feels intentional. The structure is clean and the design makes a very strong first impression.",
+      "I needed something modern but simple, and that’s exactly what I got. The process was smooth, updates were consistent, and feedback was actually listened to. The final product feels premium and professional, which is exactly what I needed to represent my brand.",
   },
   {
     avatar: "CD",
     name: "Collins Dada",
-    role: "Developer",
+    role: "Frontend Engineer",
     rating: 5,
-    project: "Frontend UI Build",
+    project: "UI Component System",
     location: "Ogun, Nigeria",
     workingStyle: "Focused and consistent",
-    review: "A perfectly executed portfolio with no noticeable flaws.",
+    review:
+      "Solid frontend skills with strong attention to structure and scalability.",
     fullReview:
-      "The sections are well-organized, responsive, and visually engaging. It communicates skill and professionalism without feeling too crowded.",
+      "The code quality stood out to me. Components were reusable, well-structured, and easy to extend. It’s rare to see someone balance clean UI with maintainable code this well. Definitely someone you can trust on serious frontend work.",
   },
   {
     avatar: "AY",
@@ -57,10 +58,9 @@ const testimonialData = [
     project: "Creative Web Interface",
     location: "Kano, Nigeria",
     workingStyle: "Design-driven collaboration",
-    review:
-      "The layout is elegant and clear with very good design consistency.",
+    review: "Great understanding of design-to-development translation.",
     fullReview:
-      "It reflects strong frontend understanding and a great eye for spacing, typography, and presentation. The overall visual direction feels premium.",
+      "As a designer, I really appreciated how accurately the design was implemented. Spacing, typography, and layout hierarchy were all respected. There was also good input on usability improvements, which made the final product even better than the original design.",
   },
   {
     avatar: "EO",
@@ -70,10 +70,9 @@ const testimonialData = [
     project: "Interactive Portfolio Experience",
     location: "Port Harcourt, Nigeria",
     workingStyle: "Performance-minded",
-    review:
-      "Great balance between performance and aesthetics. Everything feels intentional.",
+    review: "Nice balance between smooth animations and good performance.",
     fullReview:
-      "The interface is responsive, clean, and carefully crafted. It blends motion and structure in a way that feels modern without becoming distracting.",
+      "A lot of portfolios focus too much on visuals and ignore performance, but this one keeps things optimized. Animations are smooth without affecting load time, and everything feels responsive. It’s a good example of how to build something modern without overcomplicating it.",
   },
 ];
 

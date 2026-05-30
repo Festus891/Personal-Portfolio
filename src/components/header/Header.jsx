@@ -49,8 +49,8 @@ const Header = () => {
           <strong>Festus Aderibigbe is here.</strong>
         </motion.p>
         <motion.p variants={itemVariants}>
-          Fullstack Developer | React | Next.js | React Native | Typescript |
-          Javascript.
+          Fullstack Developer | Frontend | Backend | React | Next.js |
+          Typescript | Javascript.
         </motion.p>
         {/* <p> 
           I blend creativity with technical expertise to cook up lightning-fast
