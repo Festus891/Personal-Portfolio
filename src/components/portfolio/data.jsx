@@ -18,11 +18,30 @@ import dwellbaseMobile from "../../asset/dwellbase-mobile.png";
 
 import Mingnets from "../../asset/mingnets-web.png";
 import mingnetsMobile from "../../asset/mingnets-mobile.png";
+
+import ablWeb from "../../asset/abl-web.png";
+import ablMobile from "../../asset/abl-mobile.png";
 import { get } from "react-scroll/modules/mixins/scroller";
 
 const data = [
   {
     id: 1,
+    image: ablWeb,
+    mobileImage: ablMobile,
+    title: "ABL Integrated Nigeria Limited",
+    github: "",
+    role: "Fullstack Developer", // 👈 or "Contributor"
+    demo: "https://www.ablintegratednigeria.com/",
+    type: "Business",
+    status: "Development",
+    //
+    case_study:
+      "ABL Integrated is a leading provider of sourcing and procurement solutions, specializing in connecting businesses with reliable suppliers for a wide range of products and services. Our platform streamlines the sourcing process, enabling companies to efficiently find and acquire the materials they need to operate and grow their businesses.",
+    stack:
+      "Nextjs, Tailwind, Resend for Email, TypeScript, ShadCN UI, Zoho Mail setup",
+  },
+  {
+    id: 2,
     image: meshkenWeb,
     mobileImage: meshkenMobile,
     title: "Meshken Led Solution",
@@ -37,20 +56,6 @@ const data = [
   },
 
   {
-    id: 2,
-    image: dwellbaseWeb,
-    mobileImage: dwellbaseMobile,
-    title: "Dwellbase",
-    role: "Fullstack Developer", // 👈 or "Contributor"
-    github: "",
-    demo: "https://dwell-base.vercel.app/",
-    type: "Real Estate",
-    status: "In Development",
-    case_study:
-      "Dwellbase is a modern real estate platform that streamlines the property browsing and listing process. It integrates a comprehensive search functionality, detailed property descriptions, and a seamless booking system into one scalable web application.",
-    stack: "React, Tailwind, MongoDB, Lambda, AWS, TypeScript, ShadCN UI",
-  },
-  {
     id: 3,
     image: Mingnets,
     title: "Mingnets",
@@ -64,9 +69,23 @@ const data = [
       "Mingnets is a modern e-commerce platform where customers and merchants Source and sell at your convenience, anytime, anywhere. With 24/7 access, you can easily discover the best deals, list your items, and connect with buyers or sellers without limitations.",
     stack: "Nextjs, Tailwind, MongoDB, NestJS, ShadCN UI",
   },
-
   {
     id: 4,
+    image: dwellbaseWeb,
+    mobileImage: dwellbaseMobile,
+    title: "Dwellbase",
+    role: "Fullstack Developer", // 👈 or "Contributor"
+    github: "",
+    demo: "https://dwell-base.vercel.app/",
+    type: "Real Estate",
+    status: "In Development",
+    case_study:
+      "Dwellbase is a modern real estate platform that streamlines the property browsing and listing process. It integrates a comprehensive search functionality, detailed property descriptions, and a seamless booking system into one scalable web application.",
+    stack: "React, Tailwind, MongoDB, Lambda, AWS, TypeScript, ShadCN UI",
+  },
+
+  {
+    id: 5,
     image: ownitmartWeb,
     mobileImage: ownitmartMobile,
     role: "Fullstack Developer", // 👈 or "Contributor"
@@ -81,10 +100,10 @@ const data = [
       "REACTJS, Redux, CSS, Bootstrap, Mongodb, Express, Nodejs, Api Integration, Vercel",
   },
   {
-    id: 5,
+    id: 6,
     image: getNowWeb,
     mobileImage: getNowMobile,
-    title: "Fullstack Developer", // 👈 or "Contributor"
+    title: "GetNow", // 👈 or "Contributor"
     github: "",
     type: "e-commerce",
     status: "Upgrading",
@@ -94,11 +113,11 @@ const data = [
     stack: "Nextjs, REACTJS, CSS, TailwindCSS, Framer-motion, Sanity, Vercel",
   },
   {
-    id: 5,
+    id: 7,
     image: portfolioWeb,
     mobileImage: portfolioMobile,
     role: "Frontend Developer", // 👈 or "Contributor"
-    title: "Personal Portfolio",
+    title: "FestusCode Portfolio",
     github: "",
     type: "Personal",
     status: "Upgrading",
@@ -108,7 +127,7 @@ const data = [
     stack: "REACTJS, CSS, TailwindCSS, Framer-motion, Vercel",
   },
   {
-    id: 6,
+    id: 8,
     image: img2,
     title: "Movie-Insight",
     github: "",
@@ -130,18 +149,18 @@ const data = [
   //     "Whatsapp cloning on web  using Reactjs and firebase to practically understand how data is being store on firebase realtime database and to how data is being retrieve in each collection of database",
   //   stack: "Javascript",
   // },
-  {
-    id: 7,
-    image: img4,
-    title: "Image Getter",
-    github: "https://github.com/Festus891/ImageGetter-App",
-    demo: "https://image-getter-app.vercel.app/",
-    type: "Image search",
-    status: "Completed",
-    case_study:
-      "Image Getter is a responsive and efficient website designed to search for various types of images across the internet. Utilizing the Unsplash API, it fetches data from their extensive image repository, providing users with a seamless and diverse image search experience.",
-    stack: "HTML, CSS, Javascript, Vercel",
-  },
+  // {
+  //   id: 9,
+  //   image: img4,
+  //   title: "Image Getter",
+  //   github: "https://github.com/Festus891/ImageGetter-App",
+  //   demo: "https://image-getter-app.vercel.app/",
+  //   type: "Image search",
+  //   status: "Completed",
+  //   case_study:
+  //     "Image Getter is a responsive and efficient website designed to search for various types of images across the internet. Utilizing the Unsplash API, it fetches data from their extensive image repository, providing users with a seamless and diverse image search experience.",
+  //   stack: "HTML, CSS, Javascript, Vercel",
+  // },
 ];
 
 export default data;
