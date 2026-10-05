@@ -60,15 +60,14 @@ const Portfolio = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{
                 duration: 0.8,
-                ease: [0.22, 1, 0.36, 1], // smooth premium easing
+                ease: [0.22, 1, 0.36, 1],
                 delay: index * 0.15,
               }}
-              whileHover={{ scale: 1.04 }}
-              onClick={() => setSelectedProject(project)}
+              whileHover={{ y: -6 }}
             >
               {/* IMAGE */}
               <div className="portfolio_img_wrapper">
-                <img src={project.image} alt="" />
+                <img src={project.image} alt={project.title} />
               </div>
 
               {/* CONTENT */}
@@ -84,13 +83,30 @@ const Portfolio = () => {
 
               {/* FOOTER */}
               <div className="portfolio_footer">
-                <span>View case study</span>
-                <FaArrowUpRightFromSquare />
+                <button
+                  type="button"
+                  className="portfolio_case_study"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  View Case Study
+                  <FaArrowUpRightFromSquare />
+                </button>
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="portfolio_demo"
+                  >
+                    Live Demo
+                    <FaArrowUpRightFromSquare />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
-
         {/* LOAD MORE */}
         {visible < data.length && (
           <div className="portfolio_more">
