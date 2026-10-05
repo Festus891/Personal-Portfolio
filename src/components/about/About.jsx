@@ -6,6 +6,7 @@ import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import { motion, useScroll, useAnimation, useInView } from "framer-motion";
+import ParticlesBG from "../ParticlesBG";
 
 const About = () => {
   const ref = useRef(null);
@@ -53,6 +54,7 @@ const About = () => {
 
   return (
     <motion.section id="about" className="containers" ref={ref}>
+      <ParticlesBG />
       {/*Scroll Progress Glow */}
       <motion.div
         className="about_progress containers "
@@ -88,17 +90,20 @@ const About = () => {
           <h2 className="about_content-heading">Overview</h2>
 
           <motion.p variants={childVariants}>
-            Hi, I'm <span className="highlight">Festus</span>, a{" "}
-            <span className="highlight">Fullstack Developer</span> who builds
-            scalable, high-performance web applications from concept to
-            deployment.
+            Hi, I'm <span className="highlight">Festus.</span>, I am a{" "}
+            <span className="highlight">Fullstack Developer</span> dedicated to
+            building scalable, high-performance web applications from concept to
+            deployment. I bridge the gap between front-end user experience and
+            robust back-end architecture. Whether collaborating with engineering
+            teams or building custom platforms from scratch, I focus on writing
+            clean, maintainable code that drives business value.
           </motion.p>
 
-          <motion.p variants={childVariants}>
+          {/* <motion.p variants={childVariants}>
             Experienced in building scalable web applications from front-end to
             back-end with modern frameworks and technologies, ensuring seamless
             user experiences and robust functionality.
-          </motion.p>
+          </motion.p> */}
 
           <motion.p variants={childVariants}>
             I focus on delivering:
@@ -108,15 +113,14 @@ const About = () => {
             <br />- Smooth, engaging user experiences
           </motion.p>
 
-          <h2 className="about_content-heading">Service</h2>
+          <h2 className="about_content-heading">My Service & Expertise </h2>
           <motion.p variants={childVariants}>
-            I help businesses and individuals establish a strong online presence
-            through my web development services. Whether you need a simple
-            portfolio site or a complex e-commerce platform, Real Estate
-            platform I have the skills and expertise to deliver high-quality
-            results. With my services, you can expect a seamless and
-            professional experience that will help you stand out in the digital
-            world.
+            I help businesses, founders, and engineering teams bring digital
+            products to life. From high-converting portfolio sites to complex
+            E-commerce and Real Estate platforms, I deliver high-quality,
+            production-ready web solutions. Partnering with me means getting a
+            seamless, professional development experience that helps your
+            project or business stand out in the digital world.
           </motion.p>
 
           {/* <motion.p variants={childVariants}>

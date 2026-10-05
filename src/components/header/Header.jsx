@@ -44,13 +44,17 @@ const Header = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.h1 variants={itemVariants}>Hello!</motion.h1>
+        <motion.h1 variants={itemVariants}>Hi, I'm Festus Aderibigbe</motion.h1>
+        {/* <motion.p variants={itemVariants}>
+          <strong>Hi, I'm Festus Aderibigbe </strong>
+        </motion.p> */}
         <motion.p variants={itemVariants}>
-          <strong>Festus Aderibigbe is here.</strong>
+          Full-Stack Developer specializing in React, Next.js, and TypeScript
         </motion.p>
         <motion.p variants={itemVariants}>
-          Fullstack Developer | Frontend | Backend | React | Next.js |
-          Typescript | Javascript.
+          Whether you are a company looking to scale your engineering team or a
+          business ready to launch a high-performance web application, I build
+          reliable frontend and backend solutions that deliver results.
         </motion.p>
         {/* <p> 
           I blend creativity with technical expertise to cook up lightning-fast
