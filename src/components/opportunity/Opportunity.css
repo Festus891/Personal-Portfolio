@@ -8,7 +8,7 @@
   background: linear-gradient(90deg, #111111, #0d0d0d);
   border-radius: 2rem;
   min-height: 360px;
-  padding: 2rem 2rem;
+  padding: 3rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
 .opportunity_content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  width: 100%;
 }
 
 .opportunity_label {
@@ -33,40 +33,97 @@
   line-height: 1;
   font-weight: 700;
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   max-width: 600px;
 }
 
-.opportunity_tags {
+/* ========================================
+   OPPORTUNITY SLIDER
+======================================== */
+
+.opportunity_slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2.5rem;
+
+  /* Soft fade on both sides */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.opportunity_track {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem;
-  margin-bottom: 2rem;
-  max-width: 760px;
+  align-items: center;
+  width: max-content;
+  gap: 4rem;
+
+  animation: opportunityScroll 30s linear infinite;
 }
 
-.opportunity_tag {
-  padding: 0.85rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.02);
-  transition: 0.3s ease;
+.opportunity_slide_item {
+  flex-shrink: 0;
+
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.opportunity_tag:hover {
-  border-color: #d3e97a;
+.opportunity_slide_item:hover {
   color: #d3e97a;
   transform: translateY(-2px);
 }
+
+/* Separator between opportunities */
+.opportunity_slide_item::after {
+  content: "•";
+  margin-left: 4rem;
+  color: #d3e97a;
+}
+
+/* Infinite slider animation */
+@keyframes opportunityScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause when user hovers */
+.opportunity_slider:hover .opportunity_track {
+  animation-play-state: paused;
+}
+
+/* ========================================
+   BUTTON
+======================================== */
 
 .opportunity_btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1rem;
+  padding: 1rem;
   border-radius: 999px;
   background: #d3e97a;
   color: black;
@@ -80,6 +137,10 @@
   box-shadow: 0 12px 30px rgba(211, 233, 122, 0.2);
 }
 
+/* ========================================
+   GLOW
+======================================== */
+
 .opportunity_glow {
   position: absolute;
   top: -90px;
@@ -87,6 +148,7 @@
   width: 360px;
   height: 360px;
   border-radius: 50%;
+
   background: radial-gradient(
     circle,
     rgba(115, 65, 255, 0.22) 0%,
@@ -94,14 +156,26 @@
     rgba(115, 65, 255, 0.03) 70%,
     transparent 100%
   );
+
   z-index: 1;
   pointer-events: none;
 }
 
-/* RESPONSIVE */
+/* ========================================
+   RESPONSIVE
+======================================== */
+
 @media (max-width: 992px) {
   .opportunity_box {
     padding: 3rem 2rem;
+  }
+
+  .opportunity_track {
+    gap: 3rem;
+  }
+
+  .opportunity_slide_item::after {
+    margin-left: 3rem;
   }
 
   .opportunity_glow {
@@ -125,17 +199,26 @@
 
   .opportunity_content h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  .opportunity_tags {
-    gap: 0.75rem;
+  .opportunity_slider {
+    margin-left: -1.3rem;
+    width: calc(100% + 2.6rem);
+    margin-bottom: 2rem;
   }
 
-  .opportunity_tag {
-    width: 100%;
-    text-align: center;
-    padding: 0.9rem 1rem;
+  .opportunity_track {
+    gap: 2.5rem;
+    animation-duration: 24s;
+  }
+
+  .opportunity_slide_item {
+    font-size: 0.9rem;
+  }
+
+  .opportunity_slide_item::after {
+    margin-left: 2.5rem;
   }
 
   .opportunity_btn {
@@ -147,5 +230,12 @@
     height: 220px;
     top: -50px;
     right: -80px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .opportunity_track {
+    animation: none;
   }
 }

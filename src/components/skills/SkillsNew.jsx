@@ -1,52 +1,60 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./SkillsNew.css";
-import { useAnimation, motion, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import skillsData from "./skillsDataNoIcon";
 
 const professionalSkills = [
   {
-    title: "Frontend Experience",
+    title: "Full-Stack Development",
     description:
-      "Building modern, responsive, and interactive user interfaces with strong attention to layout, usability, accessibility, and smooth user experience.",
+      "Building complete web applications across frontend, backend, databases, authentication, APIs, and deployment with a focus on maintainability and scalability.",
   },
   {
-    title: "Backend Experience",
+    title: "Frontend Engineering",
     description:
-      "Working with server-side logic, databases, authentication, and application structure to support scalable and functional web applications.",
+      "Creating responsive, accessible, and intuitive interfaces with strong attention to usability, performance, component architecture, and user experience.",
   },
   {
-    title: "API Integration",
+    title: "Backend & API Development",
     description:
-      "Connecting frontend applications to external and internal APIs, handling requests, responses, data flow, loading states, and error handling.",
+      "Developing server-side functionality, REST APIs, authentication systems, database integrations, and application logic for reliable web products.",
   },
   {
-    title: "Responsive and Mobile-First Design",
+    title: "Product Thinking",
     description:
-      "Ensuring applications work seamlessly across different screen sizes and resolutions.",
+      "Understanding user problems, business goals, requirements, and product priorities before translating them into practical technical solutions.",
   },
   {
-    title: "Version Control / Git",
+    title: "API & Third-Party Integration",
     description:
-      "Managing code changes, collaborating with other developers, and maintaining project history.",
-  },
-  {
-    title: "Cross-Browser Compatibility",
-    description:
-      "Ensuring that web applications work consistently across modern browsers and devices.",
+      "Connecting applications with internal and external services while managing authentication, data flow, loading states, errors, and reliability.",
   },
   {
     title: "Performance Optimization",
     description:
-      "Improving speed, responsiveness, and efficiency for a better user experience.",
+      "Improving application speed, responsiveness, loading performance, and overall efficiency to create better digital experiences.",
+  },
+  {
+    title: "Responsive & Accessible Design",
+    description:
+      "Building interfaces that work consistently across mobile, tablet, desktop, and modern browsers while following accessibility and responsive design principles.",
+  },
+  {
+    title: "Collaboration & Version Control",
+    description:
+      "Using Git-based workflows to manage code, collaborate with developers and product teams, review changes, and maintain clean project history.",
   },
 ];
 
 const SkillsNew = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+
+  const isInView = useInView(ref, {
+    amount: 0.15,
+  });
 
   const headingAnimation = useAnimation();
-  const imageAnimation = useAnimation();
+  const skillsAnimation = useAnimation();
   const textAnimation = useAnimation();
 
   useEffect(() => {
@@ -55,18 +63,18 @@ const SkillsNew = () => {
         opacity: 1,
         y: 0,
         transition: {
-          duration: 1,
-          delay: 0.25,
+          duration: 0.8,
+          delay: 0.15,
           ease: "easeOut",
         },
       });
 
-      imageAnimation.start({
+      skillsAnimation.start({
         opacity: 1,
         y: 0,
         transition: {
           duration: 0.8,
-          delay: 0.25,
+          delay: 0.2,
           ease: "easeOut",
         },
       });
@@ -76,52 +84,86 @@ const SkillsNew = () => {
         x: 0,
         transition: {
           duration: 0.8,
-          delay: 0.3,
+          delay: 0.25,
           ease: "easeOut",
         },
       });
     } else {
-      headingAnimation.start({ opacity: 0, y: -50 });
-      imageAnimation.start({ opacity: 0, y: 40 });
-      textAnimation.start({ opacity: 0, x: 50 });
+      headingAnimation.start({
+        opacity: 0,
+        y: -40,
+      });
+
+      skillsAnimation.start({
+        opacity: 0,
+        y: 40,
+      });
+
+      textAnimation.start({
+        opacity: 0,
+        x: 40,
+      });
     }
-  }, [isInView, headingAnimation, imageAnimation, textAnimation]);
+  }, [isInView, headingAnimation, skillsAnimation, textAnimation]);
 
   return (
     <motion.section className="skills_section containers" id="skills" ref={ref}>
       <div className="experience_container containers">
+        {/* Section Heading */}
         <motion.div
           className="skills_heading"
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -40 }}
           animate={headingAnimation}
         >
           <h2>
             My <span>Skills</span>
           </h2>
-          <p>The tools and technologies I work with</p>
+
+          <p>
+            Technical expertise and product capabilities behind the solutions I
+            build.
+          </p>
         </motion.div>
 
         <div className="skills_main">
+          {/* Technologies */}
           <motion.div
             className="experience_frontend"
             initial={{ opacity: 0, y: 40 }}
-            animate={imageAnimation}
+            animate={skillsAnimation}
           >
             <div className="skills_category_wrapper">
               {skillsData.map((item, index) => (
                 <motion.div
                   className="skills_category_card"
                   key={item.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={imageAnimation}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -4 }}
+                  initial={{
+                    opacity: 0,
+                    y: 30,
+                  }}
+                  animate={skillsAnimation}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.08,
+                  }}
+                  whileHover={{
+                    y: -4,
+                  }}
                 >
                   <h3>{item.category}</h3>
 
+                  {item.description && (
+                    <p className="skills_category_description">
+                      {item.description}
+                    </p>
+                  )}
+
                   <div className="skills_tags">
                     {item.skills.map((skill, skillIndex) => (
-                      <span className="skill_tag" key={skillIndex}>
+                      <span
+                        className="skill_tag"
+                        key={`${item.id}-${skillIndex}`}
+                      >
                         {skill}
                       </span>
                     ))}
@@ -131,19 +173,51 @@ const SkillsNew = () => {
             </div>
           </motion.div>
 
+          {/* Professional Capabilities */}
           <motion.div
             className="skills_info"
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={textAnimation}
           >
-            <h3>Core Professional Skills</h3>
+            <div className="skills_info_heading">
+              <span className="skills_info_label">WHAT I BRING</span>
+
+              <h3>Engineering & Product Capabilities</h3>
+
+              <p>
+                Beyond individual technologies, these are the capabilities I use
+                to turn ideas and requirements into reliable digital products.
+              </p>
+            </div>
 
             <div className="skills_info_list">
               {professionalSkills.map((item, index) => (
-                <div className="skills_info_item" key={index}>
+                <motion.div
+                  className="skills_info_item"
+                  key={item.title}
+                  initial={{
+                    opacity: 0,
+                    y: 15,
+                  }}
+                  animate={
+                    isInView
+                      ? {
+                          opacity: 1,
+                          y: 0,
+                        }
+                      : {
+                          opacity: 0,
+                          y: 15,
+                        }
+                  }
+                  transition={{
+                    duration: 0.45,
+                    delay: 0.3 + index * 0.06,
+                  }}
+                >
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>

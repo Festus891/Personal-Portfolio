@@ -10,7 +10,7 @@ const Opportunity = () => {
     "Landing Pages",
     "Portfolio Websites",
     "E-commerce Sites",
-    "  Real Estate Websites",
+    "Real Estate Websites",
     "Open Source Contributions",
     "Collaborative Projects",
   ];
@@ -35,12 +35,15 @@ const Opportunity = () => {
             great together.
           </h2>
 
-          <div className="opportunity_tags">
-            {opportunities.map((item, index) => (
-              <span key={index} className="opportunity_tag">
-                {item}
-              </span>
-            ))}
+          {/* SLIDING OPPORTUNITIES */}
+          <div className="opportunity_slider">
+            <div className="opportunity_track">
+              {[...opportunities, ...opportunities].map((item, index) => (
+                <span key={index} className="opportunity_slide_item">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
 
           <a href="#contact" className="opportunity_btn">

@@ -94,6 +94,8 @@
 .cta_btn {
   display: inline-block;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
   padding: 0.8rem 1.5rem;
   border: 1px solid #d3e97a;
   color: #d3e97a;

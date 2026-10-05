@@ -45,16 +45,13 @@ const Header = () => {
         animate="visible"
       >
         <motion.h1 variants={itemVariants}>Hi, I'm Festus Aderibigbe</motion.h1>
-        {/* <motion.p variants={itemVariants}>
-          <strong>Hi, I'm Festus Aderibigbe </strong>
-        </motion.p> */}
         <motion.p variants={itemVariants}>
-          Full-Stack Developer specializing in React, Next.js, and TypeScript
+          <strong> From Ideas To Digital Product </strong>
         </motion.p>
+        {/* <motion.p variants={itemVariants}></motion.p> */}
         <motion.p variants={itemVariants}>
-          Whether you are a company looking to scale your engineering team or a
-          business ready to launch a high-performance web application, I build
-          reliable frontend and backend solutions that deliver results.
+          I build reliable, user-focused web products that help businesses
+          launch, grow, and operate better.
         </motion.p>
         {/* <p> 
           I blend creativity with technical expertise to cook up lightning-fast
@@ -89,11 +86,11 @@ const Header = () => {
       </motion.div>
       <div className="header_box">
         <div className="header_box_left" variants={itemVariants}>
-          Transforming Ideas Into Reality
+          Transforming Ideas Into
         </div>
         <div className="vertical-line"></div>
         <div className="header_box_right" variants={itemVariants}>
-          Through Coding And Design.
+          Digital Experiences
         </div>
       </div>
     </header>

@@ -77,8 +77,9 @@ header {
 .header_container p,
 p strong {
   color: var(--color-white);
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  font-weight: 400;
 }
 
 .header_container p {
@@ -274,11 +275,12 @@ p strong {
   }
 
   .header_container h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .header_container p {
     padding: 0 1rem;
     text-align: center;
+    font-weight: 100;
   }
 }

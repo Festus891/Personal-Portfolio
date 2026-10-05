@@ -1,7 +1,9 @@
 const skillsData = [
   {
     id: 1,
-    category: "Frontend Skills",
+    category: "Frontend",
+    description:
+      "Building responsive, interactive, and user-focused web interfaces.",
     skills: [
       "HTML5",
       "CSS3",
@@ -15,35 +17,47 @@ const skillsData = [
       "Mantine UI",
       "Bootstrap",
       "Framer Motion",
-      "Responsive Design",
       "Redux",
       "Redux Toolkit",
-      "Figma",
     ],
   },
+
   {
     id: 2,
-    category: "Backend Skills",
+    category: "Backend & APIs",
+    description:
+      "Building application logic, APIs, authentication, and server-side functionality.",
     skills: [
       "Node.js",
       "Express.js",
       "REST APIs",
       "GraphQL",
-      "AWS",
+      "Authentication",
+      "API Integration",
+      "Server-Side Rendering",
+    ],
+  },
+
+  {
+    id: 3,
+    category: "Databases & Cloud",
+    description:
+      "Managing application data, storage, backend services, and cloud integrations.",
+    skills: [
       "MongoDB",
       "MySQL",
       "Firebase",
       "Supabase",
-      "Authentication",
-      "API Integration",
-      "Server-Side Rendering",
       "Database Management",
-      "Sanity",
+      "AWS",
     ],
   },
+
   {
-    id: 3,
-    category: "CMS Skills",
+    id: 4,
+    category: "CMS & Commerce",
+    description:
+      "Building content-driven websites, business platforms, and e-commerce experiences.",
     skills: [
       "WordPress",
       "Contentful",
@@ -51,6 +65,39 @@ const skillsData = [
       "Strapi",
       "Shopify",
       "Webflow",
+    ],
+  },
+
+  {
+    id: 5,
+    category: "Tools & Workflow",
+    description:
+      "Tools I use for development, collaboration, design, testing, and deployment workflows.",
+    skills: [
+      "Git",
+      "GitHub",
+      "Figma",
+      "Postman",
+      "Vercel",
+      "Responsive Design",
+    ],
+  },
+
+  {
+    id: 6,
+    category: "Product Skills — Developing",
+    description:
+      "Expanding my engineering background with product management principles and practices.",
+    skills: [
+      "Product Discovery",
+      "User Flows",
+      "Requirements Gathering",
+      "User Stories",
+      "Product Requirements",
+      "PRD",
+      "Problem Definition",
+      "Feature Prioritization",
+      "Agile Fundamentals",
     ],
   },
 ];

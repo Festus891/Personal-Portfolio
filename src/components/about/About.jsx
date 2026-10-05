@@ -91,44 +91,46 @@ const About = () => {
 
           <motion.p variants={childVariants}>
             Hi, I'm <span className="highlight">Festus.</span>, I am a{" "}
-            <span className="highlight">Fullstack Developer</span> dedicated to
-            building scalable, high-performance web applications from concept to
-            deployment. I bridge the gap between front-end user experience and
-            robust back-end architecture. Whether collaborating with engineering
-            teams or building custom platforms from scratch, I focus on writing
-            clean, maintainable code that drives business value.
+            <span className="highlight">Fullstack Developer</span> focused on
+            turning ideas and business needs into reliable, scalable digital
+            products.
           </motion.p>
 
-          {/* <motion.p variants={childVariants}>
-            Experienced in building scalable web applications from front-end to
-            back-end with modern frameworks and technologies, ensuring seamless
-            user experiences and robust functionality.
-          </motion.p> */}
+          <motion.p variants={childVariants}>
+            I work across both frontend and backend development, combining
+            strong engineering execution with an increasing focus on product
+            thinking, user needs, and business outcomes. From shaping an idea to
+            building and deploying the final product, I care about creating
+            solutions that are not only technically sound, but genuinely useful.
+          </motion.p>
 
           <motion.p variants={childVariants}>
             I focus on delivering:
             <br />- Scalable and maintainable architectures
             <br />- Fast, responsive, and accessible interfaces
             <br />- Secure and efficient backend systems
-            <br />- Smooth, engaging user experiences
+            <br />- Intuitive and engaging user experiences
+            <br />- Solutions aligned with real user and business needs
           </motion.p>
 
-          <h2 className="about_content-heading">My Service & Expertise </h2>
+          <h2 className="about_content-heading">Service & Expertise </h2>
           <motion.p variants={childVariants}>
-            I help businesses, founders, and engineering teams bring digital
-            products to life. From high-converting portfolio sites to complex
-            E-commerce and Real Estate platforms, I deliver high-quality,
-            production-ready web solutions. Partnering with me means getting a
-            seamless, professional development experience that helps your
-            project or business stand out in the digital world.
+            I help businesses, founders, and engineering teams transform ideas
+            into polished, production-ready digital products.
           </motion.p>
 
-          {/* <motion.p variants={childVariants}>
-            I help businesses build scalable and secure web applications with
-            seanless user experiences, from backend systems and database to
-            responsive modern interface and accessible interfaces ensuring
-            everything works flawlessly together.
-          </motion.p> */}
+          <motion.p variants={childVariants}>
+            Whether you need a high-converting business website, an e-commerce
+            platform, a real estate solution, an internal dashboard, or a custom
+            web application, I can support the journey from concept and
+            development through deployment.
+          </motion.p>
+
+          <motion.p variants={childVariants}>
+            My approach goes beyond simply writing code. I aim to understand the
+            problem, the users, and the desired business outcome before
+            translating those needs into practical digital solutions.
+          </motion.p>
 
           {/*CARDS */}
           <motion.div className="about_cards" variants={contentVariants}>
@@ -142,7 +144,7 @@ const About = () => {
             >
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>4+ years working</small>
+              <small>4+ years Experience</small>
             </motion.article>
 
             <motion.article
@@ -155,7 +157,7 @@ const About = () => {
             >
               <FiUsers className="about_icon" />
               <h5>Clients</h5>
-              <small>20+ satisfied client and counting</small>
+              <small>20+ Clients served</small>
             </motion.article>
 
             <motion.article
@@ -168,7 +170,7 @@ const About = () => {
             >
               <VscFolderLibrary className="about_icon" />
               <h5>Projects</h5>
-              <small>20+ completed and counting</small>
+              <small>20+ Projects Completed</small>
             </motion.article>
           </motion.div>
 
