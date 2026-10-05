@@ -29,14 +29,14 @@ const HeaderSociial = () => {
           <MdEmail />
         </a>
       </div>
-      <div className="header_socials_right ">
+      {/* <div className="header_socials_right ">
         <a
           href="https://drive.google.com/file/d/18QMV8Hxrf89sWcxNg2a4Tl8taR4j_2Vu/view?usp=sharing"
           target="_blank"
         >
           My Resume
         </a>
-      </div>
+      </div> */}
     </>
   );
 };
