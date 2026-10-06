@@ -174,7 +174,7 @@ const SkillsNew = () => {
           </motion.div>
 
           {/* Professional Capabilities */}
-          <motion.div
+          {/* <motion.div
             className="skills_info"
             initial={{ opacity: 0, x: 40 }}
             animate={textAnimation}
@@ -220,7 +220,7 @@ const SkillsNew = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </motion.section>

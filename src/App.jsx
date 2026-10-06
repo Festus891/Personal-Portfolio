@@ -10,6 +10,7 @@ import Faq from "./components/faq/faq";
 import Opportunity from "./components/opportunity/Opportunity";
 import SkillsNew from "./components/skills/SkillsNew";
 import SkillsNewOption from "./components/skills/SkillsNewOption";
+import Service from "./components/Service/Service";
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <Header />
       <Portfolio />
       <About />
-      {/* <Skills /> */}
+      <Service />
       <SkillsNew />
       {/* <SkillsNewOption /> */}
       <Testimonial />

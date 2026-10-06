@@ -2,115 +2,481 @@
   display: grid;
   grid-template-columns: 30% 65%;
   gap: 5%;
-  background: radial-gradient(circle at top, #0b0f17, #000);
-
-  /* background: #1f1f1f; */
   padding: 1rem;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(211, 233, 122, 0.035),
+      transparent 30%
+    ),
+    radial-gradient(circle at top, #0b0f17, #000 70%);
 }
 
-/* 🔥 Scroll glow */
+/* =========================
+   SCROLL PROGRESS
+========================= */
+
 .about_progress {
   position: sticky;
   top: 0;
+
   height: 3px;
+
   background: #d3e97a;
+
   transform-origin: left;
+
   z-index: 10;
-  box-shadow: 0 0 10px #d3e97a;
+
+  box-shadow: 0 0 10px rgba(211, 233, 122, 0.8);
 }
 
-/* LEFT */
+/* =========================
+   LEFT SIDE
+========================= */
+
 .about_me h2 {
   text-align: center;
-  color: white;
-  font-weight: 600;
-  font-size: 3rem;
-}
 
-.about_content-heading {
-  text-decoration: underline;
-  text-decoration-color: #d3e97a;
-  text-underline-offset: 0.5rem;
-  text-decoration-thickness: 3px;
-  margin-bottom: 1rem;
+  color: #ffffff;
+
+  font-weight: 600;
+
+  font-size: 3rem;
+
+  letter-spacing: -0.03em;
 }
 
 .about_me h2 span {
-  color: white;
   background: linear-gradient(90deg, #d3e97a, #ffffff);
+
   background-clip: text;
   -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
-.about_me p {
+
+.about_me > p {
   text-align: center;
-  color: white;
+
+  margin-top: 0.4rem;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.9rem;
 }
 
-/* IMAGE */
+/* =========================
+   IMAGE
+========================= */
+
+.about_image {
+  overflow: hidden;
+
+  margin-top: 1.5rem;
+
+  border-radius: 1.5rem;
+}
+
 .about_image img {
+  display: block;
+
   width: 100%;
-  border-radius: 2rem;
-  margin-top: 1rem;
-  transition: 0.4s;
+
+  border-radius: 1.5rem;
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+
   filter: grayscale(20%);
 }
 
-.about_image img:hover {
-  transform: scale(1.05);
+.about_image:hover img {
+  transform: scale(1.03);
+
   filter: grayscale(0%);
 }
 
-/* RIGHT */
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.about_content {
+  min-width: 0;
+}
+
 .about_content p {
-  line-height: 1.6;
-  color: #ccc;
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.68);
+
   margin-bottom: 1rem;
 }
 
-/* HIGHLIGHT */
-.highlight {
+/* =========================
+   SECTION LABEL
+========================= */
+
+.about_label {
+  display: inline-block;
+
+  margin-bottom: 0.6rem;
+
   color: #d3e97a;
-  font-weight: bold;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
 }
 
-/* CARDS */
+.about_content_heading {
+  margin: 0 0 1.2rem;
+
+  color: #ffffff;
+
+  font-size: 1.7rem;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  letter-spacing: -0.02em;
+}
+
+/* =========================
+   HIGHLIGHT
+========================= */
+
+.highlight {
+  color: #d3e97a;
+
+  font-weight: 600;
+}
+
+/* =========================
+   DELIVERY PRINCIPLES
+========================= */
+
+.about_delivery {
+  margin: 2rem 0 3rem;
+
+  padding: 1.4rem 1.5rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 1rem;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.about_delivery h3 {
+  margin-bottom: 1rem;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+}
+
+.about_delivery_list {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 0.85rem 1.5rem;
+}
+
+.about_delivery_item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 0.7rem;
+
+  color: rgba(255, 255, 255, 0.67);
+
+  font-size: 0.88rem;
+
+  line-height: 1.55;
+}
+
+.about_delivery_item span {
+  flex-shrink: 0;
+
+  width: 6px;
+  height: 6px;
+
+  margin-top: 0.45rem;
+
+  border-radius: 50%;
+
+  background: #d3e97a;
+
+  box-shadow: 0 0 8px rgba(211, 233, 122, 0.5);
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.about_services {
+  margin-top: 2.5rem;
+}
+
+.about_services_intro {
+  max-width: 700px;
+
+  margin-bottom: 1.5rem !important;
+}
+
+/* SERVICE LIST */
+.about_services_grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 1.5rem 2rem;
+
+  margin-top: 1.8rem;
+}
+
+/* SERVICE ITEM */
+.about_service_card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 0.9rem;
+
+  padding: 0.2rem 0 0.2rem 1.1rem;
+
+  background: transparent;
+
+  border: none;
+
+  border-left: 2px solid rgba(211, 233, 122, 0.28);
+
+  border-radius: 0;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.about_service_card:hover {
+  background: transparent;
+
+  border-left-color: #d3e97a;
+
+  box-shadow: none;
+}
+
+/* SERVICE ICON */
+
+.about_service_icon {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  margin-top: 0.05rem;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 0;
+
+  color: #d3e97a;
+
+  font-size: 0.95rem;
+}
+
+/* SERVICE CONTENT */
+
+.about_service_card h3 {
+  margin-bottom: 0.3rem;
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.about_service_card p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.82rem;
+
+  line-height: 1.65;
+}
+
+/* =========================
+   APPROACH
+========================= */
+
+.about_approach {
+  margin-top: 2.5rem;
+
+  padding-left: 1rem;
+
+  border-left: 2px solid #d3e97a;
+
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* =========================
+   STAT CARDS
+========================= */
+
 .about_cards {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 1rem;
-  margin-top: 1rem;
+
+  margin-top: 2rem;
 }
 
 .about_card {
-  border: 1px solid #2a2a2a;
-  border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1.4rem;
+
   text-align: center;
-  transition: 0.3s;
+
+  border: 1px solid #2a2a2a;
+
+  border-radius: 1rem;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
 }
 
-/* CTA */
+.about_card:hover {
+  border-color: rgba(211, 233, 122, 0.3);
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.about_icon {
+  margin-bottom: 0.7rem;
+
+  color: #d3e97a;
+
+  font-size: 1.3rem;
+}
+
+.about_card h5 {
+  margin-bottom: 0.3rem;
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+}
+
+.about_card small {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.78rem;
+}
+
+/* =========================
+   CTA
+========================= */
+
 .cta_btn {
-  display: inline-block;
-  margin-top: 1.5rem;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
 
   padding: 0.8rem 1.5rem;
+
   border: 1px solid #d3e97a;
-  color: #d3e97a;
+
   border-radius: 2rem;
-  transition: 0.3s;
+
+  color: #d3e97a;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .cta_btn:hover {
   background: #d3e97a;
-  color: black;
+
+  color: #000000;
+
+  box-shadow: 0 8px 24px rgba(211, 233, 122, 0.14);
 }
 
-/* RESPONSIVE */
+/* =========================
+   TABLET
+========================= */
+
 @media screen and (max-width: 1024px) {
   .about_container {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .about_me {
+    max-width: 600px;
+
+    margin: 0 auto;
+  }
+
+  .about_cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media screen and (max-width: 768px) {
+  .about_services_grid {
+    grid-template-columns: 1fr;
+
+    gap: 1.4rem;
+  }
+
+  .about_delivery_list {
     grid-template-columns: 1fr;
   }
 
@@ -119,17 +485,61 @@
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media screen and (max-width: 600px) {
-  .about_cards {
-    grid-template-columns: 1fr;
+  .about_container {
+    padding: 0.8rem;
   }
 
-  /* LEFT */
   .about_me h2 {
     font-size: 2rem;
   }
 
-  .gradient_text {
-    font-size: 2rem;
+  .about_content_heading {
+    font-size: 1.4rem;
+  }
+
+  .about_delivery {
+    padding: 1.1rem;
+  }
+
+  .about_service_card {
+    padding: 0.15rem 0 0.15rem 0.9rem;
+
+    gap: 0.75rem;
+  }
+
+  .about_service_icon {
+    width: 28px;
+    height: 28px;
+
+    font-size: 0.88rem;
+  }
+
+  .about_cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media screen and (max-width: 420px) {
+  .about_service_card {
+    gap: 0.65rem;
+
+    padding-left: 0.8rem;
+  }
+
+  .about_service_card h3 {
+    font-size: 0.9rem;
+  }
+
+  .about_service_card p {
+    font-size: 0.8rem;
   }
 }
