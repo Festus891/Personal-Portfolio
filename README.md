@@ -3,7 +3,7 @@
 This project is a personal Portfolio, which aim to give information to users such as where you get to fully know about me, my skills, what I can offer, project I have worked on, and also get to contact me for Jobs.
 
 ## Demo
-(https://festuscode.vercel.app/)
+[https://festuscode.vercel.app/]
 
 ![Screenshoot](portfolio.png)
 
